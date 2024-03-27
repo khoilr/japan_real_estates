@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+    selenium:
+        image: selenium/standalone-chrome
+        ports:
+            - 4444:4444
+        environment:
+            SE_NODE_OVERRIDE_MAX_SESSIONS: true
+            SE_NODE_MAX_SESSIONS: 12
+            SE_NODE_SESSION_TIMEOUT: 3600
+        networks:
+            - airflow
+        shm_size: 8gb
+        cpus: 12
+
+    mongo:
+        image: mongo
+        ports:
+            - 27017:27017
+        networks:
+            - airflow
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: mongo
+            MONGO_INITDB_ROOT_PASSWORD: mongo
+            MONGO_INITDB_DATABASE: mongo
+
+    triggerer:
+        volumes:
+            - ./outputs:/usr/local/airflow/outputs

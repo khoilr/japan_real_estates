@@ -1,0 +1,7 @@
+# Astro Runtime includes the following pre-installed providers packages: https://docs.astronomer.io/astro/runtime-image-architecture#provider-packages
+beautifulsoup4==4.12.3
+selenium==4.18.1
+trio==0.25.0
+pymongo==4.6.2
+apache-airflow-providers-mongo==4.0.0
+random-user-agent==1.0.1
