@@ -3,7 +3,7 @@ from pprint import pformat
 
 from selenium.webdriver.common.by import By
 
-from include.webdriver import create_web_driver
+from include.utils import create_web_driver
 
 
 def regions_and_prefectures():

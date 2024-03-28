@@ -7,12 +7,11 @@ services:
             - 4444:4444
         environment:
             SE_NODE_OVERRIDE_MAX_SESSIONS: true
-            SE_NODE_MAX_SESSIONS: 12
+            SE_NODE_MAX_SESSIONS: 64
             SE_NODE_SESSION_TIMEOUT: 3600
         networks:
             - airflow
         shm_size: 8gb
-        cpus: 12
 
     mongo:
         image: mongo
