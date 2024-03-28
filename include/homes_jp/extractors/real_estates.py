@@ -1,7 +1,5 @@
-import itertools
 import logging
 
-from airflow.providers.mongo.hooks.mongo import MongoHook
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
@@ -9,36 +7,84 @@ from selenium.webdriver.remote.webelement import WebElement
 from include.webdriver import create_web_driver
 
 
-def real_estates(japan_data: list):
+def real_estates(urls: list):
+    """
+    Extracts real estate data from the given Japan data.
+
+    Args:
+        japan_data (list): A list of Japan data containing region and prefecture information.
+
+    Returns:
+        list: A list of extracted real estate data.
+    """
     extracted_data = []
-    property_classifications = ["mansion", "kodate"]
-    property_conditions = ["shinchiku", "chuko"]
-    prefectures = [region["prefecture_en"] for region in japan_data for region in region["prefectures"]]
 
-    mongo_hook = MongoHook(mongo_conn_id="mongo")
-    mongo_client = mongo_hook.get_conn()
-    db = mongo_client.db
-    db.japanese.create_index({"url": 1}, unique=True)
-
-    for classification, condition, prefecture in itertools.product(
-        property_classifications, property_conditions, prefectures
-    ):
-        url = f"https://www.homes.co.jp/{classification}/{condition}/{prefecture}/list"
+    # Iterate over property classifications, conditions, and prefectures
+    for url_dict in urls:
+        url = url_dict["url"]
 
         try:
-            real_estate_urls = get_real_estate_urls(url)
-            for real_estate_url in real_estate_urls:
-                extracted_info = extract_and_store_real_estate_data(db, real_estate_url)
-                if extracted_info:
-                    extracted_data.append(extracted_info)
+            extracted = extract_real_estate_data(url)
+            if extracted:
+                extracted.update(url)
+                extracted_data.append(extracted)
+
         except Exception as e:
             logging.error(f"An error occurred while processing {url}: {e}")
 
-    logging.info(f"Extracted {len(extracted_data)} real estates")
+    logging.info(f"Extracted info from {len(extracted_data)} real estates")
     return extracted_data
 
 
-def extract_real_estate_from_table(table_element: WebElement):
+def extract_real_estate_data(real_estate_url: str):
+    """
+    Extracts real estate data from the given real estate URL.
+
+    Args:
+        real_estate_url (str): The URL of the real estate.
+
+    Returns:
+        dict: A dictionary containing the extracted real estate data, where the keys are the table row headers
+              and the values are the corresponding row values.
+    """
+    # Initialize an empty dictionary to store the extracted data
+    extracted_data = {}
+
+    # Create a new web driver instance and open the URL
+    web_driver = create_web_driver()
+    web_driver.get(real_estate_url)
+
+    try:
+        description_element = web_driver.find_element(By.CSS_SELECTOR, "#feature h1").text.strip()
+        extracted_data["description"] = description_element
+
+        image_element = web_driver.find_element(
+            By.CSS_SELECTOR,
+            "ol[data-pages--detail--sbmansion--pc--photo_slider-target='photoList'] > li img",
+        )
+        image_url = image_element.get_attribute("src")
+        extracted_data["image_url"] = image_url
+
+        # Extract data from seller overview table
+        seller_overview_table = web_driver.find_element(By.CSS_SELECTOR, "h3#outline_salesOverview ~ div > table")
+        extracted_data.update(extract_data_from_table(seller_overview_table))
+
+        # Extract data from general overview table
+        general_overview_table = web_driver.find_element(By.CSS_SELECTOR, "h3#outline_generalOverview ~ div > table")
+        extracted_data.update(extract_data_from_table(general_overview_table))
+
+    except NoSuchElementException as e:
+        logging.error(f"An exception occurred while extracting real estate data from {real_estate_url}, {e.msg}")
+
+    # Close the web driver
+    web_driver.close()
+    web_driver.quit()
+
+    # Return the extracted data
+    return extracted_data
+
+
+def extract_data_from_table(table_element: WebElement):
     """
     Extracts real estate data from a table element.
 
@@ -68,87 +114,3 @@ def extract_real_estate_from_table(table_element: WebElement):
 
     # Return the extracted data
     return extracted_data
-
-
-def get_real_estate_urls(url: str):
-    real_estate_urls = []
-
-    while True:
-        web_driver = create_web_driver()
-        web_driver.get(url)
-
-        real_estates = web_driver.find_elements(
-            By.CSS_SELECTOR,
-            "#prg-mod-bukkenList > div.prg-bundle > div.mod-mergeBuilding--sale",
-        )
-        logging.info(f"Found {len(real_estates)} real estates at {url}")
-
-        if len(real_estates) == 0:
-            write_page_source(url, web_driver.page_source)
-
-        for real_estate in real_estates:
-            real_estate_a = real_estate.find_element(By.CSS_SELECTOR, "h3.heading > a")
-            real_estate_href = real_estate_a.get_attribute("href")
-            real_estate_urls.append(real_estate_href)
-
-        try:
-            next_page_link = web_driver.find_element(By.CSS_SELECTOR, "li.nextPage > a")
-            url = next_page_link.get_attribute("href")
-        except NoSuchElementException:
-            break
-        finally:
-            web_driver.close()
-            web_driver.quit()
-
-    return real_estate_urls
-
-
-def write_page_source(url: str, page_source: str):
-    with open(f"outputs/error_{url.replace('/', '_').replace(':', '')}.html", "w") as f:
-        f.write(page_source)
-
-
-def extract_and_store_real_estate_data(db, real_estate_url):
-    if db.japanese.find_one({"url": real_estate_url}):
-        logging.info(f"Skipping {real_estate_url} - URL already exists")
-        return None
-
-    extracted_info = extract_real_estate_data(real_estate_url)
-    if extracted_info:
-        extracted_info["url"] = real_estate_url
-        db.japanese.insert_one(extracted_info)
-        logging.info(f"Inserted {extracted_info['_id']}")
-        return extracted_info
-    else:
-        logging.warning(f"Failed to extract data from {real_estate_url}")
-        return None
-
-
-def extract_real_estate_data(real_estate_url: str):
-    # Initialize an empty dictionary to store the extracted data
-    data = {}
-
-    # Create a new web driver instance and open the URL
-    web_driver = create_web_driver()
-    web_driver.get(real_estate_url)
-
-    try:
-        # Extract data from seller overview table
-        seller_overview_table = web_driver.find_element(By.CSS_SELECTOR, "h3#outline_salesOverview ~ div > table")
-        data.update(extract_real_estate_from_table(seller_overview_table))
-
-        # Extract data from general overview table
-        general_overview_table = web_driver.find_element(By.CSS_SELECTOR, "h3#outline_generalOverview ~ div > table")
-        data.update(extract_real_estate_from_table(general_overview_table))
-
-    except NoSuchElementException:
-        logging.error("Exception occurred", exc_info=True)
-        logging.warning(real_estate_url)
-        logging.warning(web_driver.page_source)
-
-    # Close the web driver
-    web_driver.close()
-    web_driver.quit()
-
-    # Return the extracted data
-    return data
