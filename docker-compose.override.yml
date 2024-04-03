@@ -1,29 +1,35 @@
-version: '3.4'
-
 services:
-    selenium:
-        image: selenium/standalone-chrome
-        ports:
-            - 4444:4444
-        environment:
-            SE_NODE_OVERRIDE_MAX_SESSIONS: true
-            SE_NODE_MAX_SESSIONS: 64
-            SE_NODE_SESSION_TIMEOUT: 3600
-        networks:
-            - airflow
-        shm_size: 8gb
-
     mongo:
         image: mongo
         ports:
             - 27017:27017
-        networks:
-            - airflow
+        # networks:
+        #     - airflow
         environment:
             MONGO_INITDB_ROOT_USERNAME: mongo
             MONGO_INITDB_ROOT_PASSWORD: mongo
-            MONGO_INITDB_DATABASE: mongo
 
-    triggerer:
+    mgob:
+        image: maxisam/mgob
+        command: -LogLevel=info
+        ports:
+            - 8090:8090
         volumes:
-            - ./outputs:/usr/local/airflow/outputs
+            - ./mgob/config:/config
+            - ./mgob/storage:/storage
+            - ./mgob/tmp:/tmp
+            - ./mgob/data:/data
+        restart: always
+        # networks:
+        #     - airflow
+# selenium:
+#     image: selenium/standalone-edge
+#     ports:
+#         - 4444:4444
+#     environment:
+#         SE_NODE_OVERRIDE_MAX_SESSIONS: true
+#         SE_NODE_MAX_SESSIONS: 64
+#         SE_NODE_SESSION_TIMEOUT: 3600
+#     networks:
+#         - airflow
+#     cpus: 32

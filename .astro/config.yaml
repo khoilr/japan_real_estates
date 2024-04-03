@@ -1,4 +1,4 @@
 airflow:
-    expose_port: "true"
+  expose_port: 'true'
 project:
-    name: japan-real-estates
+  name: japan-real-estates
