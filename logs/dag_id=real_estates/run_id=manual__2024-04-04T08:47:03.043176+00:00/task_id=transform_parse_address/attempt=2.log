@@ -1,0 +1,36 @@
+[2024-04-04T08:58:19.452+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.transform_parse_address manual__2024-04-04T08:47:03.043176+00:00 [queued]>
+[2024-04-04T08:58:19.472+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.transform_parse_address manual__2024-04-04T08:47:03.043176+00:00 [queued]>
+[2024-04-04T08:58:19.473+0000] {taskinstance.py:2193} INFO - Starting attempt 2 of 2
+[2024-04-04T08:58:19.498+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): transform_parse_address> on 2024-04-04 08:47:03.043176+00:00
+[2024-04-04T08:58:19.513+0000] {standard_task_runner.py:60} INFO - Started process 4192 to run task
+[2024-04-04T08:58:19.520+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'transform_parse_address', 'manual__2024-04-04T08:47:03.043176+00:00', '--job-id', '219', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmpoic54bjp']
+[2024-04-04T08:58:19.525+0000] {standard_task_runner.py:88} INFO - Job 219: Subtask transform_parse_address
+[2024-04-04T08:58:19.957+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.transform_parse_address manual__2024-04-04T08:47:03.043176+00:00 [running]> on host 05a350db99a0
+[2024-04-04T08:58:20.429+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='transform_parse_address' AIRFLOW_CTX_EXECUTION_DATE='2024-04-04T08:47:03.043176+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-04T08:47:03.043176+00:00'
+[2024-04-04T08:58:20.438+0000] {__init__.py:98} WARNING - Town 千住宮元町 not in database
+[2024-04-04T08:58:20.440+0000] {__init__.py:98} WARNING - Town 元橋本町 not in database
+[2024-04-04T08:58:20.442+0000] {__init__.py:98} WARNING - Town 深大寺東町 not in database
+[2024-04-04T08:58:20.445+0000] {__init__.py:98} WARNING - Town 莇生町 not in database
+[2024-04-04T08:58:20.448+0000] {__init__.py:98} WARNING - Town 元総社町 not in database
+[2024-04-04T08:58:20.449+0000] {__init__.py:98} WARNING - Town 中泉町 not in database
+[2024-04-04T08:58:20.450+0000] {__init__.py:98} WARNING - Town 藤原光町 not in database
+[2024-04-04T08:58:20.453+0000] {__init__.py:98} WARNING - Town ひうみ町 not in database
+[2024-04-04T08:58:20.455+0000] {__init__.py:98} WARNING - Town 新井町 not in database
+[2024-04-04T08:58:20.457+0000] {__init__.py:98} WARNING - Town 南町 not in database
+[2024-04-04T08:58:20.459+0000] {__init__.py:98} WARNING - Town 散田町 not in database
+[2024-04-04T08:58:20.461+0000] {__init__.py:98} WARNING - Town 並木西町 not in database
+[2024-04-04T08:58:20.464+0000] {__init__.py:98} WARNING - Town 須惠町 not in database
+[2024-04-04T08:58:20.466+0000] {__init__.py:98} WARNING - Town 若葉町 not in database
+[2024-04-04T08:58:20.468+0000] {__init__.py:98} WARNING - Town 本木東町 not in database
+[2024-04-04T08:58:20.470+0000] {__init__.py:98} WARNING - Town 出川町 not in database
+[2024-04-04T08:58:20.474+0000] {__init__.py:98} WARNING - Town 菖蒲町 not in database
+[2024-04-04T08:58:20.476+0000] {__init__.py:98} WARNING - Town 中町 not in database
+[2024-04-04T08:58:20.478+0000] {__init__.py:98} WARNING - Town 追分町 not in database
+[2024-04-04T08:58:20.480+0000] {__init__.py:98} WARNING - Town 緑町 not in database
+[2024-04-04T08:58:20.482+0000] {__init__.py:98} WARNING - Town 宮本町 not in database
+[2024-04-04T08:58:20.484+0000] {__init__.py:98} WARNING - Town 北町 not in database
+[2024-04-04T08:58:20.487+0000] {__init__.py:98} WARNING - Town 西戸部町 not in database
+[2024-04-04T08:58:20.489+0000] {python.py:204} INFO - Done. Returned value not shown
+[2024-04-04T08:58:20.606+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=real_estates, task_id=transform_parse_address, execution_date=20240404T084703, start_date=20240404T085819, end_date=20240404T085820
+[2024-04-04T08:58:20.695+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-04T08:58:21.042+0000] {taskinstance.py:3312} INFO - 2 downstream tasks scheduled from follow-on schedule check

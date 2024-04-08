@@ -1,0 +1,131 @@
+[2024-04-04T08:52:02.881+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.load_to_one_c manual__2024-04-04T08:47:03.043176+00:00 [queued]>
+[2024-04-04T08:52:02.901+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.load_to_one_c manual__2024-04-04T08:47:03.043176+00:00 [queued]>
+[2024-04-04T08:52:02.902+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-04T08:52:02.928+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): load_to_one_c> on 2024-04-04 08:47:03.043176+00:00
+[2024-04-04T08:52:02.944+0000] {standard_task_runner.py:60} INFO - Started process 4081 to run task
+[2024-04-04T08:52:02.952+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'load_to_one_c', 'manual__2024-04-04T08:47:03.043176+00:00', '--job-id', '213', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmp1mil5kjw']
+[2024-04-04T08:52:02.958+0000] {standard_task_runner.py:88} INFO - Job 213: Subtask load_to_one_c
+[2024-04-04T08:52:03.383+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.load_to_one_c manual__2024-04-04T08:47:03.043176+00:00 [running]> on host 05a350db99a0
+[2024-04-04T08:52:03.889+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='load_to_one_c' AIRFLOW_CTX_EXECUTION_DATE='2024-04-04T08:47:03.043176+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-04T08:47:03.043176+00:00'
+[2024-04-04T08:52:04.005+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:04.082+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:04.156+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:04.233+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:04.307+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:04.383+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:04.457+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:04.529+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:04.604+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:04.678+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:04.753+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:04.826+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:04.904+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:04.977+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:05.051+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:05.126+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:05.205+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:05.280+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:05.354+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:05.426+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:05.500+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:05.575+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:05.655+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:05.730+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:05.819+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:05.892+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:05.962+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.033+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.107+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.177+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.246+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.325+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.398+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.473+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.547+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.585+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.636+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.673+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.746+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.821+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.901+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:06.971+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:07.044+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:07.123+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:07.198+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:07.276+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:07.347+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:07.420+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:07.491+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:07.569+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:07.640+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:07.712+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:07.785+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:07.863+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:07.937+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:08.009+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:08.083+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:08.153+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:08.241+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:08.313+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:08.390+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:08.461+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:08.540+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:08.636+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:08.710+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:08.784+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:08.862+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:08.937+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:09.015+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:09.083+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:09.154+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:09.223+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:09.293+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:09.359+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:09.428+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:09.502+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:09.575+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:09.645+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:09.716+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:09.788+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:09.866+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:09.945+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:10.026+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:10.103+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:10.177+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:10.249+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:10.320+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:10.383+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:10.457+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:10.540+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:10.624+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:10.698+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:10.780+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:10.853+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:10.948+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:11.028+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:11.101+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:11.174+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:11.245+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:11.323+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:11.404+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:11.479+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:11.551+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:11.654+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:11.730+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:11.808+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:11.900+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:11.973+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:12.064+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:12.139+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:12.235+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:12.320+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:12.406+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:12.483+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:12.554+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:12.646+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:12.726+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:12.801+0000] {one_c.py:90} INFO - Inserted data to 1C with code 201
+[2024-04-04T08:52:12.802+0000] {python.py:204} INFO - Done. Returned value not shown
+[2024-04-04T08:52:12.821+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=real_estates, task_id=load_to_one_c, execution_date=20240404T084703, start_date=20240404T085202, end_date=20240404T085212
+[2024-04-04T08:52:12.880+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-04T08:52:12.910+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

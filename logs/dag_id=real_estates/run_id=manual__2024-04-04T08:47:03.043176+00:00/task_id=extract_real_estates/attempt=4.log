@@ -1,0 +1,62 @@
+[2024-04-04T10:52:42.970+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.extract_real_estates manual__2024-04-04T08:47:03.043176+00:00 [queued]>
+[2024-04-04T10:52:42.991+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.extract_real_estates manual__2024-04-04T08:47:03.043176+00:00 [queued]>
+[2024-04-04T10:52:42.992+0000] {taskinstance.py:2193} INFO - Starting attempt 4 of 4
+[2024-04-04T10:52:43.021+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): extract_real_estates> on 2024-04-04 08:47:03.043176+00:00
+[2024-04-04T10:52:43.038+0000] {standard_task_runner.py:60} INFO - Started process 5818 to run task
+[2024-04-04T10:52:43.045+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'extract_real_estates', 'manual__2024-04-04T08:47:03.043176+00:00', '--job-id', '238', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmpo8j0dyou']
+[2024-04-04T10:52:43.051+0000] {standard_task_runner.py:88} INFO - Job 238: Subtask extract_real_estates
+[2024-04-04T10:52:43.478+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.extract_real_estates manual__2024-04-04T08:47:03.043176+00:00 [running]> on host 05a350db99a0
+[2024-04-04T10:52:44.090+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='extract_real_estates' AIRFLOW_CTX_EXECUTION_DATE='2024-04-04T08:47:03.043176+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-04T08:47:03.043176+00:00'
+[2024-04-04T10:52:58.469+0000] {real_estates.py:29} INFO - Batch 1/1 fetched 3893 pages
+[2024-04-04T10:58:23.659+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1001240002567/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:23.918+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-39049880000436/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:24.176+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/office/b-39035740004682/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:24.834+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1486320000086/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:25.103+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1181950008218/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:25.370+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1181950008217/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:25.656+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/tempo/b-1310270000064/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:25.913+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-39049610000045/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:26.214+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1466070000195/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:26.478+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1181950008216/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:26.734+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/office/b-39035740004683/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:26.990+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/office/b-39035740004680/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:27.678+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-37004290000146/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:27.937+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1109950012977/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:28.223+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1075270004549/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:28.484+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1109950012978/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:28.772+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1338940000679/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:29.055+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/office/b-39035740004684/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:29.333+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/tempo/b-1002630035623/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:29.557+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/tempo/b-1487520000096/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:30.203+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-39041440018998/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:30.483+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1181950008215/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:30.798+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1274500001211/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:31.079+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1181950008221/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:31.360+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1181950008220/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:31.608+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-32221170001501/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:31.930+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/tempo/b-1075270004551/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:32.225+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1181950008219/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:32.900+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/office/b-1075290002865/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:33.258+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1075290002864/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:33.561+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/tempo/b-1516700000048/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:33.815+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/office/b-39035740004681/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:34.136+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/soko/b-1002630035630/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:34.462+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-70780019009/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:34.758+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/soko/b-1002630035624/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:35.082+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/tempo/b-1384200006088/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:35.748+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-35515240000015/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:36.023+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1360400001192/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:36.265+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/tempo/b-1515160000004/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:36.542+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-32178300000020/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:36.865+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1367480000065/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:37.209+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1231900025161/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:37.464+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1359280002322/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:37.761+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-32176570000120/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:38.394+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/tempo/b-1370540000029/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:38.629+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-32171220000053/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:38.895+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-32171100000517/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:39.171+0000] {real_estates.py:76} ERROR - Error extracting data from https://www.homes.co.jp/other/b-1474480001464/: 'NoneType' object has no attribute 'select'
+[2024-04-04T10:58:39.230+0000] {python.py:204} INFO - Done. Returned value not shown
+[2024-04-04T10:58:39.353+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=real_estates, task_id=extract_real_estates, execution_date=20240404T084703, start_date=20240404T105242, end_date=20240404T105839
+[2024-04-04T10:58:39.474+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-04T10:58:39.522+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

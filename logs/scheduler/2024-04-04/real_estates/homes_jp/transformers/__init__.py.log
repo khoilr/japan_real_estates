@@ -1,0 +1,168 @@
+[2024-04-04T08:09:00.100+0000] {processor.py:161} INFO - Started process (PID=3775) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:00.110+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:09:00.112+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:09:00.112+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:00.306+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:09:00.304+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py", line 3, in <module>
+    from dags.real_estates.homes_jp.transformers.parse_address import _transform_to_english_keys
+ModuleNotFoundError: No module named 'dags'
+[2024-04-04T08:09:00.307+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:00.360+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.267 seconds
+[2024-04-04T08:09:11.176+0000] {processor.py:161} INFO - Started process (PID=3777) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:11.179+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:09:11.181+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:09:11.180+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:11.373+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:09:11.371+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py", line 3, in <module>
+    from dags.real_estates.homes_jp.transformers.parse_address import _transform_parse_address
+ModuleNotFoundError: No module named 'dags'
+[2024-04-04T08:09:11.374+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:11.426+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.260 seconds
+[2024-04-04T08:09:27.602+0000] {processor.py:161} INFO - Started process (PID=3788) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:27.605+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:09:27.607+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:09:27.606+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:27.818+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:09:27.816+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py", line 3, in <module>
+    from dags.real_estates.homes_jp.transformers.parse_address import _transform_parse_address
+ModuleNotFoundError: No module named 'dags'
+[2024-04-04T08:09:27.819+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:27.866+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.271 seconds
+[2024-04-04T08:09:32.942+0000] {processor.py:161} INFO - Started process (PID=3791) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:32.945+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:09:32.947+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:09:32.947+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:33.147+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:09:33.145+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py", line 4, in <module>
+    from dags.real_estates.homes_jp.transformers.parse_address import (
+ModuleNotFoundError: No module named 'dags'
+[2024-04-04T08:09:33.148+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:33.190+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.256 seconds
+[2024-04-04T08:09:37.983+0000] {processor.py:161} INFO - Started process (PID=3793) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:37.987+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:09:37.989+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:09:37.988+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:38.194+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:09:38.192+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py", line 4, in <module>
+    from dags.real_estates.homes_jp.transformers.parse_address import (
+ModuleNotFoundError: No module named 'dags'
+[2024-04-04T08:09:38.195+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:09:38.234+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.259 seconds
+[2024-04-04T08:10:08.477+0000] {processor.py:161} INFO - Started process (PID=3805) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:10:08.479+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:10:08.481+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:10:08.480+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:10:08.676+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:10:08.674+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py", line 4, in <module>
+    from dags.real_estates.homes_jp.transformers.parse_address import (
+ModuleNotFoundError: No module named 'dags'
+[2024-04-04T08:10:08.678+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:10:08.715+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.245 seconds
+[2024-04-04T08:10:39.168+0000] {processor.py:161} INFO - Started process (PID=3819) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:10:39.171+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:10:39.173+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:10:39.172+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:10:39.378+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:10:39.376+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py", line 4, in <module>
+    from dags.real_estates.homes_jp.transformers.parse_address import (
+ModuleNotFoundError: No module named 'dags'
+[2024-04-04T08:10:39.379+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:10:39.420+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.260 seconds
+[2024-04-04T08:11:09.628+0000] {processor.py:161} INFO - Started process (PID=3829) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:09.631+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:11:09.633+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:11:09.632+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:09.826+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:11:09.824+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py", line 4, in <module>
+    from dags.real_estates.homes_jp.transformers.parse_address import (
+ModuleNotFoundError: No module named 'dags'
+[2024-04-04T08:11:09.827+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:09.866+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.247 seconds
+[2024-04-04T08:11:40.099+0000] {processor.py:161} INFO - Started process (PID=3839) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:40.102+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:11:40.103+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:11:40.103+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:40.292+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:11:40.290+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py", line 4, in <module>
+    from dags.real_estates.homes_jp.transformers.parse_address import (
+ModuleNotFoundError: No module named 'dags'
+[2024-04-04T08:11:40.293+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:40.336+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.244 seconds
+[2024-04-04T08:11:44.154+0000] {processor.py:161} INFO - Started process (PID=3841) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:44.156+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:11:44.158+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:11:44.157+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:44.161+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:11:44.160+0000] {dagbag.py:329} INFO - File /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py assumed to contain no DAGs. Skipping.
+[2024-04-04T08:11:44.162+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:44.203+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.057 seconds
+[2024-04-04T08:11:46.180+0000] {processor.py:161} INFO - Started process (PID=3842) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:46.182+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:11:46.184+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:11:46.184+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:46.188+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:11:46.187+0000] {dagbag.py:329} INFO - File /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py assumed to contain no DAGs. Skipping.
+[2024-04-04T08:11:46.188+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:46.219+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.048 seconds
+[2024-04-04T08:11:56.614+0000] {processor.py:161} INFO - Started process (PID=3851) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:56.617+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:11:56.619+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:11:56.619+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:56.622+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:11:56.622+0000] {dagbag.py:329} INFO - File /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py assumed to contain no DAGs. Skipping.
+[2024-04-04T08:11:56.623+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:11:56.653+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.047 seconds
+[2024-04-04T08:12:26.852+0000] {processor.py:161} INFO - Started process (PID=3860) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:12:26.854+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:12:26.856+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:12:26.855+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:12:26.859+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:12:26.858+0000] {dagbag.py:329} INFO - File /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py assumed to contain no DAGs. Skipping.
+[2024-04-04T08:12:26.859+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:12:26.890+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.047 seconds
+[2024-04-04T08:12:57.102+0000] {processor.py:161} INFO - Started process (PID=3869) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:12:57.105+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:12:57.107+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:12:57.106+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:12:57.110+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:12:57.109+0000] {dagbag.py:329} INFO - File /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py assumed to contain no DAGs. Skipping.
+[2024-04-04T08:12:57.111+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:12:57.141+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.047 seconds
+[2024-04-04T08:13:27.352+0000] {processor.py:161} INFO - Started process (PID=3882) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:13:27.354+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:13:27.356+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:13:27.355+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:13:27.359+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:13:27.358+0000] {dagbag.py:329} INFO - File /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py assumed to contain no DAGs. Skipping.
+[2024-04-04T08:13:27.359+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:13:27.389+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.046 seconds
+[2024-04-04T08:13:57.602+0000] {processor.py:161} INFO - Started process (PID=3891) to work on /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:13:57.604+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py for tasks to queue
+[2024-04-04T08:13:57.606+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:13:57.606+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:13:57.609+0000] {logging_mixin.py:188} INFO - [2024-04-04T08:13:57.609+0000] {dagbag.py:329} INFO - File /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py assumed to contain no DAGs. Skipping.
+[2024-04-04T08:13:57.610+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py
+[2024-04-04T08:13:57.641+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py took 0.048 seconds

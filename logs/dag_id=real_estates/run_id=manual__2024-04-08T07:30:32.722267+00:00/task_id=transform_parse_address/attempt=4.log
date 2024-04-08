@@ -1,0 +1,45 @@
+[2024-04-08T08:38:28.619+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.transform_parse_address manual__2024-04-08T07:30:32.722267+00:00 [queued]>
+[2024-04-08T08:38:28.640+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.transform_parse_address manual__2024-04-08T07:30:32.722267+00:00 [queued]>
+[2024-04-08T08:38:28.641+0000] {taskinstance.py:2193} INFO - Starting attempt 4 of 4
+[2024-04-08T08:38:28.670+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): transform_parse_address> on 2024-04-08 07:30:32.722267+00:00
+[2024-04-08T08:38:28.685+0000] {standard_task_runner.py:60} INFO - Started process 622 to run task
+[2024-04-08T08:38:28.693+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'transform_parse_address', 'manual__2024-04-08T07:30:32.722267+00:00', '--job-id', '346', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmp2fpiyetg']
+[2024-04-08T08:38:28.698+0000] {standard_task_runner.py:88} INFO - Job 346: Subtask transform_parse_address
+[2024-04-08T08:38:29.108+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.transform_parse_address manual__2024-04-08T07:30:32.722267+00:00 [running]> on host 0a1174cdb8a2
+[2024-04-08T08:38:29.385+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='transform_parse_address' AIRFLOW_CTX_EXECUTION_DATE='2024-04-08T07:30:32.722267+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-08T07:30:32.722267+00:00'
+[2024-04-08T08:38:29.394+0000] {__init__.py:98} WARNING - Town 千住緑町 not in database
+[2024-04-08T08:38:29.395+0000] {__init__.py:98} WARNING - Town 飯山満町 not in database
+[2024-04-08T08:38:29.395+0000] {__init__.py:98} WARNING - Town 元町 not in database
+[2024-04-08T08:38:29.396+0000] {__init__.py:98} WARNING - Town 伊勢田町 not in database
+[2024-04-08T08:38:29.397+0000] {__init__.py:98} WARNING - Town 鴨居町 not in database
+[2024-04-08T08:38:29.398+0000] {__init__.py:98} WARNING - Town 本町 not in database
+[2024-04-08T08:38:29.398+0000] {__init__.py:98} WARNING - Town 千歳町 not in database
+[2024-04-08T08:38:29.399+0000] {__init__.py:98} WARNING - Town 北玉垣町 not in database
+[2024-04-08T08:38:29.400+0000] {__init__.py:98} WARNING - Town 幸町 not in database
+[2024-04-08T08:38:29.401+0000] {__init__.py:98} WARNING - Town 三河安城本町 not in database
+[2024-04-08T08:38:29.401+0000] {__init__.py:98} WARNING - Town 小手指元町 not in database
+[2024-04-08T08:38:29.402+0000] {__init__.py:98} WARNING - Town 天道町 not in database
+[2024-04-08T08:38:29.402+0000] {__init__.py:98} WARNING - Town 西枇杷島町 not in database
+[2024-04-08T08:38:29.403+0000] {__init__.py:98} WARNING - Town 川口町 not in database
+[2024-04-08T08:38:29.404+0000] {__init__.py:98} WARNING - Town 西町 not in database
+[2024-04-08T08:38:29.405+0000] {__init__.py:98} WARNING - Town 北野町 not in database
+[2024-04-08T08:38:29.405+0000] {__init__.py:98} WARNING - Town 柏町 not in database
+[2024-04-08T08:38:29.406+0000] {__init__.py:98} WARNING - Town 奈良津町 not in database
+[2024-04-08T08:38:29.407+0000] {__init__.py:98} WARNING - Town 須惠町 not in database
+[2024-04-08T08:38:29.408+0000] {__init__.py:98} WARNING - Town 林島町 not in database
+[2024-04-08T08:38:29.409+0000] {__init__.py:98} WARNING - Town 松見町 not in database
+[2024-04-08T08:38:29.410+0000] {__init__.py:98} WARNING - Town 南町 not in database
+[2024-04-08T08:38:29.410+0000] {__init__.py:98} WARNING - Town 大門町 not in database
+[2024-04-08T08:38:29.411+0000] {parse_address.py:67} ERROR - Error parsing address: '飾磨区'
+[2024-04-08T08:38:29.412+0000] {__init__.py:98} WARNING - Town 甲南町 not in database
+[2024-04-08T08:38:29.412+0000] {parse_address.py:67} ERROR - Error parsing address: '飾磨区'
+[2024-04-08T08:38:29.413+0000] {__init__.py:98} WARNING - Town 戸塚町 not in database
+[2024-04-08T08:38:29.413+0000] {__init__.py:98} WARNING - Town 押立町 not in database
+[2024-04-08T08:38:29.414+0000] {__init__.py:98} WARNING - Town 今井町 not in database
+[2024-04-08T08:38:29.415+0000] {__init__.py:98} WARNING - Town 東峰町 not in database
+[2024-04-08T08:38:29.416+0000] {parse_address.py:67} ERROR - Error parsing address: '平松本町字上り戸721番16、722番16（従前地）（宇都宮都市計画事業宇都宮大学東南部第1土地区'
+[2024-04-08T08:38:29.417+0000] {parse_address.py:59} INFO - Parsed 128 addresses.
+[2024-04-08T08:38:29.419+0000] {python.py:204} INFO - Done. Returned value not shown
+[2024-04-08T08:38:29.482+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=real_estates, task_id=transform_parse_address, execution_date=20240408T073032, start_date=20240408T083828, end_date=20240408T083829
+[2024-04-08T08:38:29.547+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-08T08:38:29.884+0000] {taskinstance.py:3312} INFO - 2 downstream tasks scheduled from follow-on schedule check

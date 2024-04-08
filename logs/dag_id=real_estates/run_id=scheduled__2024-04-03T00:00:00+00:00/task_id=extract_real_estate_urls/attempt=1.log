@@ -1,0 +1,16 @@
+[2024-04-04T00:00:01.706+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.extract_real_estate_urls scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T00:00:01.725+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.extract_real_estate_urls scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T00:00:01.725+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-04T00:00:01.755+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): extract_real_estate_urls> on 2024-04-03 00:00:00+00:00
+[2024-04-04T00:00:01.769+0000] {standard_task_runner.py:60} INFO - Started process 11117 to run task
+[2024-04-04T00:00:01.776+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'extract_real_estate_urls', 'scheduled__2024-04-03T00:00:00+00:00', '--job-id', '143', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmpa58g2flp']
+[2024-04-04T00:00:01.782+0000] {standard_task_runner.py:88} INFO - Job 143: Subtask extract_real_estate_urls
+[2024-04-04T00:00:02.206+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.extract_real_estate_urls scheduled__2024-04-03T00:00:00+00:00 [running]> on host 72a42bdc0b23
+[2024-04-04T00:00:02.353+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='extract_real_estate_urls' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-03T00:00:00+00:00'
+[2024-04-04T00:00:04.064+0000] {urls.py:36} INFO - Found 50206 real estates
+[2024-04-04T00:00:04.070+0000] {urls.py:41} INFO - Found 10 pages
+[2024-04-04T00:00:05.969+0000] {urls.py:55} INFO - Batch 1/1 fetched 10 pages
+[2024-04-04T00:00:19.992+0000] {python.py:204} INFO - Done. Returned value not shown
+[2024-04-04T00:00:20.040+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=real_estates, task_id=extract_real_estate_urls, execution_date=20240403T000000, start_date=20240404T000001, end_date=20240404T000020
+[2024-04-04T00:00:20.106+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-04T00:00:20.158+0000] {taskinstance.py:3312} INFO - 2 downstream tasks scheduled from follow-on schedule check

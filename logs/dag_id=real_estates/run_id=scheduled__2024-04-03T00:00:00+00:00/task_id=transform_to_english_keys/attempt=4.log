@@ -1,0 +1,56 @@
+[2024-04-04T04:22:50.495+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.transform_to_english_keys scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T04:22:50.515+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.transform_to_english_keys scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T04:22:50.516+0000] {taskinstance.py:2193} INFO - Starting attempt 4 of 4
+[2024-04-04T04:22:50.544+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): transform_to_english_keys> on 2024-04-03 00:00:00+00:00
+[2024-04-04T04:22:50.558+0000] {standard_task_runner.py:60} INFO - Started process 194 to run task
+[2024-04-04T04:22:50.566+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'transform_to_english_keys', 'scheduled__2024-04-03T00:00:00+00:00', '--job-id', '157', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmp_asricc6']
+[2024-04-04T04:22:50.571+0000] {standard_task_runner.py:88} INFO - Job 157: Subtask transform_to_english_keys
+[2024-04-04T04:22:50.676+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.transform_to_english_keys scheduled__2024-04-03T00:00:00+00:00 [running]> on host 05a350db99a0
+[2024-04-04T04:22:51.379+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='transform_to_english_keys' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-03T00:00:00+00:00'
+[2024-04-04T04:22:51.383+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py", line 8, in transform_to_english_keys
+    return trio.run(_transform_to_english_keys(data))
+  File "/home/airflow/.local/lib/python3.8/site-packages/trio/_core/_run.py", line 2288, in run
+    raise runner.main_task_outcome.error
+  File "/home/airflow/.local/lib/python3.8/site-packages/trio/_core/_run.py", line 1920, in init
+    self.main_task = self.spawn_impl(
+  File "/home/airflow/.local/lib/python3.8/site-packages/trio/_core/_run.py", line 1753, in spawn_impl
+    coro = context.run(coroutine_or_error, async_fn, *args)  # type: ignore[arg-type]
+  File "/home/airflow/.local/lib/python3.8/site-packages/trio/_util.py", line 147, in coroutine_or_error
+    raise TypeError(
+TypeError: Trio was expecting an async function, but instead it got a coroutine object <coroutine object _transform_to_english_keys at 0x7f36cfb3d1c0>
+
+Probably you did something like:
+
+  trio.run(_transform_to_english_keys(...))            # incorrect!
+  nursery.start_soon(_transform_to_english_keys(...))  # incorrect!
+
+Instead, you want (notice the parentheses!):
+
+  trio.run(_transform_to_english_keys, ...)            # correct!
+  nursery.start_soon(_transform_to_english_keys, ...)  # correct!
+[2024-04-04T04:22:51.402+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=real_estates, task_id=transform_to_english_keys, execution_date=20240403T000000, start_date=20240404T042250, end_date=20240404T042251
+[2024-04-04T04:22:51.425+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 157 for task transform_to_english_keys (Trio was expecting an async function, but instead it got a coroutine object <coroutine object _transform_to_english_keys at 0x7f36cfb3d1c0>
+
+Probably you did something like:
+
+  trio.run(_transform_to_english_keys(...))            # incorrect!
+  nursery.start_soon(_transform_to_english_keys(...))  # incorrect!
+
+Instead, you want (notice the parentheses!):
+
+  trio.run(_transform_to_english_keys, ...)            # correct!
+  nursery.start_soon(_transform_to_english_keys, ...)  # correct!; 194)
+[2024-04-04T04:22:51.461+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-04T04:22:51.518+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

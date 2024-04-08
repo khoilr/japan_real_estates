@@ -1,0 +1,62 @@
+[2024-04-08T03:57:13.371+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.extract_real_estates manual__2024-04-08T03:55:40.228975+00:00 [queued]>
+[2024-04-08T03:57:13.389+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.extract_real_estates manual__2024-04-08T03:55:40.228975+00:00 [queued]>
+[2024-04-08T03:57:13.390+0000] {taskinstance.py:2193} INFO - Starting attempt 2 of 2
+[2024-04-08T03:57:13.423+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): extract_real_estates> on 2024-04-08 03:55:40.228975+00:00
+[2024-04-08T03:57:13.439+0000] {standard_task_runner.py:60} INFO - Started process 78248 to run task
+[2024-04-08T03:57:13.447+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'extract_real_estates', 'manual__2024-04-08T03:55:40.228975+00:00', '--job-id', '307', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmp74fd458c']
+[2024-04-08T03:57:13.452+0000] {standard_task_runner.py:88} INFO - Job 307: Subtask extract_real_estates
+[2024-04-08T03:57:13.869+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.extract_real_estates manual__2024-04-08T03:55:40.228975+00:00 [running]> on host 05a350db99a0
+[2024-04-08T03:57:14.059+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='extract_real_estates' AIRFLOW_CTX_EXECUTION_DATE='2024-04-08T03:55:40.228975+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-08T03:55:40.228975+00:00'
+[2024-04-08T03:57:16.135+0000] {real_estates.py:37} INFO - Batch 1/1 fetched 121 pages
+[2024-04-08T03:57:23.879+0000] {local_task_job_runner.py:302} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2024-04-08T03:57:23.885+0000] {process_utils.py:131} INFO - Sending 15 to group 78248. PIDs of all processes in the group: [78248]
+[2024-04-08T03:57:23.890+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 78248
+[2024-04-08T03:57:23.891+0000] {taskinstance.py:2483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-04-08T03:57:23.955+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/__init__.py", line 17, in extract_real_estates
+    return asyncio.run(_extract_real_estates(urls))
+  File "/usr/local/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/real_estates.py", line 41, in _extract_real_estates
+    real_estate_data = await extract_real_estate_data(response_text, url_obj)
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/real_estates.py", line 73, in extract_real_estate_data
+    soup = BeautifulSoup(response_text, "html.parser")
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/__init__.py", line 335, in __init__
+    self._feed()
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/__init__.py", line 478, in _feed
+    self.builder.feed(self.markup)
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/builder/_htmlparser.py", line 380, in feed
+    parser.feed(markup)
+  File "/usr/local/lib/python3.8/html/parser.py", line 111, in feed
+    self.goahead(0)
+  File "/usr/local/lib/python3.8/html/parser.py", line 171, in goahead
+    k = self.parse_starttag(i)
+  File "/usr/local/lib/python3.8/html/parser.py", line 345, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/builder/_htmlparser.py", line 137, in handle_starttag
+    tag = self.soup.handle_starttag(
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/__init__.py", line 749, in handle_starttag
+    tag = self.element_classes.get(Tag, Tag)(
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/element.py", line 1262, in __init__
+    attrs = builder._replace_cdata_list_attribute_values(
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/builder/__init__.py", line 330, in _replace_cdata_list_attribute_values
+    attrs[attr] = values
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2485, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-04-08T03:57:23.965+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=real_estates, task_id=extract_real_estates, execution_date=20240408T035540, start_date=20240408T035713, end_date=20240408T035723
+[2024-04-08T03:57:23.991+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 307 for task extract_real_estates (Task received SIGTERM signal; 78248)
+[2024-04-08T03:57:24.064+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=78248, status='terminated', exitcode=1, started='03:57:12') (78248) terminated with exit code 1

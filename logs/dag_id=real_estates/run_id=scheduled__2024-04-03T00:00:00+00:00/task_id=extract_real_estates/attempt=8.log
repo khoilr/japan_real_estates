@@ -1,0 +1,352 @@
+[2024-04-04T07:21:47.766+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.extract_real_estates scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T07:21:47.786+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.extract_real_estates scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T07:21:47.787+0000] {taskinstance.py:2193} INFO - Starting attempt 8 of 8
+[2024-04-04T07:21:47.814+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): extract_real_estates> on 2024-04-03 00:00:00+00:00
+[2024-04-04T07:21:47.829+0000] {standard_task_runner.py:60} INFO - Started process 2714 to run task
+[2024-04-04T07:21:47.836+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'extract_real_estates', 'scheduled__2024-04-03T00:00:00+00:00', '--job-id', '180', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmp29jbrihd']
+[2024-04-04T07:21:47.842+0000] {standard_task_runner.py:88} INFO - Job 180: Subtask extract_real_estates
+[2024-04-04T07:21:47.948+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.extract_real_estates scheduled__2024-04-03T00:00:00+00:00 [running]> on host 05a350db99a0
+[2024-04-04T07:21:48.734+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='extract_real_estates' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='8' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-03T00:00:00+00:00'
+[2024-04-04T07:22:00.284+0000] {real_estates.py:29} INFO - Batch 1/3 fetched 1000 pages
+[2024-04-04T07:22:28.077+0000] {real_estates.py:68} WARNING - Temporarily skipping https://www.homes.co.jp/mansion/b-16001870000695/
+[2024-04-04T07:22:28.102+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/mansion/b-16001870000695/
+[2024-04-04T07:22:31.915+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/kodate/b-17076060000069/
+[2024-04-04T07:22:36.616+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/kodate/b-17076060000072/
+[2024-04-04T07:22:37.385+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/00320827f5b2f118b1245381817f74bb0ad722ed/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:37.386+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/00320827f5b2f118b1245381817f74bb0ad722ed/
+[2024-04-04T07:22:37.921+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/9e60e4a0c803093d47029e686997bc47b124b618/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:37.921+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/9e60e4a0c803093d47029e686997bc47b124b618/
+[2024-04-04T07:22:38.468+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/0fa17910aafb444b9433085991ded0d45372a8db/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:38.469+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/0fa17910aafb444b9433085991ded0d45372a8db/
+[2024-04-04T07:22:39.256+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/70644bd863866865e24fa931d56e74799a77bb32/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:39.257+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/70644bd863866865e24fa931d56e74799a77bb32/
+[2024-04-04T07:22:39.758+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/49eba0957bd6fb15cfc5ad809cf73a3d63920511/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:39.759+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/49eba0957bd6fb15cfc5ad809cf73a3d63920511/
+[2024-04-04T07:22:40.296+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/0d81ed723108a07dc3741af4d8ef85e832b984b7/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:40.297+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/0d81ed723108a07dc3741af4d8ef85e832b984b7/
+[2024-04-04T07:22:40.833+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/4d3cea978ae550de323456d0803f48bd5d1df99a/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:40.834+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/4d3cea978ae550de323456d0803f48bd5d1df99a/
+[2024-04-04T07:22:41.379+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/49baa4cf60decaebe7d0ec54956af6db27ce4cbc/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:41.379+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/49baa4cf60decaebe7d0ec54956af6db27ce4cbc/
+[2024-04-04T07:22:42.274+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/f7c6465c7a74f552d0b222e48c6f0fe9a395ba54/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:42.274+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/f7c6465c7a74f552d0b222e48c6f0fe9a395ba54/
+[2024-04-04T07:22:42.832+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/7374c3087e9b63b118f1fb8474b684239c5c83fd/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:42.832+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/7374c3087e9b63b118f1fb8474b684239c5c83fd/
+[2024-04-04T07:22:43.520+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/a3649cb210cbcdb4bbfa9864cb2a0cb10728032f/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:43.521+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/a3649cb210cbcdb4bbfa9864cb2a0cb10728032f/
+[2024-04-04T07:22:44.035+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/a0b8c9f30e0319ae446b3a006f2b0e6925ccc40f/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:44.036+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/a0b8c9f30e0319ae446b3a006f2b0e6925ccc40f/
+[2024-04-04T07:22:44.956+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/17c2e1fc9ca444eadff9e412591851252fbfcc34/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:44.957+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/17c2e1fc9ca444eadff9e412591851252fbfcc34/
+[2024-04-04T07:22:45.401+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/9f09da2d41e8173b7ca02754fc11ce864b8c6837/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:45.402+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/9f09da2d41e8173b7ca02754fc11ce864b8c6837/
+[2024-04-04T07:22:45.948+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/9bbcc1fdf9f8326414b33a4a7c49993036c23809/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:45.949+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/9bbcc1fdf9f8326414b33a4a7c49993036c23809/
+[2024-04-04T07:22:46.495+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/fbadaad51238ef44881a55668a6a4b516e66de58/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:46.496+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/fbadaad51238ef44881a55668a6a4b516e66de58/
+[2024-04-04T07:22:47.038+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/f769be5a4cfce01d28a32863f4eeeb0098df4f39/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:47.039+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/f769be5a4cfce01d28a32863f4eeeb0098df4f39/
+[2024-04-04T07:22:47.593+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/bee6330566af6bac215a249f495e41d55519dc57/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:47.594+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/bee6330566af6bac215a249f495e41d55519dc57/
+[2024-04-04T07:22:48.444+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/3f47ca19e1fbbb1a91338754ff753549facca6f9/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:48.445+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/3f47ca19e1fbbb1a91338754ff753549facca6f9/
+[2024-04-04T07:22:48.953+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/00add0645391bc6e30ddd18f19635da75d035680/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:48.954+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/00add0645391bc6e30ddd18f19635da75d035680/
+[2024-04-04T07:22:49.493+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/b05e260ccddc6a3de1acf1ee544f2de0ca4cbd62/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:49.494+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/b05e260ccddc6a3de1acf1ee544f2de0ca4cbd62/
+[2024-04-04T07:22:50.046+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/094fc80a2c3de2344c6458f11702092624b28d4a/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:50.047+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/094fc80a2c3de2344c6458f11702092624b28d4a/
+[2024-04-04T07:22:50.432+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/6d4e85ad38e4ec52561f661f55f38fdf1e03bcc4/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:50.433+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/6d4e85ad38e4ec52561f661f55f38fdf1e03bcc4/
+[2024-04-04T07:22:51.294+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/8f3b09c74c7bf9c549dfd12dec40a59e0a79526e/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:51.296+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/8f3b09c74c7bf9c549dfd12dec40a59e0a79526e/
+[2024-04-04T07:22:51.811+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/94fa20c9057f1f6b6d90931ee402f96ba83083ab/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:51.811+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/94fa20c9057f1f6b6d90931ee402f96ba83083ab/
+[2024-04-04T07:22:52.365+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/3e8ca3cab306849f9c4afcac58341cfad4c4f998/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:52.366+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/3e8ca3cab306849f9c4afcac58341cfad4c4f998/
+[2024-04-04T07:22:52.847+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/fc8db9499f53a4a5d9cb2f07fca225c30386ab10/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:52.847+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/fc8db9499f53a4a5d9cb2f07fca225c30386ab10/
+[2024-04-04T07:22:53.322+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/cd1b793b66812af7f2889f549f148c228aba3a64/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:53.323+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/cd1b793b66812af7f2889f549f148c228aba3a64/
+[2024-04-04T07:22:54.254+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/e97e56689ddb350e5c12295f4c887ea64be6867b/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:54.254+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/e97e56689ddb350e5c12295f4c887ea64be6867b/
+[2024-04-04T07:22:54.789+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/7b3c3cdd7cdcd2c420ee6872ed2b3500f625f870/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:54.789+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/7b3c3cdd7cdcd2c420ee6872ed2b3500f625f870/
+[2024-04-04T07:22:55.249+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/0dd25ab2106f5f7edff0dca9057a287945b773b2/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:55.250+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/0dd25ab2106f5f7edff0dca9057a287945b773b2/
+[2024-04-04T07:22:55.709+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/51576e22f28e022e24e885034a6516ae2cb35453/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:55.710+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/51576e22f28e022e24e885034a6516ae2cb35453/
+[2024-04-04T07:22:56.248+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/71d8d8411e5b23a223ad7f78568afc1db74b978a/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:56.249+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/71d8d8411e5b23a223ad7f78568afc1db74b978a/
+[2024-04-04T07:22:57.141+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/12ea3679fbf61a3af22de4ff4011643c1a48783a/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:57.141+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/12ea3679fbf61a3af22de4ff4011643c1a48783a/
+[2024-04-04T07:22:57.630+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/f24ed45f152368d81f5041a53bef76bf34789adc/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:57.630+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/f24ed45f152368d81f5041a53bef76bf34789adc/
+[2024-04-04T07:22:58.167+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/ea47d06613382b1c86c3c490a0127f76820d18fc/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:58.168+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/ea47d06613382b1c86c3c490a0127f76820d18fc/
+[2024-04-04T07:22:58.707+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/7ec36fb01ffc71ced9900e90db39243f4f077156/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:58.708+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/7ec36fb01ffc71ced9900e90db39243f4f077156/
+[2024-04-04T07:22:59.242+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/0334f73f0b7c630180fe065f5042d11a61d0707d/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:22:59.243+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/0334f73f0b7c630180fe065f5042d11a61d0707d/
+[2024-04-04T07:23:00.008+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/d82c58c8d2667930fb88db528e4633184c1a5b0e/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:00.008+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/d82c58c8d2667930fb88db528e4633184c1a5b0e/
+[2024-04-04T07:23:00.465+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/72237a80e448dcd2d557de35dad3e1d8c80077a2/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:00.466+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/72237a80e448dcd2d557de35dad3e1d8c80077a2/
+[2024-04-04T07:23:01.058+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/e71eba9ab52da005e03f7babf3fb9dc737a4eaa6/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:01.059+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/e71eba9ab52da005e03f7babf3fb9dc737a4eaa6/
+[2024-04-04T07:23:01.610+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/e08026ff41669a755365187bb9f563a5c173409d/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:01.611+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/e08026ff41669a755365187bb9f563a5c173409d/
+[2024-04-04T07:23:02.059+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/f125fd910eedb6b56b052295b8c9c512a159e56c/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:02.060+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/f125fd910eedb6b56b052295b8c9c512a159e56c/
+[2024-04-04T07:23:02.945+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/cbb72b4f07fcbe7c592116fa79c587ef5f0ad533/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:02.946+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/cbb72b4f07fcbe7c592116fa79c587ef5f0ad533/
+[2024-04-04T07:23:03.460+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/0f4e742a5558aa786d17c8658b2bc955593cc10f/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:03.461+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/0f4e742a5558aa786d17c8658b2bc955593cc10f/
+[2024-04-04T07:23:03.992+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/5435d72271be012600c69c02ea183b6232ec3886/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:03.993+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/5435d72271be012600c69c02ea183b6232ec3886/
+[2024-04-04T07:23:04.540+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/abb1523fe044cc4fa1a6808b15bf73a77a1b1ece/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:04.541+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/abb1523fe044cc4fa1a6808b15bf73a77a1b1ece/
+[2024-04-04T07:23:05.102+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/8b51ac065ece0578eeb0f7592f40f9310895bac0/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:05.103+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/8b51ac065ece0578eeb0f7592f40f9310895bac0/
+[2024-04-04T07:23:06.032+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/98558a26e90317e23167a6ba92327bed2911db4f/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:06.032+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/98558a26e90317e23167a6ba92327bed2911db4f/
+[2024-04-04T07:23:06.484+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/6b09afd33e8bcaf762e3ea0f0ba0cf6e8f103be5/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:06.485+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/6b09afd33e8bcaf762e3ea0f0ba0cf6e8f103be5/
+[2024-04-04T07:23:07.022+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/a7c1b1c91616f8e7b228ea265f5507d3832010e6/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:07.023+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/a7c1b1c91616f8e7b228ea265f5507d3832010e6/
+[2024-04-04T07:23:07.491+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/587bc3ff05cd80adadf330701504b45a3e478966/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:07.492+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/587bc3ff05cd80adadf330701504b45a3e478966/
+[2024-04-04T07:23:07.971+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/875e6c1f9f61033231bab7d4f63e2a410222395d/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:07.972+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/875e6c1f9f61033231bab7d4f63e2a410222395d/
+[2024-04-04T07:23:08.394+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/e00c80c86ac30dbd9ab6a6e63c72b581cade1501/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:08.395+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/e00c80c86ac30dbd9ab6a6e63c72b581cade1501/
+[2024-04-04T07:23:09.269+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/eafae5b9a80b1da22ba521b9709a82109ee3328f/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:09.270+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/eafae5b9a80b1da22ba521b9709a82109ee3328f/
+[2024-04-04T07:23:09.763+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/037849a2519600943b30566c21a2a1a8e0539245/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:09.764+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/037849a2519600943b30566c21a2a1a8e0539245/
+[2024-04-04T07:23:10.316+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/6818a7a59199b82de664cffc83e75aa476189077/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:10.318+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/6818a7a59199b82de664cffc83e75aa476189077/
+[2024-04-04T07:23:10.836+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/87112788fbdb332c7d0877423bb59e499dabaf56/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:10.837+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/87112788fbdb332c7d0877423bb59e499dabaf56/
+[2024-04-04T07:23:11.302+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/ed1959f93437c31d9748681615dcc7876bafc6b3/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:11.303+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/ed1959f93437c31d9748681615dcc7876bafc6b3/
+[2024-04-04T07:23:12.170+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/13f0ea2fc7017c87c686f2debc382e033f951e87/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:12.171+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/13f0ea2fc7017c87c686f2debc382e033f951e87/
+[2024-04-04T07:23:12.639+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/de378aaf38aca8f0b211daa9fa5a9e8317e114b0/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:12.640+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/de378aaf38aca8f0b211daa9fa5a9e8317e114b0/
+[2024-04-04T07:23:13.203+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/b37340c27be5f9a1cc4d9539c833dd3fe825b7e7/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:13.204+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/b37340c27be5f9a1cc4d9539c833dd3fe825b7e7/
+[2024-04-04T07:23:13.766+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/db99c799d22d08544d3ccbe1a844efe59177c942/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:13.767+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/db99c799d22d08544d3ccbe1a844efe59177c942/
+[2024-04-04T07:23:14.230+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/fcbc907413efc9d3c03a1eaf0a91f3eb4d7a1d16/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:14.231+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/fcbc907413efc9d3c03a1eaf0a91f3eb4d7a1d16/
+[2024-04-04T07:23:15.040+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/44a859b26c6f4354dadb77753cd8fa14378c25c2/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:15.041+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/44a859b26c6f4354dadb77753cd8fa14378c25c2/
+[2024-04-04T07:23:15.606+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/840d51e227344ab2703f5947a9cd436aa424ffe8/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:15.607+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/840d51e227344ab2703f5947a9cd436aa424ffe8/
+[2024-04-04T07:23:16.136+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/3b8e2b751536d69b232c35cff5fe83188f5661de/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:16.138+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/3b8e2b751536d69b232c35cff5fe83188f5661de/
+[2024-04-04T07:23:16.547+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/13d0a719735210e31fda6937cffe00c8266b369d/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:16.549+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/13d0a719735210e31fda6937cffe00c8266b369d/
+[2024-04-04T07:23:17.113+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/d9e5e1126b79c48e0f344d19ce59c5bd8520fbe5/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:17.114+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/d9e5e1126b79c48e0f344d19ce59c5bd8520fbe5/
+[2024-04-04T07:23:17.951+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/e228e29495cac072d1add6d32f618fe1b47212c0/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:17.952+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/e228e29495cac072d1add6d32f618fe1b47212c0/
+[2024-04-04T07:23:18.483+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/a5d4e5eded2f822f3018a17f6f71b1c8ea93426a/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:18.484+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/a5d4e5eded2f822f3018a17f6f71b1c8ea93426a/
+[2024-04-04T07:23:19.005+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/6f97e6b6d6dd0b16ef6dbb601406a26d33490687/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:19.006+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/6f97e6b6d6dd0b16ef6dbb601406a26d33490687/
+[2024-04-04T07:23:19.517+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/ce5572b9ca16d366fa6ca3ce1427fc788cb90628/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:19.518+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/ce5572b9ca16d366fa6ca3ce1427fc788cb90628/
+[2024-04-04T07:23:20.049+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/ced7cba5b92d1d074502eed313eca2dcf7302570/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:20.050+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/ced7cba5b92d1d074502eed313eca2dcf7302570/
+[2024-04-04T07:23:20.863+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/f4de90fda1895fd552c82f7704a4e1b0e5640cf6/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:20.864+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/f4de90fda1895fd552c82f7704a4e1b0e5640cf6/
+[2024-04-04T07:23:21.258+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/2619676c6d73d668893b6f3214fae1a9b1ad1d7f/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:21.259+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/2619676c6d73d668893b6f3214fae1a9b1ad1d7f/
+[2024-04-04T07:23:21.801+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/b8ad595a10d985a72eb1e3a81070cd33d96a90b2/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:21.802+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/b8ad595a10d985a72eb1e3a81070cd33d96a90b2/
+[2024-04-04T07:23:22.252+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/16f8c823d32754b8aed94c13182c3aa851a9d8ba/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:22.253+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/16f8c823d32754b8aed94c13182c3aa851a9d8ba/
+[2024-04-04T07:23:22.811+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/ab1def81adfdad4ad4bf5b6f4bc405360cf0d4ed/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:22.812+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/ab1def81adfdad4ad4bf5b6f4bc405360cf0d4ed/
+[2024-04-04T07:23:23.629+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/63407bc0ecddf3b10ceb953e4f3dbf8055c598b4/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:23.631+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/63407bc0ecddf3b10ceb953e4f3dbf8055c598b4/
+[2024-04-04T07:23:24.095+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/0285fa164f3b97d99940faf1857f1fcbd3785ecb/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:24.096+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/0285fa164f3b97d99940faf1857f1fcbd3785ecb/
+[2024-04-04T07:23:24.580+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/4d1debb595e747ad197d157ee8364941ddc4ceb9/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:24.581+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/4d1debb595e747ad197d157ee8364941ddc4ceb9/
+[2024-04-04T07:23:25.117+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/ce0efb8408590bc87c28418910f20c397b3f0d4c/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:25.118+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/ce0efb8408590bc87c28418910f20c397b3f0d4c/
+[2024-04-04T07:23:25.646+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/9c117ca4beb7bf9d7c8e64f18c267eac418473f2/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:25.647+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/9c117ca4beb7bf9d7c8e64f18c267eac418473f2/
+[2024-04-04T07:23:26.163+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/b2a1a53f43d849d2f9e4b6efef820f40de1323b5/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:26.165+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/b2a1a53f43d849d2f9e4b6efef820f40de1323b5/
+[2024-04-04T07:23:27.074+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/82a8f2adbcac0ddfbb145587b4a2caf45ea58a91/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:27.075+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/82a8f2adbcac0ddfbb145587b4a2caf45ea58a91/
+[2024-04-04T07:23:27.598+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/6ce6b8d0e0cac7d2a7b4dc2bb124dc46dc1257c5/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:27.599+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/6ce6b8d0e0cac7d2a7b4dc2bb124dc46dc1257c5/
+[2024-04-04T07:23:28.136+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/a9c3a10b6c18d5a7a7dac24ac1bc8fafa0aa3a0e/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:28.137+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/a9c3a10b6c18d5a7a7dac24ac1bc8fafa0aa3a0e/
+[2024-04-04T07:23:28.617+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/df7442d5a16bd7823f31277b1dd087853ccf22b8/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:28.618+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/df7442d5a16bd7823f31277b1dd087853ccf22b8/
+[2024-04-04T07:23:29.152+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/d853b85018285123c8bf7d5c15bf539ec297544b/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:29.154+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/d853b85018285123c8bf7d5c15bf539ec297544b/
+[2024-04-04T07:23:30.044+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/8e2162ee24c30729835f580bbe701e3e779572d4/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:30.044+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/8e2162ee24c30729835f580bbe701e3e779572d4/
+[2024-04-04T07:23:30.593+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/66869d36baf25e4cbe2e0ebee0b6fbcd62f28852/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:30.595+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/66869d36baf25e4cbe2e0ebee0b6fbcd62f28852/
+[2024-04-04T07:23:31.122+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/3dd1159ca8ed48efe3cdb6f796da1c59f6d61071/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:31.124+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/3dd1159ca8ed48efe3cdb6f796da1c59f6d61071/
+[2024-04-04T07:23:31.668+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/74aab96334608b5834ee7dc3ce7f15094b67cb76/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:31.669+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/74aab96334608b5834ee7dc3ce7f15094b67cb76/
+[2024-04-04T07:23:32.076+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/8179e79c8ab140645c5a2ae1c23776beb2c569e9/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:32.077+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/8179e79c8ab140645c5a2ae1c23776beb2c569e9/
+[2024-04-04T07:23:32.854+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/025f5f0c2d41d6f921519f452b4e1f89ef58f07f/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:32.856+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/025f5f0c2d41d6f921519f452b4e1f89ef58f07f/
+[2024-04-04T07:23:33.370+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/b7c8b94d3bb260aad170c0449e8816d7d4f5efae/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:33.371+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/b7c8b94d3bb260aad170c0449e8816d7d4f5efae/
+[2024-04-04T07:23:33.875+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/d4f77eb744a84858e5433a2a6c524aeaacdfff2c/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:33.877+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/d4f77eb744a84858e5433a2a6c524aeaacdfff2c/
+[2024-04-04T07:23:34.357+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/7c15389e4e2aba0fb4d315159a36c4d610ffde83/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:34.359+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/7c15389e4e2aba0fb4d315159a36c4d610ffde83/
+[2024-04-04T07:23:34.845+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/c070c299d0c4e31995a3176faec1aa383bd9c45a/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:34.849+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/c070c299d0c4e31995a3176faec1aa383bd9c45a/
+[2024-04-04T07:23:35.733+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/a986ed1752ebc5a223a971a2e8b245663b9e7108/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:35.735+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/a986ed1752ebc5a223a971a2e8b245663b9e7108/
+[2024-04-04T07:23:36.197+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/c0a091dcdd6236e7599787a01dc1682a26de98ff/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:36.199+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/c0a091dcdd6236e7599787a01dc1682a26de98ff/
+[2024-04-04T07:23:36.704+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/889804662a2af134d48a57ac81f80d8fd4fcdce1/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:36.706+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/889804662a2af134d48a57ac81f80d8fd4fcdce1/
+[2024-04-04T07:23:37.213+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/32af7baf5277fd5eff391c6a25cfe616992d86cc/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:37.214+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/32af7baf5277fd5eff391c6a25cfe616992d86cc/
+[2024-04-04T07:23:37.751+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/eda4352289a693b314c7579c3c10c220bb219532/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:37.752+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/eda4352289a693b314c7579c3c10c220bb219532/
+[2024-04-04T07:23:38.273+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/64d5d3ca0cdfbd58cef35c40dea3900ee841797a/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:38.274+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/64d5d3ca0cdfbd58cef35c40dea3900ee841797a/
+[2024-04-04T07:23:39.194+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/99b840c35d2d533f6849e7f4fc7d69b441970c41/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:39.195+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/99b840c35d2d533f6849e7f4fc7d69b441970c41/
+[2024-04-04T07:23:39.604+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/8e8a9bcc1cf4f51f87ebd45596d083b527f6e83e/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:39.605+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/8e8a9bcc1cf4f51f87ebd45596d083b527f6e83e/
+[2024-04-04T07:23:40.111+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/858c7ef1102fabfd0e64131521093a8992c1d1c9/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:40.112+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/858c7ef1102fabfd0e64131521093a8992c1d1c9/
+[2024-04-04T07:23:40.581+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/f115378f4a991ca4df9034003426f4b3b17f0d35/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:40.581+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/f115378f4a991ca4df9034003426f4b3b17f0d35/
+[2024-04-04T07:23:41.019+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/6059f0e0f0881d0a4ba9f7847a9fe1dc1d4a1e8c/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:41.019+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/6059f0e0f0881d0a4ba9f7847a9fe1dc1d4a1e8c/
+[2024-04-04T07:23:41.847+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/555f43fdd35516faa074ffa20b16faadb7da9307/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:41.848+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/555f43fdd35516faa074ffa20b16faadb7da9307/
+[2024-04-04T07:23:42.360+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/dc30ec5019406c2950fe6e2a89379946353a259a/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:42.361+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/dc30ec5019406c2950fe6e2a89379946353a259a/
+[2024-04-04T07:23:42.816+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/6b66a75b6a6e2dc8de8a68a531f005d6ae166212/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:42.816+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/6b66a75b6a6e2dc8de8a68a531f005d6ae166212/
+[2024-04-04T07:23:43.339+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/4a64b709204e5693f8799d951130fc00963ab550/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:43.339+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/4a64b709204e5693f8799d951130fc00963ab550/
+[2024-04-04T07:23:43.844+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/51927636295a40f5c5b7cd6bc932be23b25fdf31/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:43.845+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/51927636295a40f5c5b7cd6bc932be23b25fdf31/
+[2024-04-04T07:23:44.360+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/eddd6820db7412fa456a775070f455e97377144b/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:44.361+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/eddd6820db7412fa456a775070f455e97377144b/
+[2024-04-04T07:23:45.267+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/89611d8ab1e005f4039ace4cb880a1ad133dabd3/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:45.268+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/89611d8ab1e005f4039ace4cb880a1ad133dabd3/
+[2024-04-04T07:23:45.765+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/de7595549c7a542bc2dec1dcd6c28c3e4b01d49e/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:45.766+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/de7595549c7a542bc2dec1dcd6c28c3e4b01d49e/
+[2024-04-04T07:23:46.348+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/80f3fbea16c91b0f5f8a57233b895fa0ed8cef70/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:46.349+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/80f3fbea16c91b0f5f8a57233b895fa0ed8cef70/
+[2024-04-04T07:23:46.907+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/b49525cfa57a46760c002cfec7c5646282e3002d/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:46.907+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/b49525cfa57a46760c002cfec7c5646282e3002d/
+[2024-04-04T07:23:47.441+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/fa7d90e9386b091e1398a7d8b1a7f2ba5b16457d/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:47.442+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/fa7d90e9386b091e1398a7d8b1a7f2ba5b16457d/
+[2024-04-04T07:23:48.341+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/634076a5c64ec94b96d3df3e9390cb9d808bfdeb/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:48.342+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/634076a5c64ec94b96d3df3e9390cb9d808bfdeb/
+[2024-04-04T07:23:48.737+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/aa84404fb480ce4ec9cf57121b40e14ace195009/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:48.737+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/aa84404fb480ce4ec9cf57121b40e14ace195009/
+[2024-04-04T07:23:49.273+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/e8aa0ca2712208864ef7767213bdcdaa917c890e/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:49.273+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/e8aa0ca2712208864ef7767213bdcdaa917c890e/
+[2024-04-04T07:23:49.787+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/2d9c9a1cb13b1d7961350e7a1cde27cf67f04bfd/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:49.787+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/2d9c9a1cb13b1d7961350e7a1cde27cf67f04bfd/
+[2024-04-04T07:23:50.256+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/d8103c90625daf761fc73de004fa310873ebcc1e/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:50.256+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/d8103c90625daf761fc73de004fa310873ebcc1e/
+[2024-04-04T07:23:51.137+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/a2c6650a060a0edbd63e4ba3ffd0b82e9df8fc9b/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:51.138+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/a2c6650a060a0edbd63e4ba3ffd0b82e9df8fc9b/
+[2024-04-04T07:23:51.503+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/01c3c55b0a2bc8cb5a9fbab0249a21407eabc204/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:51.504+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/01c3c55b0a2bc8cb5a9fbab0249a21407eabc204/
+[2024-04-04T07:23:51.966+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/5cf7b9414fb5e3871bac5c1c73fb152729f40296/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:51.966+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/5cf7b9414fb5e3871bac5c1c73fb152729f40296/
+[2024-04-04T07:23:52.460+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/d2e81c51f5f8ce0496df817bfb4d923548fa5e05/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:52.461+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/d2e81c51f5f8ce0496df817bfb4d923548fa5e05/
+[2024-04-04T07:23:52.987+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/3cb030056af4d4a2744b811359915a451dfcdf0d/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:52.987+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/3cb030056af4d4a2744b811359915a451dfcdf0d/
+[2024-04-04T07:23:53.877+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/b3b114da331da64dd1e454f4f721e96c61c44e6b/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:53.878+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/b3b114da331da64dd1e454f4f721e96c61c44e6b/
+[2024-04-04T07:23:54.474+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/5a906cd643bb7cd78a676b687e3cfe51fd7380c1/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:54.475+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/5a906cd643bb7cd78a676b687e3cfe51fd7380c1/
+[2024-04-04T07:23:55.036+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/b5c4a45834458b513bb2d16fb91c45f0abc7b09b/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:55.037+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/b5c4a45834458b513bb2d16fb91c45f0abc7b09b/
+[2024-04-04T07:23:55.497+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/9670a285aef6cdca7e3b0744f46788d5453c4bff/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:55.498+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/9670a285aef6cdca7e3b0744f46788d5453c4bff/
+[2024-04-04T07:23:56.048+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/5e40a14e3c7a9a86d1e05b5ed9285be9666c2fdb/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:56.049+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/5e40a14e3c7a9a86d1e05b5ed9285be9666c2fdb/
+[2024-04-04T07:23:56.960+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/bd171a0dc890f71dc611b03bc96fa213f254360e/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:56.961+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/bd171a0dc890f71dc611b03bc96fa213f254360e/
+[2024-04-04T07:23:57.315+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/ba625a2a59a272aa81c1240d44f7497d0bbae7bd/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:57.316+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/ba625a2a59a272aa81c1240d44f7497d0bbae7bd/
+[2024-04-04T07:23:57.839+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/96358c3212657910a448f2942883674244e79b17/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:57.840+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/96358c3212657910a448f2942883674244e79b17/
+[2024-04-04T07:23:58.335+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/5778128009fa11e21296da54fe940378d2d6dc42/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:58.335+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/5778128009fa11e21296da54fe940378d2d6dc42/
+[2024-04-04T07:23:58.847+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/4c19693799a6d30ab8f49b16dec98846d0228011/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:58.848+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/4c19693799a6d30ab8f49b16dec98846d0228011/
+[2024-04-04T07:23:59.241+0000] {real_estates.py:75} ERROR - Error extracting data from https://www.homes.co.jp/chintai/room/74e7177c529febda40f36495849abce12d6a7018/: 'NoneType' object has no attribute 'select'
+[2024-04-04T07:23:59.242+0000] {real_estates.py:77} WARNING - Could not extract data from https://www.homes.co.jp/chintai/room/74e7177c529febda40f36495849abce12d6a7018/
+[2024-04-04T07:23:59.412+0000] {local_task_job_runner.py:280} WARNING - Recorded pid 2750 does not match the current pid 2714
+[2024-04-04T07:23:59.416+0000] {process_utils.py:131} INFO - Sending 15 to group 2714. PIDs of all processes in the group: [2714]
+[2024-04-04T07:23:59.417+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 2714
+[2024-04-04T07:23:59.418+0000] {taskinstance.py:2483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-04-04T07:23:59.479+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/__init__.py", line 17, in extract_real_estates
+    return asyncio.run(_extract_real_estates(urls))
+  File "/usr/local/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/real_estates.py", line 32, in _extract_real_estates
+    real_estate_data = await extract_real_estate_data(response_text, url_obj)
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/real_estates.py", line 59, in extract_real_estate_data
+    soup = BeautifulSoup(response_text, "html.parser")
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/__init__.py", line 335, in __init__
+    self._feed()
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/__init__.py", line 478, in _feed
+    self.builder.feed(self.markup)
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/builder/_htmlparser.py", line 380, in feed
+    parser.feed(markup)
+  File "/usr/local/lib/python3.8/html/parser.py", line 111, in feed
+    self.goahead(0)
+  File "/usr/local/lib/python3.8/html/parser.py", line 171, in goahead
+    k = self.parse_starttag(i)
+  File "/usr/local/lib/python3.8/html/parser.py", line 345, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/builder/_htmlparser.py", line 137, in handle_starttag
+    tag = self.soup.handle_starttag(
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/__init__.py", line 749, in handle_starttag
+    tag = self.element_classes.get(Tag, Tag)(
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/element.py", line 1262, in __init__
+    attrs = builder._replace_cdata_list_attribute_values(
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/builder/__init__.py", line 321, in _replace_cdata_list_attribute_values
+    values = nonwhitespace_re.findall(value)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2485, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-04-04T07:23:59.490+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=real_estates, task_id=extract_real_estates, execution_date=20240403T000000, start_date=20240404T072358, end_date=20240404T072359
+[2024-04-04T07:23:59.515+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 180 for task extract_real_estates (Task received SIGTERM signal; 2714)
+[2024-04-04T07:23:59.671+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=2714, status='terminated', exitcode=1, started='07:21:46') (2714) terminated with exit code 1

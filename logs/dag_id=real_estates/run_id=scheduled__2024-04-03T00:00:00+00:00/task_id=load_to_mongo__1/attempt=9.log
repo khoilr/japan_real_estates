@@ -1,0 +1,17 @@
+[2024-04-04T07:59:19.290+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.load_to_mongo__1 scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T07:59:19.310+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.load_to_mongo__1 scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T07:59:19.311+0000] {taskinstance.py:2193} INFO - Starting attempt 9 of 9
+[2024-04-04T07:59:19.336+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): load_to_mongo__1> on 2024-04-03 00:00:00+00:00
+[2024-04-04T07:59:19.350+0000] {standard_task_runner.py:60} INFO - Started process 3266 to run task
+[2024-04-04T07:59:19.358+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'load_to_mongo__1', 'scheduled__2024-04-03T00:00:00+00:00', '--job-id', '190', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmpy3w95ady']
+[2024-04-04T07:59:19.363+0000] {standard_task_runner.py:88} INFO - Job 190: Subtask load_to_mongo__1
+[2024-04-04T07:59:19.470+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.load_to_mongo__1 scheduled__2024-04-03T00:00:00+00:00 [running]> on host 05a350db99a0
+[2024-04-04T07:59:20.260+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='load_to_mongo__1' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='9' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-03T00:00:00+00:00'
+[2024-04-04T07:59:20.264+0000] {__init__.py:10} INFO - hihi
+[2024-04-04T07:59:20.265+0000] {__init__.py:11} INFO - 113
+[2024-04-04T07:59:20.267+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2024-04-04T07:59:20.269+0000] {base.py:83} INFO - Using connection ID '***' for task execution.
+[2024-04-04T07:59:20.356+0000] {python.py:204} INFO - Done. Returned value not shown
+[2024-04-04T07:59:20.375+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=real_estates, task_id=load_to_***__1, execution_date=20240403T000000, start_date=20240404T075919, end_date=20240404T075920
+[2024-04-04T07:59:20.453+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-04T07:59:20.490+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

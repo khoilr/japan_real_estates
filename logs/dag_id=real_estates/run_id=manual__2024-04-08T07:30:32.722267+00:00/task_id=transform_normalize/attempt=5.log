@@ -1,0 +1,14 @@
+[2024-04-08T08:40:09.087+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.transform_normalize manual__2024-04-08T07:30:32.722267+00:00 [queued]>
+[2024-04-08T08:40:09.109+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.transform_normalize manual__2024-04-08T07:30:32.722267+00:00 [queued]>
+[2024-04-08T08:40:09.110+0000] {taskinstance.py:2193} INFO - Starting attempt 5 of 5
+[2024-04-08T08:40:09.136+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): transform_normalize> on 2024-04-08 07:30:32.722267+00:00
+[2024-04-08T08:40:09.151+0000] {standard_task_runner.py:60} INFO - Started process 658 to run task
+[2024-04-08T08:40:09.158+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'transform_normalize', 'manual__2024-04-08T07:30:32.722267+00:00', '--job-id', '349', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmprxkb2ydx']
+[2024-04-08T08:40:09.163+0000] {standard_task_runner.py:88} INFO - Job 349: Subtask transform_normalize
+[2024-04-08T08:40:09.585+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.transform_normalize manual__2024-04-08T07:30:32.722267+00:00 [running]> on host 0a1174cdb8a2
+[2024-04-08T08:40:09.852+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='transform_normalize' AIRFLOW_CTX_EXECUTION_DATE='2024-04-08T07:30:32.722267+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-08T07:30:32.722267+00:00'
+[2024-04-08T08:40:09.870+0000] {normalize.py:14} INFO - Normalized 128 items
+[2024-04-08T08:40:09.872+0000] {python.py:204} INFO - Done. Returned value not shown
+[2024-04-08T08:40:09.933+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=real_estates, task_id=transform_normalize, execution_date=20240408T073032, start_date=20240408T084009, end_date=20240408T084009
+[2024-04-08T08:40:10.012+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-08T08:40:10.365+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

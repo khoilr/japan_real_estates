@@ -1,0 +1,54 @@
+[2024-04-03T10:55:05.677+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.transform_to_english_keys manual__2024-04-03T10:39:54.321446+00:00 [queued]>
+[2024-04-03T10:55:05.696+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.transform_to_english_keys manual__2024-04-03T10:39:54.321446+00:00 [queued]>
+[2024-04-03T10:55:05.697+0000] {taskinstance.py:2193} INFO - Starting attempt 4 of 4
+[2024-04-03T10:55:05.725+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): transform_to_english_keys> on 2024-04-03 10:39:54.321446+00:00
+[2024-04-03T10:55:05.739+0000] {standard_task_runner.py:60} INFO - Started process 481 to run task
+[2024-04-03T10:55:05.747+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'transform_to_english_keys', 'manual__2024-04-03T10:39:54.321446+00:00', '--job-id', '136', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmp6mq9_z85']
+[2024-04-03T10:55:05.752+0000] {standard_task_runner.py:88} INFO - Job 136: Subtask transform_to_english_keys
+[2024-04-03T10:55:06.175+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.transform_to_english_keys manual__2024-04-03T10:39:54.321446+00:00 [running]> on host 72a42bdc0b23
+[2024-04-03T10:55:06.847+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='transform_to_english_keys' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T10:39:54.321446+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-03T10:39:54.321446+00:00'
+[2024-04-03T10:56:30.033+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.8/json/__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.8/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.8/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/py_trans/translator.py", line 55, in google
+    resp = requests.get(
+  File "/home/airflow/.local/lib/python3.8/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py", line 7, in transform_to_english_keys
+    return _transform_to_english_keys(data)
+  File "/opt/airflow/dags/real_estates/homes_jp/transformers/english_keys.py", line 60, in _transform_to_english_keys
+    translated_value = tr.google(value, "en")
+  File "/home/airflow/.local/lib/python3.8/site-packages/py_trans/translator.py", line 68, in google
+    raise UnableToTranslate(e)
+py_trans.errors.UnableToTranslate: {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-03T10:56:30.051+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=real_estates, task_id=transform_to_english_keys, execution_date=20240403T103954, start_date=20240403T105505, end_date=20240403T105630
+[2024-04-03T10:56:30.080+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 136 for task transform_to_english_keys ({'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}; 481)
+[2024-04-03T10:56:30.144+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-03T10:56:30.188+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

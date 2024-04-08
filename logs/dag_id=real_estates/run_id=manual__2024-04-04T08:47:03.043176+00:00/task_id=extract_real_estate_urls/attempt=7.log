@@ -1,0 +1,65 @@
+[2024-04-04T09:27:16.265+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.extract_real_estate_urls manual__2024-04-04T08:47:03.043176+00:00 [queued]>
+[2024-04-04T09:27:16.284+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.extract_real_estate_urls manual__2024-04-04T08:47:03.043176+00:00 [queued]>
+[2024-04-04T09:27:16.286+0000] {taskinstance.py:2193} INFO - Starting attempt 7 of 7
+[2024-04-04T09:27:16.314+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): extract_real_estate_urls> on 2024-04-04 08:47:03.043176+00:00
+[2024-04-04T09:27:16.329+0000] {standard_task_runner.py:60} INFO - Started process 4649 to run task
+[2024-04-04T09:27:16.337+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'extract_real_estate_urls', 'manual__2024-04-04T08:47:03.043176+00:00', '--job-id', '233', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmpc0_fprbl']
+[2024-04-04T09:27:16.342+0000] {standard_task_runner.py:88} INFO - Job 233: Subtask extract_real_estate_urls
+[2024-04-04T09:27:16.765+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.extract_real_estate_urls manual__2024-04-04T08:47:03.043176+00:00 [running]> on host 05a350db99a0
+[2024-04-04T09:27:16.919+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='extract_real_estate_urls' AIRFLOW_CTX_EXECUTION_DATE='2024-04-04T08:47:03.043176+00:00' AIRFLOW_CTX_TRY_NUMBER='7' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-04T08:47:03.043176+00:00'
+[2024-04-04T09:27:18.828+0000] {urls.py:36} INFO - Found 84763 real estates
+[2024-04-04T09:27:18.834+0000] {urls.py:41} INFO - Found 2125 pages
+[2024-04-04T09:27:33.961+0000] {urls.py:55} INFO - Batch 1/3 fetched 1000 pages
+[2024-04-04T09:42:14.446+0000] {urls.py:55} INFO - Batch 2/3 fetched 1000 pages
+[2024-04-04T09:48:17.128+0000] {local_task_job_runner.py:280} WARNING - Recorded pid 4930 does not match the current pid 4649
+[2024-04-04T09:48:17.131+0000] {process_utils.py:131} INFO - Sending 15 to group 4649. PIDs of all processes in the group: [4649]
+[2024-04-04T09:48:17.132+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 4649
+[2024-04-04T09:48:17.133+0000] {taskinstance.py:2483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-04-04T09:48:17.195+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/__init__.py", line 22, in extract_real_estate_urls
+    return asyncio.run(_extract_real_estate_urls())
+  File "/usr/local/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/urls.py", line 59, in _extract_real_estate_urls
+    urls.extend(await extract_urls_at_page(response_text, batch_index * BATCH_SIZE + index + 1))
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/urls.py", line 99, in extract_urls_at_page
+    soup = BeautifulSoup(response_text, "html.parser")
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/__init__.py", line 335, in __init__
+    self._feed()
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/__init__.py", line 478, in _feed
+    self.builder.feed(self.markup)
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/builder/_htmlparser.py", line 380, in feed
+    parser.feed(markup)
+  File "/usr/local/lib/python3.8/html/parser.py", line 111, in feed
+    self.goahead(0)
+  File "/usr/local/lib/python3.8/html/parser.py", line 173, in goahead
+    k = self.parse_endtag(i)
+  File "/usr/local/lib/python3.8/html/parser.py", line 421, in parse_endtag
+    self.handle_endtag(elem)
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/builder/_htmlparser.py", line 176, in handle_endtag
+    self.soup.handle_endtag(name)
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/__init__.py", line 771, in handle_endtag
+    self._popToTag(name, nsprefix)
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/__init__.py", line 716, in _popToTag
+    most_recently_popped = self.popTag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/bs4/__init__.py", line 562, in popTag
+    self.open_tag_counter[tag.name] -= 1
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2485, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-04-04T09:48:17.204+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=real_estates, task_id=extract_real_estate_urls, execution_date=20240404T084703, start_date=20240404T094813, end_date=20240404T094817
+[2024-04-04T09:48:17.228+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 233 for task extract_real_estate_urls (Task received SIGTERM signal; 4649)
+[2024-04-04T09:48:17.507+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=4649, status='terminated', exitcode=1, started='09:27:15') (4649) terminated with exit code 1

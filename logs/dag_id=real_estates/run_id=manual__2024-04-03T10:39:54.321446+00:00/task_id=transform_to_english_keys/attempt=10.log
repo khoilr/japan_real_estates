@@ -1,0 +1,439 @@
+[2024-04-04T03:15:00.435+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.transform_to_english_keys manual__2024-04-03T10:39:54.321446+00:00 [queued]>
+[2024-04-04T03:15:00.454+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.transform_to_english_keys manual__2024-04-03T10:39:54.321446+00:00 [queued]>
+[2024-04-04T03:15:00.455+0000] {taskinstance.py:2193} INFO - Starting attempt 10 of 10
+[2024-04-04T03:15:00.482+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): transform_to_english_keys> on 2024-04-03 10:39:54.321446+00:00
+[2024-04-04T03:15:00.497+0000] {standard_task_runner.py:60} INFO - Started process 13792 to run task
+[2024-04-04T03:15:00.504+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'transform_to_english_keys', 'manual__2024-04-03T10:39:54.321446+00:00', '--job-id', '151', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmp83k73ifn']
+[2024-04-04T03:15:00.510+0000] {standard_task_runner.py:88} INFO - Job 151: Subtask transform_to_english_keys
+[2024-04-04T03:15:00.949+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.transform_to_english_keys manual__2024-04-03T10:39:54.321446+00:00 [running]> on host 72a42bdc0b23
+[2024-04-04T03:15:01.612+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='transform_to_english_keys' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T10:39:54.321446+00:00' AIRFLOW_CTX_TRY_NUMBER='10' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-03T10:39:54.321446+00:00'
+[2024-04-04T03:15:02.415+0000] {english_keys.py:68} WARNING - Error translating name - クレイドルガーデン宮崎市高岡町飯田　第６
+[2024-04-04T03:15:02.416+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:03.027+0000] {english_keys.py:68} WARNING - Error translating 所在地 - 宮崎県宮崎市高岡町飯田3-19以下未定
+[2024-04-04T03:15:03.028+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:03.692+0000] {english_keys.py:68} WARNING - Error translating 交通 - JR日豊本線「宮崎神宮」駅 車で約14.1ｋｍ                    JR日豊本線「宮崎」駅 車で約14.8ｋｍ                    JR日豊本線「蓮ケ池」駅 車で約15.8ｋｍ
+[2024-04-04T03:15:03.692+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:04.180+0000] {english_keys.py:68} WARNING - Error translating 販売価格 - 1,999万円・2,199万円
+                                                                
+宮崎市の価格相場ページ
+[2024-04-04T03:15:04.181+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:04.654+0000] {english_keys.py:68} WARNING - Error translating 最多価格帯 - -
+[2024-04-04T03:15:04.655+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:05.240+0000] {english_keys.py:68} WARNING - Error translating 建物面積 - 98.00ｍ2・100.43ｍ2
+[2024-04-04T03:15:05.241+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:05.699+0000] {english_keys.py:68} WARNING - Error translating 土地面積 - 140.83ｍ2・150.41ｍ2
+[2024-04-04T03:15:05.700+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:06.272+0000] {english_keys.py:68} WARNING - Error translating 間取り - 4ＬＤＫ
+[2024-04-04T03:15:06.273+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:06.690+0000] {english_keys.py:68} WARNING - Error translating 建物構造 - 木造ストレートまたはアスファルトシングル葺2階建て
+[2024-04-04T03:15:06.690+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:07.320+0000] {english_keys.py:68} WARNING - Error translating 販売スケジュール - 販売中
+[2024-04-04T03:15:07.321+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:07.702+0000] {english_keys.py:68} WARNING - Error translating 販売戸数 / 総戸数 - 2戸
+                                        /
+                                            2戸
+[2024-04-04T03:15:07.703+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:08.382+0000] {english_keys.py:68} WARNING - Error translating 完成予定日 - 2024年4月下旬
+[2024-04-04T03:15:08.383+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:09.026+0000] {english_keys.py:68} WARNING - Error translating 引き渡し可能年月 - 2024年5月上旬
+[2024-04-04T03:15:09.027+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:09.566+0000] {english_keys.py:68} WARNING - Error translating 駐車場 - 2台 ~ 4台（1号棟：4台、2号棟：2台）
+[2024-04-04T03:15:09.567+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:09.964+0000] {english_keys.py:68} WARNING - Error translating 道路の幅員 - 西側：6m・南側：6m
+[2024-04-04T03:15:09.964+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:10.631+0000] {english_keys.py:68} WARNING - Error translating 用途地域 - 第一種中高層住居専用地域
+[2024-04-04T03:15:10.631+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:11.232+0000] {english_keys.py:68} WARNING - Error translating 都市計画 - 市街化区域
+[2024-04-04T03:15:11.232+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:11.728+0000] {english_keys.py:68} WARNING - Error translating 地目 - 宅地
+[2024-04-04T03:15:11.729+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:12.293+0000] {english_keys.py:68} WARNING - Error translating 国土法 - -
+[2024-04-04T03:15:12.293+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:12.837+0000] {english_keys.py:68} WARNING - Error translating 土地の権利 - 所有権
+[2024-04-04T03:15:12.838+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:13.458+0000] {english_keys.py:68} WARNING - Error translating 借地権の種類・期間 - -
+[2024-04-04T03:15:13.458+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:13.942+0000] {english_keys.py:68} WARNING - Error translating 主たる設備の概要 - 公営水道・本下水・オール電化
+[2024-04-04T03:15:13.943+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:14.438+0000] {english_keys.py:68} WARNING - Error translating 建築確認番号 - 第R06SHC100054号・第R06SHC100055号
+[2024-04-04T03:15:14.439+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:15.029+0000] {english_keys.py:68} WARNING - Error translating 施工会社 - 株式会社アーネストワン
+[2024-04-04T03:15:15.030+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:15.408+0000] {english_keys.py:68} WARNING - Error translating 機構融資 - -
+[2024-04-04T03:15:15.409+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:16.044+0000] {english_keys.py:68} WARNING - Error translating 売主 - 株式会社アーネストワン
+                     [国土交通大臣(5)第6157号]
+[2024-04-04T03:15:16.045+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:16.528+0000] {english_keys.py:68} WARNING - Error translating 取引態様 - テラスエステート宮崎営業所(一般媒介)
+[2024-04-04T03:15:16.529+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:16.955+0000] {english_keys.py:68} WARNING - Error translating 備考 - 【本日モデルハウスのご内覧可能！！】
+当日・土日祝・お仕事帰りなどのご内覧もご相談下さい♪
+TEL：0985-41-7751
+22時までお電話対応致しております。　
+
+【お迎えをご希望の方へ】
+→お車でのお迎えや最寄り駅でのお待ち合わせも可能です♪
+お気軽にお申し付けください。
+
+【現地お待ち合わせをご希望の方へ】
+→カーナビ住所をお伝えいたします。
+物件付近で迷われた方もお気軽にお電話下さい。
+
+
+ご希望の日時や時間お気軽にお申し付けください♪
+[2024-04-04T03:15:16.956+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:17.560+0000] {english_keys.py:68} WARNING - Error translating 情報更新日 - 2024/04/02
+[2024-04-04T03:15:17.561+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:17.955+0000] {english_keys.py:68} WARNING - Error translating 次回更新予定日 - 2024/04/16
+[2024-04-04T03:15:17.956+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:18.542+0000] {english_keys.py:68} WARNING - Error translating 取引条件有効期限 - 2025/04/02
+[2024-04-04T03:15:18.542+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:19.172+0000] {english_keys.py:68} WARNING - Error translating name - 【町田市野津田町　新築戸建】
+[2024-04-04T03:15:19.173+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:19.757+0000] {english_keys.py:68} WARNING - Error translating 所在地 - 東京都町田市野津田町
+[2024-04-04T03:15:19.758+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:20.195+0000] {english_keys.py:68} WARNING - Error translating 交通 - 小田急小田原線「鶴川」駅 「薬師ヶ丘」バス乗車14分 徒歩4分                    小田急小田原線「町田」駅 「薬師ヶ丘」バス乗車16分 徒歩4分                    JR横浜線「町田」駅 「薬師ヶ丘」バス乗車16分 徒歩4分
+[2024-04-04T03:15:20.196+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:20.774+0000] {english_keys.py:68} WARNING - Error translating 販売価格 - 3798万円
+                                                                
+町田市の価格相場ページ
+[2024-04-04T03:15:20.774+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:21.184+0000] {english_keys.py:68} WARNING - Error translating 最多価格帯 - 3700万円台(1戸)
+[2024-04-04T03:15:21.185+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:21.866+0000] {english_keys.py:68} WARNING - Error translating 建物面積 - 84.84m2(実測)
+[2024-04-04T03:15:21.867+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:22.390+0000] {english_keys.py:68} WARNING - Error translating 土地面積 - 107.64m2(実測)
+[2024-04-04T03:15:22.391+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:23.028+0000] {english_keys.py:68} WARNING - Error translating 間取り - 3LDK
+[2024-04-04T03:15:23.029+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:23.661+0000] {english_keys.py:68} WARNING - Error translating 建物構造 - 木造2階建て
+[2024-04-04T03:15:23.661+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:24.310+0000] {english_keys.py:68} WARNING - Error translating 販売スケジュール - 新規分譲
+[2024-04-04T03:15:24.311+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:24.890+0000] {english_keys.py:68} WARNING - Error translating 販売戸数 / 総戸数 - 1戸
+                                        /
+                                            1戸
+[2024-04-04T03:15:24.890+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:25.408+0000] {english_keys.py:68} WARNING - Error translating 完成予定日 - 2024年4月
+[2024-04-04T03:15:25.408+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:25.920+0000] {english_keys.py:68} WARNING - Error translating 引き渡し可能年月 - 相談
+[2024-04-04T03:15:25.920+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:26.379+0000] {english_keys.py:68} WARNING - Error translating 駐車場 - -
+[2024-04-04T03:15:26.379+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:26.977+0000] {english_keys.py:68} WARNING - Error translating 道路の幅員 - 道路幅4.0m アスファルト舗装
+[2024-04-04T03:15:26.978+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:27.493+0000] {english_keys.py:68} WARNING - Error translating 用途地域 - 1種低層
+[2024-04-04T03:15:27.494+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:28.143+0000] {english_keys.py:68} WARNING - Error translating 都市計画 - 市街化区域
+[2024-04-04T03:15:28.144+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:28.760+0000] {english_keys.py:68} WARNING - Error translating 地目 - 宅地
+[2024-04-04T03:15:28.761+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:29.374+0000] {english_keys.py:68} WARNING - Error translating 国土法 - -
+[2024-04-04T03:15:29.375+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:29.965+0000] {english_keys.py:68} WARNING - Error translating 土地の権利 - 所有権
+[2024-04-04T03:15:29.966+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:30.528+0000] {english_keys.py:68} WARNING - Error translating 借地権の種類・期間 - 
+[2024-04-04T03:15:30.529+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:31.100+0000] {english_keys.py:68} WARNING - Error translating 借地権の月賃料 - 
+[2024-04-04T03:15:31.101+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:31.184+0000] {local_task_job_runner.py:280} WARNING - Recorded pid 13803 does not match the current pid 13792
+[2024-04-04T03:15:31.188+0000] {process_utils.py:131} INFO - Sending 15 to group 13792. PIDs of all processes in the group: [13792]
+[2024-04-04T03:15:31.189+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 13792
+[2024-04-04T03:15:31.208+0000] {taskinstance.py:2483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-04-04T03:15:31.208+0000] {english_keys.py:68} WARNING - Error translating 保証金 - 
+[2024-04-04T03:15:31.209+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': AirflowException('Task received SIGTERM signal')}
+[2024-04-04T03:15:31.865+0000] {english_keys.py:68} WARNING - Error translating 主たる設備の概要 - 公営水道/都市ガス
+[2024-04-04T03:15:31.866+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:32.520+0000] {english_keys.py:68} WARNING - Error translating 建築確認番号 - 第HPA-23-12875-1号
+[2024-04-04T03:15:32.521+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:32.914+0000] {english_keys.py:68} WARNING - Error translating 施工会社 - -
+[2024-04-04T03:15:32.915+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:33.428+0000] {english_keys.py:68} WARNING - Error translating 機構融資 - -
+[2024-04-04T03:15:33.429+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:34.059+0000] {english_keys.py:68} WARNING - Error translating 売主 - 
+[2024-04-04T03:15:34.060+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:34.541+0000] {english_keys.py:68} WARNING - Error translating 取引態様 - リストインターナショナルリアルティ株式会社町田支店／仲介
+[2024-04-04T03:15:34.542+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:35.102+0000] {english_keys.py:68} WARNING - Error translating 備考 - 公法制限：第１種高度地区　最低敷地面積：120m2
+
+
+◆お電話いただければ当日のご見学も可能です。お気軽にお電話ください。
+
+TEL：0800-800-3119【通話料無料】
+
+◆土日はもちろん、平日、お仕事帰りのご見学も大歓迎
+
+◆ご見学方法はお客様のご希望に合わせて以下のメニューからご選択ください。
+
+○ショートプラン
+
+【目安時間：30分～1時間】
+
+「とりあえず物件だけ見たい」という方に最適。現地待ち合わせ、もしくはお車での送迎で物件見学のみを行うプランです。
+
+○スタンダードプラン
+
+【目安時間：2時間～4時間】
+
+「ついでに他の物件も見学したい」という方に最適。お問い合わせいただいた物件の他に未公開物件のご紹介。資金計画のご相談。現地の物件見学を行っていただきます。弊社は町田駅から徒歩3分、無料駐車場、キッズスペース完備でお客様のお時間の許す限りご対応させていただきます。
+
+○スペシャルプラン
+
+【目安時間：4時間～8時間】
+
+お住まい探しが初めての方に最適。弊社にご来社いただき、住宅ローンの安全な組み方のご説明。お客様のご希望地域の物件紹介。資金計画のご相談。土地・家の探し方のご相談。現地の物件見学を行っていただきます。10時から2時間程度ご相談し、お昼休憩をとっていただき実際の物件を見学いただきます。
+
+上記プランを参考に担当営業にご相談ください。
+
+TEL：0800-800-3119【通話料無料】
+[2024-04-04T03:15:35.103+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:35.538+0000] {english_keys.py:68} WARNING - Error translating 情報更新日 - 2024/04/02
+[2024-04-04T03:15:35.540+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:36.120+0000] {english_keys.py:68} WARNING - Error translating 次回更新予定日 - 2024/04/16
+[2024-04-04T03:15:36.121+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:36.591+0000] {english_keys.py:68} WARNING - Error translating 取引条件有効期限 - 2024/06/30
+[2024-04-04T03:15:36.592+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:37.130+0000] {english_keys.py:68} WARNING - Error translating name - 刈谷市小垣江町地内
+[2024-04-04T03:15:37.131+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:37.554+0000] {english_keys.py:68} WARNING - Error translating 所在地 - 愛知県刈谷市小垣江町地内62
+[2024-04-04T03:15:37.555+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:38.024+0000] {english_keys.py:68} WARNING - Error translating 交通 - 名鉄三河線「小垣江」駅 徒歩8分                    名鉄三河線「刈谷市」駅 徒歩27分
+[2024-04-04T03:15:38.025+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:38.501+0000] {english_keys.py:68} WARNING - Error translating 販売価格 - 3,480万円
+                                                                
+刈谷市の価格相場ページ
+[2024-04-04T03:15:38.502+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:39.026+0000] {english_keys.py:68} WARNING - Error translating 最多価格帯 - -
+[2024-04-04T03:15:39.027+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:39.581+0000] {english_keys.py:68} WARNING - Error translating 建物面積 - 101.33ｍ2
+[2024-04-04T03:15:39.582+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:40.165+0000] {english_keys.py:68} WARNING - Error translating 土地面積 - 106.39ｍ2
+[2024-04-04T03:15:40.166+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:40.809+0000] {english_keys.py:68} WARNING - Error translating 間取り - 3SLDK
+[2024-04-04T03:15:40.810+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:41.236+0000] {english_keys.py:68} WARNING - Error translating 建物構造 - 木造2階建
+[2024-04-04T03:15:41.237+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:41.724+0000] {english_keys.py:68} WARNING - Error translating 販売スケジュール - 販売中
+[2024-04-04T03:15:41.725+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:42.283+0000] {english_keys.py:68} WARNING - Error translating 販売戸数 / 総戸数 - 1戸
+                                        /
+                                            3戸
+[2024-04-04T03:15:42.284+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:42.861+0000] {english_keys.py:68} WARNING - Error translating 完成予定日 - 2023年12月
+[2024-04-04T03:15:42.862+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:43.470+0000] {english_keys.py:68} WARNING - Error translating 引き渡し可能年月 - 即引渡可
+[2024-04-04T03:15:43.471+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:44.039+0000] {english_keys.py:68} WARNING - Error translating 駐車場 - 1台 ~ 2台
+[2024-04-04T03:15:44.039+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:44.478+0000] {english_keys.py:68} WARNING - Error translating 道路の幅員 - 南西側幅員2m公道
+[2024-04-04T03:15:44.479+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:45.031+0000] {english_keys.py:68} WARNING - Error translating 用途地域 - 第一種住居地域
+[2024-04-04T03:15:45.031+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:45.702+0000] {english_keys.py:68} WARNING - Error translating 都市計画 - 市街化区域
+[2024-04-04T03:15:45.703+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:46.258+0000] {english_keys.py:68} WARNING - Error translating 地目 - 宅地
+[2024-04-04T03:15:46.260+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:46.728+0000] {english_keys.py:68} WARNING - Error translating 国土法 - -
+[2024-04-04T03:15:46.729+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:47.420+0000] {english_keys.py:68} WARNING - Error translating 土地の権利 - 所有権
+[2024-04-04T03:15:47.421+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:47.954+0000] {english_keys.py:68} WARNING - Error translating 借地権の種類・期間 - -
+[2024-04-04T03:15:47.955+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:48.500+0000] {english_keys.py:68} WARNING - Error translating 主たる設備の概要 - 電気、公営水道、都市ガス
+[2024-04-04T03:15:48.501+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:48.921+0000] {english_keys.py:68} WARNING - Error translating 建築確認番号 - 完成済みのため省略
+[2024-04-04T03:15:48.922+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:49.464+0000] {english_keys.py:68} WARNING - Error translating 施工会社 - -
+[2024-04-04T03:15:49.464+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:50.101+0000] {english_keys.py:68} WARNING - Error translating 機構融資 - -
+[2024-04-04T03:15:50.102+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:50.771+0000] {english_keys.py:68} WARNING - Error translating 売主 - 
+[2024-04-04T03:15:50.772+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:51.260+0000] {english_keys.py:68} WARNING - Error translating 取引態様 - 仲介　株式会社アイデムホーム安城店
+[2024-04-04T03:15:51.261+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:51.896+0000] {english_keys.py:68} WARNING - Error translating 備考 - ●○●愛知県新築戸建成約件数トップクラスの実績●○●
+三河エリア全域で豊富な物件情報を取り扱い中♪
+年末年始以外は年中無休で営業中！経験豊富な弊社担当者が丁寧にご対応致します。
+
+■弊社店舗について
+駐車場完備、キッズコーナーも併設しておりますのでお子様連れでもご安心下さい。
+豊富な物件資料を取り揃えており、落ち着いた空間でドリンクサービスもございますので快適にお過ごし頂けます。
+
+■ご案内について
+現地でのお待ち合わせやお客様のご希望によりご自宅までの送迎や最寄り駅までの送迎も行います。
+又、弊社までご来店して頂きご案内も可能です。
+
+■住宅ローンについて
+弊社では豊富な販売実績により、お客様のご希望や条件に合う最適な住宅ローン商品
+のご提案をさせて頂きます。また、以下のようなご相談も是非ご相談下さい。
+・勤続年数が短い方、自営業者の方
+・車のローンやクレジット、キャッシングの借入がある方
+・自己資金がない、支払いに不安のある方
+など他にもご不安、心配な事がある方は何でもご相談下さい。
+
+■その他各種ご相談もお気軽にご相談下さい
+弊社では「ワンストップサービス」を取り入れております。
+専門部署によるリフォーム、オプション工事や火災保険の販売など住宅購入に関する事はすべてアイデムホームで対応可能です。
+また、安心できるファイナンシャルプランナーによる資金計画（要予約）も実施しております。
+
+アイデムホームではお客様第一での営業を心掛けております。
+スタッフ一同全力でお客様のサポートをさせて頂きますのでお気軽にお問合せ下さい。
+[2024-04-04T03:15:51.896+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:52.513+0000] {english_keys.py:68} WARNING - Error translating 情報更新日 - 2024/04/02
+[2024-04-04T03:15:52.514+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:53.140+0000] {english_keys.py:68} WARNING - Error translating 次回更新予定日 - 2024/04/16
+[2024-04-04T03:15:53.141+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:53.674+0000] {english_keys.py:68} WARNING - Error translating 取引条件有効期限 - 2024/12/31
+[2024-04-04T03:15:53.674+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:54.110+0000] {english_keys.py:68} WARNING - Error translating name - リーブルガーデン福重4丁目第4　新築戸建　1～2号棟
+[2024-04-04T03:15:54.111+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:54.666+0000] {english_keys.py:68} WARNING - Error translating 所在地 - 福岡県福岡市西区福重４丁目
+[2024-04-04T03:15:54.667+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:55.338+0000] {english_keys.py:68} WARNING - Error translating 交通 - 福岡市地下鉄空港線「姪浜」駅 徒歩24分                    福岡市地下鉄七隈線「橋本」駅 徒歩25分                    福岡市地下鉄七隈線「次郎丸」駅 徒歩32分
+[2024-04-04T03:15:55.338+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:55.717+0000] {english_keys.py:68} WARNING - Error translating 販売価格 - 3550万円・3580万円
+                                                                
+福岡市西区の価格相場ページ
+[2024-04-04T03:15:55.718+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:56.145+0000] {english_keys.py:68} WARNING - Error translating 最多価格帯 - 3500万円台(2戸)
+[2024-04-04T03:15:56.146+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:56.756+0000] {english_keys.py:68} WARNING - Error translating 建物面積 - 96.58m2・98.40m2
+[2024-04-04T03:15:56.757+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:57.371+0000] {english_keys.py:68} WARNING - Error translating 土地面積 - 75.52m2・75.53m2
+[2024-04-04T03:15:57.371+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:57.757+0000] {english_keys.py:68} WARNING - Error translating 間取り - 2LDK+S・3LDK+S
+[2024-04-04T03:15:57.758+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:58.276+0000] {english_keys.py:68} WARNING - Error translating 建物構造 - 木造3階建て
+[2024-04-04T03:15:58.277+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:58.776+0000] {english_keys.py:68} WARNING - Error translating 販売スケジュール - 新規分譲
+[2024-04-04T03:15:58.777+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:15:59.417+0000] {english_keys.py:68} WARNING - Error translating 販売戸数 / 総戸数 - 2戸
+                                        /
+                                            2戸
+[2024-04-04T03:15:59.418+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:00.043+0000] {english_keys.py:68} WARNING - Error translating 完成予定日 - 2024年5月完成予定
+[2024-04-04T03:16:00.044+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:00.499+0000] {english_keys.py:68} WARNING - Error translating 引き渡し可能年月 - 相談
+[2024-04-04T03:16:00.500+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:01.007+0000] {english_keys.py:68} WARNING - Error translating 駐車場 - カースペース有
+[2024-04-04T03:16:01.008+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:01.405+0000] {english_keys.py:68} WARNING - Error translating 道路の幅員 - 道路幅5.0m アスファルト舗装
+[2024-04-04T03:16:01.405+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:01.803+0000] {english_keys.py:68} WARNING - Error translating 用途地域 - 2種住居
+[2024-04-04T03:16:01.803+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:02.310+0000] {english_keys.py:68} WARNING - Error translating 都市計画 - 市街化区域
+[2024-04-04T03:16:02.311+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:02.918+0000] {english_keys.py:68} WARNING - Error translating 地目 - 
+[2024-04-04T03:16:02.919+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:03.582+0000] {english_keys.py:68} WARNING - Error translating 国土法 - -
+[2024-04-04T03:16:03.583+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:04.014+0000] {english_keys.py:68} WARNING - Error translating 土地の権利 - 所有権
+[2024-04-04T03:16:04.015+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:04.533+0000] {english_keys.py:68} WARNING - Error translating 借地権の種類・期間 - 
+[2024-04-04T03:16:04.533+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:05.135+0000] {english_keys.py:68} WARNING - Error translating 借地権の月賃料 - 
+[2024-04-04T03:16:05.135+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:05.580+0000] {english_keys.py:68} WARNING - Error translating 保証金 - 
+[2024-04-04T03:16:05.581+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:06.106+0000] {english_keys.py:68} WARNING - Error translating 主たる設備の概要 - 電気/公営水道/本下水/都市ガス
+[2024-04-04T03:16:06.107+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:06.500+0000] {english_keys.py:68} WARNING - Error translating 建築確認番号 - 第R05SHC118119号、他
+[2024-04-04T03:16:06.501+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:06.948+0000] {english_keys.py:68} WARNING - Error translating 施工会社 - -
+[2024-04-04T03:16:06.950+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:07.565+0000] {english_keys.py:68} WARNING - Error translating 機構融資 - -
+[2024-04-04T03:16:07.566+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:08.233+0000] {english_keys.py:68} WARNING - Error translating 売主 - 
+[2024-04-04T03:16:08.234+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:08.872+0000] {english_keys.py:68} WARNING - Error translating 取引態様 - 株式会社　リアルティストア福岡城南店／仲介
+[2024-04-04T03:16:08.873+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:09.482+0000] {english_keys.py:68} WARNING - Error translating 備考 - -
+[2024-04-04T03:16:09.483+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:09.868+0000] {english_keys.py:68} WARNING - Error translating 情報更新日 - 2024/04/02
+[2024-04-04T03:16:09.869+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:10.265+0000] {english_keys.py:68} WARNING - Error translating 次回更新予定日 - 2024/04/15
+[2024-04-04T03:16:10.266+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:10.802+0000] {english_keys.py:68} WARNING - Error translating 取引条件有効期限 - 2025/11/07
+[2024-04-04T03:16:10.803+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:11.265+0000] {english_keys.py:68} WARNING - Error translating name - ■見学予約キャンペーン実施中■柴田町槻木白幡第５■
+[2024-04-04T03:16:11.266+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:11.951+0000] {english_keys.py:68} WARNING - Error translating 所在地 - 宮城県柴田郡柴田町槻木白幡４丁目
+[2024-04-04T03:16:11.952+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:12.409+0000] {english_keys.py:68} WARNING - Error translating 交通 - JR東北本線「槻木」駅 徒歩11分
+[2024-04-04T03:16:12.410+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:12.921+0000] {english_keys.py:68} WARNING - Error translating 販売価格 - 2330～2380万円
+                                                                
+柴田郡柴田町の価格相場ページ
+[2024-04-04T03:16:12.922+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:13.407+0000] {english_keys.py:68} WARNING - Error translating 最多価格帯 - 2330万円（1戸）、2380万円（1戸）
+[2024-04-04T03:16:13.408+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:13.998+0000] {english_keys.py:68} WARNING - Error translating 建物面積 - 96.78m2～100.44m2
+[2024-04-04T03:16:13.999+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:14.567+0000] {english_keys.py:68} WARNING - Error translating 土地面積 - 239.50m2～330.34m2
+[2024-04-04T03:16:14.568+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:15.095+0000] {english_keys.py:68} WARNING - Error translating 間取り - 4ＬＤＫ+Ｓ～4ＬＤＫ+Ｓ
+[2024-04-04T03:16:15.096+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:15.649+0000] {english_keys.py:68} WARNING - Error translating 建物構造 - 2階建て 構造：木造 工法：
+[2024-04-04T03:16:15.651+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:16.102+0000] {english_keys.py:68} WARNING - Error translating 販売スケジュール - -
+[2024-04-04T03:16:16.103+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:16.783+0000] {english_keys.py:68} WARNING - Error translating 販売戸数 / 総戸数 - 2戸
+                                        /
+                                            2戸
+[2024-04-04T03:16:16.784+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:17.222+0000] {english_keys.py:68} WARNING - Error translating 完成予定日 - 2024/03
+[2024-04-04T03:16:17.223+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:17.765+0000] {english_keys.py:68} WARNING - Error translating 引き渡し可能年月 - 相談
+[2024-04-04T03:16:17.766+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:18.239+0000] {english_keys.py:68} WARNING - Error translating 駐車場 - 2台
+[2024-04-04T03:16:18.240+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:18.725+0000] {english_keys.py:68} WARNING - Error translating 道路の幅員 - 5.20m ～ 10.00m
+[2024-04-04T03:16:18.725+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:19.385+0000] {english_keys.py:68} WARNING - Error translating 用途地域 - 第1種住居地域
+[2024-04-04T03:16:19.386+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:19.792+0000] {english_keys.py:68} WARNING - Error translating 都市計画 - 市街化区域
+[2024-04-04T03:16:19.793+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:20.339+0000] {english_keys.py:68} WARNING - Error translating 地目 - 地目：宅地
+[2024-04-04T03:16:20.340+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:21.001+0000] {english_keys.py:68} WARNING - Error translating 国土法 - 不要
+[2024-04-04T03:16:21.002+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:21.574+0000] {english_keys.py:68} WARNING - Error translating 土地の権利 - 所有権
+[2024-04-04T03:16:21.576+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:22.204+0000] {english_keys.py:68} WARNING - Error translating 借地権の種類・期間 - -
+[2024-04-04T03:16:22.205+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:22.652+0000] {english_keys.py:68} WARNING - Error translating 主たる設備の概要 - 公営水道、公共下水、ＩＨ
+[2024-04-04T03:16:22.653+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:23.247+0000] {english_keys.py:68} WARNING - Error translating 建築確認番号 - 完成済み
+[2024-04-04T03:16:23.248+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:23.663+0000] {english_keys.py:68} WARNING - Error translating 施工会社 - -
+[2024-04-04T03:16:23.664+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:24.191+0000] {english_keys.py:68} WARNING - Error translating 機構融資 - -
+[2024-04-04T03:16:24.192+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:24.794+0000] {english_keys.py:68} WARNING - Error translating 売主 - -
+[2024-04-04T03:16:24.795+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:25.267+0000] {english_keys.py:68} WARNING - Error translating 取引態様 - 株式会社永大ハウス工業（媒介）
+[2024-04-04T03:16:25.267+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:25.682+0000] {english_keys.py:68} WARNING - Error translating 備考 - ※詳細と異なる場合は現況優先とします。
+[2024-04-04T03:16:25.683+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:26.341+0000] {english_keys.py:68} WARNING - Error translating 情報更新日 - 2024/04/02
+[2024-04-04T03:16:26.342+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:27.023+0000] {english_keys.py:68} WARNING - Error translating 次回更新予定日 - 2024/04/09
+[2024-04-04T03:16:27.024+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:27.497+0000] {english_keys.py:68} WARNING - Error translating 取引条件有効期限 - 2024/04/16
+[2024-04-04T03:16:27.497+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:28.082+0000] {english_keys.py:68} WARNING - Error translating name - オープンプレイス柳瀬サンシャイン
+[2024-04-04T03:16:28.082+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:28.596+0000] {english_keys.py:68} WARNING - Error translating 所在地 - 福岡県福岡市南区柳瀬１丁目
+[2024-04-04T03:16:28.596+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:29.273+0000] {english_keys.py:68} WARNING - Error translating 交通 - JR博多南線「博多南」駅 徒歩25分
+[2024-04-04T03:16:29.273+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:29.766+0000] {english_keys.py:68} WARNING - Error translating 販売価格 - 2,049万円
+[2024-04-04T03:16:29.766+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:30.189+0000] {english_keys.py:68} WARNING - Error translating 最多価格帯 - -
+[2024-04-04T03:16:30.190+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:30.730+0000] {english_keys.py:68} WARNING - Error translating 建物面積 - -
+[2024-04-04T03:16:30.730+0000] {english_keys.py:69} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T03:16:31.196+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=13792, name='airflow task ru', status='sleeping', started='03:14:59') did not respond to SIGTERM. Trying SIGKILL
+[2024-04-04T03:16:31.198+0000] {process_utils.py:86} INFO - Sending the signal 9 to group 13792
+[2024-04-04T03:16:31.251+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=13792, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='03:14:59') (13792) terminated with exit code -9
+[2024-04-04T03:16:31.252+0000] {standard_task_runner.py:175} ERROR - Job 152 was killed before it finished (likely due to running out of memory)

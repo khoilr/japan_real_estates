@@ -1,0 +1,41 @@
+[2024-04-04T09:48:45.560+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.extract_real_estate_urls manual__2024-04-04T08:47:03.043176+00:00 [queued]>
+[2024-04-04T09:48:45.579+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.extract_real_estate_urls manual__2024-04-04T08:47:03.043176+00:00 [queued]>
+[2024-04-04T09:48:45.580+0000] {taskinstance.py:2193} INFO - Starting attempt 9 of 9
+[2024-04-04T09:48:45.609+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): extract_real_estate_urls> on 2024-04-04 08:47:03.043176+00:00
+[2024-04-04T09:48:45.624+0000] {standard_task_runner.py:60} INFO - Started process 4942 to run task
+[2024-04-04T09:48:45.632+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'extract_real_estate_urls', 'manual__2024-04-04T08:47:03.043176+00:00', '--job-id', '235', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmp_uwtuvv3']
+[2024-04-04T09:48:45.637+0000] {standard_task_runner.py:88} INFO - Job 235: Subtask extract_real_estate_urls
+[2024-04-04T09:48:46.071+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.extract_real_estate_urls manual__2024-04-04T08:47:03.043176+00:00 [running]> on host 05a350db99a0
+[2024-04-04T09:48:46.227+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='extract_real_estate_urls' AIRFLOW_CTX_EXECUTION_DATE='2024-04-04T08:47:03.043176+00:00' AIRFLOW_CTX_TRY_NUMBER='9' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-04T08:47:03.043176+00:00'
+[2024-04-04T09:48:47.988+0000] {urls.py:36} INFO - Found 86115 real estates
+[2024-04-04T09:48:47.994+0000] {urls.py:41} INFO - Found 2160 pages
+[2024-04-04T09:49:18.577+0000] {urls.py:55} INFO - Batch 1/1 fetched 2160 pages
+[2024-04-04T10:19:14.207+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/__init__.py", line 22, in extract_real_estate_urls
+    return asyncio.run(_extract_real_estate_urls())
+  File "/usr/local/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/urls.py", line 59, in _extract_real_estate_urls
+    urls.extend(await extract_urls_at_page(response_text, batch_index * BATCH_SIZE + index + 1))
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/urls.py", line 105, in extract_urls_at_page
+    write_page_source(f"https://www.homes.co.jp/list?page={index}".replace("/", "-"), soup.prettify())
+  File "/opt/airflow/dags/real_estates/utils.py", line 18, in write_page_source
+    with open(f"./outputs/{name}.html", "w") as file:
+FileNotFoundError: [Errno 2] No such file or directory: './outputs/https:--www.homes.co.jp-list?page=2151.html'
+[2024-04-04T10:19:14.225+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=real_estates, task_id=extract_real_estate_urls, execution_date=20240404T084703, start_date=20240404T094845, end_date=20240404T101914
+[2024-04-04T10:19:14.249+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 235 for task extract_real_estate_urls ([Errno 2] No such file or directory: './outputs/https:--www.homes.co.jp-list?page=2151.html'; 4942)
+[2024-04-04T10:19:14.533+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-04T10:19:14.584+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

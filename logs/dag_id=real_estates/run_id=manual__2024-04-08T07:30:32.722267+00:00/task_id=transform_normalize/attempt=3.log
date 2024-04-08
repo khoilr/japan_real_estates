@@ -1,0 +1,50 @@
+[2024-04-08T08:30:24.665+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.transform_normalize manual__2024-04-08T07:30:32.722267+00:00 [queued]>
+[2024-04-08T08:30:24.685+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.transform_normalize manual__2024-04-08T07:30:32.722267+00:00 [queued]>
+[2024-04-08T08:30:24.686+0000] {taskinstance.py:2193} INFO - Starting attempt 3 of 3
+[2024-04-08T08:30:24.713+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): transform_normalize> on 2024-04-08 07:30:32.722267+00:00
+[2024-04-08T08:30:24.728+0000] {standard_task_runner.py:60} INFO - Started process 506 to run task
+[2024-04-08T08:30:24.735+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'transform_normalize', 'manual__2024-04-08T07:30:32.722267+00:00', '--job-id', '343', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmpauu0jgeq']
+[2024-04-08T08:30:24.741+0000] {standard_task_runner.py:88} INFO - Job 343: Subtask transform_normalize
+[2024-04-08T08:30:24.840+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.transform_normalize manual__2024-04-08T07:30:32.722267+00:00 [running]> on host 0a1174cdb8a2
+[2024-04-08T08:30:25.430+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='transform_normalize' AIRFLOW_CTX_EXECUTION_DATE='2024-04-08T07:30:32.722267+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-08T07:30:32.722267+00:00'
+[2024-04-08T08:30:25.448+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+  |     result = _execute_callable(context=context, **execute_callable_kwargs)
+  |   File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+  |     return execute_callable(context=context, **execute_callable_kwargs)
+  |   File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+  |     return_value = super().execute(context)
+  |   File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+  |     return_value = self.execute_callable()
+  |   File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+  |     return self.python_callable(*self.op_args, **self.op_kwargs)
+  |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py", line 20, in transform_normalize
+  |     return trio.run(_normalize, data)
+  |   File "/home/airflow/.local/lib/python3.8/site-packages/trio/_core/_run.py", line 2288, in run
+  |     raise runner.main_task_outcome.error
+  |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 12, in _normalize
+  |     nursery.start_soon(normalize, item, normalized_data)
+  |   File "/home/airflow/.local/lib/python3.8/site-packages/trio/_core/_run.py", line 954, in __aexit__
+  |     raise combined_error_from_nursery
+  | exceptiongroup.ExceptionGroup: Exceptions from Trio nursery (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 50, in normalize
+    |     normalized_item["price"] = float(price_bound[0])
+    | IndexError: list index out of range
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 50, in normalize
+    |     normalized_item["price"] = float(price_bound[0])
+    | IndexError: list index out of range
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 50, in normalize
+    |     normalized_item["price"] = float(price_bound[0])
+    | IndexError: list index out of range
+    +------------------------------------
+[2024-04-08T08:30:25.466+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=real_estates, task_id=transform_normalize, execution_date=20240408T073032, start_date=20240408T083024, end_date=20240408T083025
+[2024-04-08T08:30:25.489+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 343 for task transform_normalize (Exceptions from Trio nursery (3 sub-exceptions); 506)
+[2024-04-08T08:30:25.549+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-08T08:30:25.894+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

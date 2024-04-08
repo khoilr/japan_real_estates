@@ -1,0 +1,135 @@
+[2024-04-08T07:31:18.470+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.extract_real_estates manual__2024-04-08T07:30:32.722267+00:00 [queued]>
+[2024-04-08T07:31:18.490+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.extract_real_estates manual__2024-04-08T07:30:32.722267+00:00 [queued]>
+[2024-04-08T07:31:18.491+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-08T07:31:18.515+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): extract_real_estates> on 2024-04-08 07:30:32.722267+00:00
+[2024-04-08T07:31:18.529+0000] {standard_task_runner.py:60} INFO - Started process 81215 to run task
+[2024-04-08T07:31:18.538+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'extract_real_estates', 'manual__2024-04-08T07:30:32.722267+00:00', '--job-id', '327', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmp_91s1yw9']
+[2024-04-08T07:31:18.544+0000] {standard_task_runner.py:88} INFO - Job 327: Subtask extract_real_estates
+[2024-04-08T07:31:18.958+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.extract_real_estates manual__2024-04-08T07:30:32.722267+00:00 [running]> on host 05a350db99a0
+[2024-04-08T07:31:19.150+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='extract_real_estates' AIRFLOW_CTX_EXECUTION_DATE='2024-04-08T07:30:32.722267+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-08T07:30:32.722267+00:00'
+[2024-04-08T07:31:22.324+0000] {real_estates.py:37} INFO - Batch 1/1 fetched 155 pages
+[2024-04-08T07:31:23.099+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17076860000091/: could not convert string to float: '107.44～107.45ｍ2'
+[2024-04-08T07:31:23.943+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17077500000408/: could not convert string to float: '84.90ｍ2～99.60ｍ2'
+[2024-04-08T07:31:24.740+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17079580000134/: could not convert string to float: '100.00ｍ2～104.21ｍ2'
+[2024-04-08T07:31:25.215+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17017190000317/: could not convert string to float: '191.71（57.99坪）'
+[2024-04-08T07:31:26.077+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17063270000453/: could not convert string to float: '141.55ｍ2'
+[2024-04-08T07:31:26.448+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17007820000100/: could not convert string to float: '152.5～167.96'
+[2024-04-08T07:31:26.842+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17007820000099/: could not convert string to float: '163.51～163.53'
+[2024-04-08T07:31:27.881+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17010140001216/: could not convert string to float: '174.90ｍ2'
+[2024-04-08T07:31:28.292+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17069080002412/: could not convert string to float: '101.46~101.46'
+[2024-04-08T07:31:28.564+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17077370000849/: could not convert string to float: '111.19～119.60'
+[2024-04-08T07:31:29.051+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17059460000390/: could not convert string to float: '79.19～98.03'
+[2024-04-08T07:31:31.084+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17079330002436/: could not convert string to float: '143.53～149.03ｍ2'
+[2024-04-08T07:31:31.830+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17002970000583/: could not convert string to float: '2区画\n                                        /\n                                            2区画'
+[2024-04-08T07:31:32.209+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17059390000320/: could not convert string to float: '70.13(実測)'
+[2024-04-08T07:31:33.373+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17059460000395/: could not convert string to float: '83.06・83.11'
+[2024-04-08T07:31:33.688+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17020970024727/: could not convert string to float: '47.73～57.42'
+[2024-04-08T07:31:33.995+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17020970024733/: could not convert string to float: '71.37～77.04'
+[2024-04-08T07:31:34.439+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17059460000392/: could not convert string to float: '70.04～71.71'
+[2024-04-08T07:31:34.885+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17017190000318/: could not convert string to float: '143.16～147.13（43.30坪～44.50坪）'
+[2024-04-08T07:31:36.011+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17012640000071/: could not convert string to float: '1区画\n                                        /\n                                            22区画'
+[2024-04-08T07:31:36.318+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17020970024734/: could not convert string to float: '1区画\n                                        /\n                                            6区画'
+[2024-04-08T07:31:36.720+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17080960000166/: could not convert string to float: '101.43・101.85'
+[2024-04-08T07:31:37.114+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17059460000396/: could not convert string to float: '47.54・49.83'
+[2024-04-08T07:31:37.523+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17080960000169/: could not convert string to float: '116.28・126.02'
+[2024-04-08T07:31:37.966+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17017190000319/: could not convert string to float: '133.90～160.01（40.50坪～48.40坪）'
+[2024-04-08T07:31:38.265+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17073850001707/: could not convert string to float: '205.87～207.64'
+[2024-04-08T07:31:38.892+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17073810001472/: could not convert string to float: '150.94～153.40'
+[2024-04-08T07:31:39.307+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17054070000231/: could not convert string to float: '113.83～121.84'
+[2024-04-08T07:31:39.629+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17073790001375/: could not convert string to float: '91.35～93.12'
+[2024-04-08T07:31:40.041+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17076860000094/: could not convert string to float: '207.43ｍ2'
+[2024-04-08T07:31:40.897+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17059990000230/: could not convert string to float: '46.16～48.02'
+[2024-04-08T07:31:41.240+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17072500000139/: could not convert string to float: '158.00～167.34'
+[2024-04-08T07:31:42.239+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17020970024729/: could not convert string to float: '43.97～48.66'
+[2024-04-08T07:31:42.667+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17059460000393/: could not convert string to float: '76.25・76.29'
+[2024-04-08T07:31:43.053+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17079380000027/: could not convert string to float: '139.18ｍ2・146.03ｍ2'
+[2024-04-08T07:31:44.298+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17080960000168/: could not convert string to float: '104.66・123.51'
+[2024-04-08T07:31:45.047+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17080960000167/: could not convert string to float: '232.72～242.29'
+[2024-04-08T07:31:45.887+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17079330002435/: could not convert string to float: '70.48～76.48ｍ2'
+[2024-04-08T07:31:46.596+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17024410000026/: could not convert string to float: '61.03ｍ2'
+[2024-04-08T07:31:47.001+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17078020001233/: could not convert string to float: '143.00～146.83'
+[2024-04-08T07:31:47.690+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17060170009105/: could not convert string to float: '76.77～86.07＜私道負担面積2.14＞'
+[2024-04-08T07:31:48.073+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17010140001217/: could not convert string to float: '388.50ｍ2'
+[2024-04-08T07:31:48.474+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17082230000429/: could not convert string to float: '100.13・110.54'
+[2024-04-08T07:31:48.862+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17054070000229/: could not convert string to float: '199.66・199.67'
+[2024-04-08T07:31:49.343+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17079330002437/: could not convert string to float: '96.66ｍ2'
+[2024-04-08T07:31:49.769+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17080960000165/: could not convert string to float: '201.05・201.90'
+[2024-04-08T07:31:51.635+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17069060011405/: could not convert string to float: '101.08＜私道負担面積144\u3000私道負担割合1/7＞'
+[2024-04-08T07:31:52.307+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17020970024732/: could not convert string to float: '79.89～97.90'
+[2024-04-08T07:31:52.745+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17002970000584/: could not convert string to float: '6区画\n                                        /\n                                            6区画'
+[2024-04-08T07:31:53.574+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17006290000260/: could not convert string to float: '106.32～122.88'
+[2024-04-08T07:31:53.958+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17005120000529/: could not convert string to float: '124.54（約37.67坪）'
+[2024-04-08T07:31:54.287+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17069080002413/: could not convert string to float: '140.79~155.31'
+[2024-04-08T07:31:54.715+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17077500000409/: could not convert string to float: '94.27～96.05'
+[2024-04-08T07:31:55.128+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17080960000170/: could not convert string to float: '139.98～165.08'
+[2024-04-08T07:31:55.573+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17076860000090/: could not convert string to float: '127.59～127.77ｍ2'
+[2024-04-08T07:31:56.171+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17077370000850/: could not convert string to float: '171.39～176.23'
+[2024-04-08T07:31:56.523+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17020970024730/: could not convert string to float: '71.77～72.96'
+[2024-04-08T07:31:57.350+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17069060011403/: could not convert string to float: '120.33～153.39'
+[2024-04-08T07:31:57.793+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17069060011397/: could not convert string to float: '106.08～110.85'
+[2024-04-08T07:31:58.217+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17078020001234/: could not convert string to float: '118.71～123.15'
+[2024-04-08T07:31:58.646+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17018090001065/: could not convert string to float: '200.99～201.32'
+[2024-04-08T07:32:00.227+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17080960000164/: could not convert string to float: '168.26～186.95'
+[2024-04-08T07:32:00.667+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17054070000230/: could not convert string to float: '132.22～144.66'
+[2024-04-08T07:32:01.095+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17069060011402/: could not convert string to float: '142.97～202.01'
+[2024-04-08T07:32:02.964+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17077870000047/: could not convert string to float: '53.95ｍ2'
+[2024-04-08T07:32:03.384+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17082230000426/: could not convert string to float: '165・177.71'
+[2024-04-08T07:32:03.741+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17021890000233/: could not convert string to float: '74.41ｍ2'
+[2024-04-08T07:32:05.185+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17020970024728/: could not convert string to float: '1区画\n                                        /\n                                            1区画'
+[2024-04-08T07:32:06.038+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17059460000391/: could not convert string to float: '126.00～150.00'
+[2024-04-08T07:32:06.431+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17080950000188/: could not convert string to float: '110.22～128.00'
+[2024-04-08T07:32:06.799+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17015760000074/: could not convert string to float: '204.24～275.03'
+[2024-04-08T07:32:07.205+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17002970000582/: could not convert string to float: '1区画\n                                        /\n                                            1区画'
+[2024-04-08T07:32:07.847+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/tochi/b-17068930000037/: could not convert string to float: '177.52～249.79'
+[2024-04-08T07:32:08.247+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17005120000531/: could not convert string to float: '159.59（約48.27坪）'
+[2024-04-08T07:32:08.632+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17018090001064/: could not convert string to float: '180.66ｍ2・185.25ｍ2'
+[2024-04-08T07:32:09.020+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17053680000140/: could not convert string to float: '165.89ｍ2'
+[2024-04-08T07:32:09.341+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17073850001705/: could not convert string to float: '121.19～137.88'
+[2024-04-08T07:32:09.709+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17080950000189/: could not convert string to float: '160.21・161.49'
+[2024-04-08T07:32:10.807+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17080950000186/: could not convert string to float: '110.93・111.23'
+[2024-04-08T07:32:11.191+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17069060011404/: could not convert string to float: '78.85～79.97'
+[2024-04-08T07:32:11.619+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17076860000093/: could not convert string to float: '110.46～114.87ｍ2'
+[2024-04-08T07:32:11.994+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17082070000118/: could not convert string to float: '109.82～121.25'
+[2024-04-08T07:32:12.514+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17079330002434/: could not convert string to float: '147.02～148.76'
+[2024-04-08T07:32:12.899+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17005120000530/: could not convert string to float: '120.22（約36.36坪）'
+[2024-04-08T07:32:13.724+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17069060011401/: could not convert string to float: '114.87～156.63'
+[2024-04-08T07:32:14.846+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17020970024737/: could not convert string to float: '84.88～85.64'
+[2024-04-08T07:32:15.252+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17080950000185/: could not convert string to float: '131.45・132.57'
+[2024-04-08T07:32:15.669+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17080950000187/: could not convert string to float: '100.84～116.42'
+[2024-04-08T07:32:16.414+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17076860000092/: could not convert string to float: '152.42～166.78ｍ2'
+[2024-04-08T07:32:16.890+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17019460001075/: could not convert string to float: '120.5～134.34'
+[2024-04-08T07:32:17.707+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17053900000079/: could not convert string to float: '149.18平米'
+[2024-04-08T07:32:18.496+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17005120000532/: could not convert string to float: '188.12（約56.90坪）'
+[2024-04-08T07:32:19.638+0000] {real_estates.py:97} ERROR - Error extracting data from https://www.homes.co.jp/kodate/b-17063310000303/: could not convert string to float: '101.35ｍ2～121.43ｍ2'
+[2024-04-08T07:32:19.967+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-32175980000907/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:20.342+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1507730000108/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:20.678+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1358110006664/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:21.012+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1358110006658/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:21.675+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1358110006589/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:22.008+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1358110006636/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:22.296+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-32176740000015/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:22.629+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-32174520000445/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:23.060+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1124400015832/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:23.395+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1102210024618/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:24.118+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1496700003581/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:24.492+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1472370004660/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:24.889+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1472370004513/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:25.277+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1364410009352/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:25.690+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1418240004126/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:26.090+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1020740082062/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:26.788+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1512540001828/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:27.190+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1252630010131/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:27.536+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1498690000305/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:27.953+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1124550022345/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:28.370+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-1124550022978/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:29.034+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-93070000083/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:29.373+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-93070000088/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:29.669+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-93070000090/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:30.068+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-93070000098/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:30.467+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-93070000096/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:30.867+0000] {real_estates.py:89} WARNING - https://www.homes.co.jp/kodate/b-93070000089/ doesn't match any type of format. Skipping...
+[2024-04-08T07:32:30.880+0000] {real_estates.py:46} INFO - Extracted 35 real estates
+[2024-04-08T07:32:30.915+0000] {python.py:204} INFO - Done. Returned value not shown
+[2024-04-08T07:32:30.962+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=real_estates, task_id=extract_real_estates, execution_date=20240408T073032, start_date=20240408T073118, end_date=20240408T073230
+[2024-04-08T07:32:31.065+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-08T07:32:31.120+0000] {taskinstance.py:3312} INFO - 2 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,111 @@
+[2024-04-04T04:36:09.246+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.transform_to_english_keys scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T04:36:09.266+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.transform_to_english_keys scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T04:36:09.267+0000] {taskinstance.py:2193} INFO - Starting attempt 7 of 7
+[2024-04-04T04:36:09.294+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): transform_to_english_keys> on 2024-04-03 00:00:00+00:00
+[2024-04-04T04:36:09.308+0000] {standard_task_runner.py:60} INFO - Started process 407 to run task
+[2024-04-04T04:36:09.316+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'transform_to_english_keys', 'scheduled__2024-04-03T00:00:00+00:00', '--job-id', '166', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmp7nyi7xsa']
+[2024-04-04T04:36:09.321+0000] {standard_task_runner.py:88} INFO - Job 166: Subtask transform_to_english_keys
+[2024-04-04T04:36:09.428+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.transform_to_english_keys scheduled__2024-04-03T00:00:00+00:00 [running]> on host 05a350db99a0
+[2024-04-04T04:36:10.162+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='transform_to_english_keys' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='7' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-03T00:00:00+00:00'
+[2024-04-04T04:36:10.166+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17077260002244/
+[2024-04-04T04:36:10.167+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17068450001070/
+[2024-04-04T04:36:10.167+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17068450001072/
+[2024-04-04T04:36:10.167+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17025820007930/
+[2024-04-04T04:36:10.168+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/tochi/b-17000130014618/
+[2024-04-04T04:36:10.168+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17068450001073/
+[2024-04-04T04:36:10.169+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17069060011349/
+[2024-04-04T04:36:10.169+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17069060011354/
+[2024-04-04T04:36:10.169+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17020970024680/
+[2024-04-04T04:36:10.170+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17079580000132/
+[2024-04-04T04:36:10.170+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17077260002255/
+[2024-04-04T04:36:10.171+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17068450001071/
+[2024-04-04T04:36:10.171+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17081730000062/
+[2024-04-04T04:36:10.171+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17069060011351/
+[2024-04-04T04:36:10.172+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17079330002420/
+[2024-04-04T04:36:10.172+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17077260002246/
+[2024-04-04T04:36:10.173+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17068450001068/
+[2024-04-04T04:36:10.173+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076810003270/
+[2024-04-04T04:36:10.174+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17020970024670/
+[2024-04-04T04:36:10.174+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17069060011353/
+[2024-04-04T04:36:10.174+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17069060011352/
+[2024-04-04T04:36:10.175+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17077260002248/
+[2024-04-04T04:36:10.176+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17077260002247/
+[2024-04-04T04:36:10.176+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17081930000040/
+[2024-04-04T04:36:10.176+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17053210000248/
+[2024-04-04T04:36:10.177+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17081730000063/
+[2024-04-04T04:36:10.177+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17068450001067/
+[2024-04-04T04:36:10.178+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17063270000449/
+[2024-04-04T04:36:10.178+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17077260002245/
+[2024-04-04T04:36:10.178+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17069060011359/
+[2024-04-04T04:36:10.179+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17060170009099/
+[2024-04-04T04:36:10.179+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17068450001074/
+[2024-04-04T04:36:10.179+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17068450001075/
+[2024-04-04T04:36:10.180+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17079330002421/
+[2024-04-04T04:36:10.180+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17061200001741/
+[2024-04-04T04:36:10.181+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076810003274/
+[2024-04-04T04:36:10.181+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17060170009098/
+[2024-04-04T04:36:10.181+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17077260002251/
+[2024-04-04T04:36:10.182+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17069060011356/
+[2024-04-04T04:36:10.182+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17069060011362/
+[2024-04-04T04:36:10.183+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17069060011360/
+[2024-04-04T04:36:10.183+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17025820007929/
+[2024-04-04T04:36:10.183+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17077260002253/
+[2024-04-04T04:36:10.184+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17020970024673/
+[2024-04-04T04:36:10.184+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17068450001077/
+[2024-04-04T04:36:10.185+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17077260002243/
+[2024-04-04T04:36:10.185+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17077260002250/
+[2024-04-04T04:36:10.185+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17068450001076/
+[2024-04-04T04:36:10.186+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17083320000001/
+[2024-04-04T04:36:10.186+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076060000073/
+[2024-04-04T04:36:10.186+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17069060011355/
+[2024-04-04T04:36:10.187+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17069060011361/
+[2024-04-04T04:36:10.187+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17069060011357/
+[2024-04-04T04:36:10.188+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17082530000002/
+[2024-04-04T04:36:10.188+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17077260002249/
+[2024-04-04T04:36:10.188+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17077260002252/
+[2024-04-04T04:36:10.189+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076810003272/
+[2024-04-04T04:36:10.189+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076810003273/
+[2024-04-04T04:36:10.190+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076810003267/
+[2024-04-04T04:36:10.191+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17000130014621/
+[2024-04-04T04:36:10.191+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17000130014617/
+[2024-04-04T04:36:10.192+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17000130014616/
+[2024-04-04T04:36:10.192+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17020970024679/
+[2024-04-04T04:36:10.192+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17069060011358/
+[2024-04-04T04:36:10.193+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17068450001078/
+[2024-04-04T04:36:10.193+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17083340000001/
+[2024-04-04T04:36:10.194+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076060000077/
+[2024-04-04T04:36:10.195+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076810003266/
+[2024-04-04T04:36:10.195+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17020970024675/
+[2024-04-04T04:36:10.195+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17020970024674/
+[2024-04-04T04:36:10.196+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076810003269/
+[2024-04-04T04:36:10.197+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17069060011350/
+[2024-04-04T04:36:10.198+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076810003268/
+[2024-04-04T04:36:10.199+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076060000069/
+[2024-04-04T04:36:10.200+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17020970024672/
+[2024-04-04T04:36:10.201+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17020970024678/
+[2024-04-04T04:36:10.202+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17020970024677/
+[2024-04-04T04:36:10.203+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17077260002254/
+[2024-04-04T04:36:10.204+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076060000074/
+[2024-04-04T04:36:10.205+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17020970024671/
+[2024-04-04T04:36:10.205+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076810003271/
+[2024-04-04T04:36:10.206+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17068450001069/
+[2024-04-04T04:36:10.207+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076060000076/
+[2024-04-04T04:36:10.208+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076060000070/
+[2024-04-04T04:36:10.209+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17020970024676/
+[2024-04-04T04:36:10.209+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076060000071/
+[2024-04-04T04:36:10.210+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076060000072/
+[2024-04-04T04:36:10.211+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17076060000075/
+[2024-04-04T04:36:10.212+0000] {english_keys.py:59} INFO - Translating https://www.homes.co.jp/kodate/b-17000130014619/
+[2024-04-04T04:46:57.306+0000] {local_task_job_runner.py:280} WARNING - Recorded pid 565 does not match the current pid 407
+[2024-04-04T04:46:57.309+0000] {process_utils.py:131} INFO - Sending 15 to group 407. PIDs of all processes in the group: [407]
+[2024-04-04T04:46:57.310+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 407
+[2024-04-04T04:46:57.311+0000] {taskinstance.py:2483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-04-04T04:46:57.312+0000] {english_keys.py:75} WARNING - Error translating Event information - 住宅ローンにご不安がございましたら、弊社の住宅ローンご相談会へ！
+日時：2024年04月01日〜2024年09月30日
+場所：埼玉県川口市新井町
+お申込み締切：2024年09月30日
+[2024-04-04T04:46:57.312+0000] {english_keys.py:76} ERROR - Task received SIGTERM signal
+[2024-04-04T04:47:57.330+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=407, name='airflow task ru', status='sleeping', started='04:36:08') did not respond to SIGTERM. Trying SIGKILL
+[2024-04-04T04:47:57.333+0000] {process_utils.py:86} INFO - Sending the signal 9 to group 407
+[2024-04-04T04:47:57.386+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=407, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='04:36:08') (407) terminated with exit code -9
+[2024-04-04T04:47:57.388+0000] {standard_task_runner.py:175} ERROR - Job 168 was killed before it finished (likely due to running out of memory)

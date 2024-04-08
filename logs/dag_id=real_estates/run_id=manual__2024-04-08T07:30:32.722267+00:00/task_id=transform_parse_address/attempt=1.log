@@ -1,0 +1,26 @@
+[2024-04-08T07:32:33.609+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.transform_parse_address manual__2024-04-08T07:30:32.722267+00:00 [queued]>
+[2024-04-08T07:32:33.629+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.transform_parse_address manual__2024-04-08T07:30:32.722267+00:00 [queued]>
+[2024-04-08T07:32:33.630+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-08T07:32:33.657+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): transform_parse_address> on 2024-04-08 07:30:32.722267+00:00
+[2024-04-08T07:32:33.673+0000] {standard_task_runner.py:60} INFO - Started process 81249 to run task
+[2024-04-08T07:32:33.682+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'transform_parse_address', 'manual__2024-04-08T07:30:32.722267+00:00', '--job-id', '329', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmpt5myr2zl']
+[2024-04-08T07:32:33.687+0000] {standard_task_runner.py:88} INFO - Job 329: Subtask transform_parse_address
+[2024-04-08T07:32:34.099+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.transform_parse_address manual__2024-04-08T07:30:32.722267+00:00 [running]> on host 05a350db99a0
+[2024-04-08T07:32:34.290+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='transform_parse_address' AIRFLOW_CTX_EXECUTION_DATE='2024-04-08T07:30:32.722267+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-08T07:30:32.722267+00:00'
+[2024-04-08T07:32:34.296+0000] {__init__.py:98} WARNING - Town 千住緑町 not in database
+[2024-04-08T07:32:34.298+0000] {__init__.py:98} WARNING - Town 元町 not in database
+[2024-04-08T07:32:34.298+0000] {__init__.py:98} WARNING - Town 伊勢田町 not in database
+[2024-04-08T07:32:34.299+0000] {__init__.py:98} WARNING - Town 鴨居町 not in database
+[2024-04-08T07:32:34.300+0000] {__init__.py:98} WARNING - Town 千歳町 not in database
+[2024-04-08T07:32:34.301+0000] {__init__.py:98} WARNING - Town 三河安城本町 not in database
+[2024-04-08T07:32:34.302+0000] {__init__.py:98} WARNING - Town 小手指元町 not in database
+[2024-04-08T07:32:34.303+0000] {__init__.py:98} WARNING - Town 西枇杷島町 not in database
+[2024-04-08T07:32:34.304+0000] {__init__.py:98} WARNING - Town 川口町 not in database
+[2024-04-08T07:32:34.305+0000] {__init__.py:98} WARNING - Town 奈良津町 not in database
+[2024-04-08T07:32:34.306+0000] {__init__.py:98} WARNING - Town 林島町 not in database
+[2024-04-08T07:32:34.307+0000] {__init__.py:98} WARNING - Town 南町 not in database
+[2024-04-08T07:32:34.309+0000] {parse_address.py:59} INFO - Parsed 35 addresses.
+[2024-04-08T07:32:34.311+0000] {python.py:204} INFO - Done. Returned value not shown
+[2024-04-08T07:32:34.362+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=real_estates, task_id=transform_parse_address, execution_date=20240408T073032, start_date=20240408T073233, end_date=20240408T073234
+[2024-04-08T07:32:34.455+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-08T07:32:34.799+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

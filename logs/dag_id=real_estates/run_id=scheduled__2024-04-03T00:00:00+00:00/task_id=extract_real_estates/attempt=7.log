@@ -1,0 +1,67 @@
+[2024-04-04T07:21:30.339+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.extract_real_estates scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T07:21:30.361+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.extract_real_estates scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T07:21:30.363+0000] {taskinstance.py:2193} INFO - Starting attempt 7 of 7
+[2024-04-04T07:21:30.392+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): extract_real_estates> on 2024-04-03 00:00:00+00:00
+[2024-04-04T07:21:30.406+0000] {standard_task_runner.py:60} INFO - Started process 2702 to run task
+[2024-04-04T07:21:30.414+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'extract_real_estates', 'scheduled__2024-04-03T00:00:00+00:00', '--job-id', '179', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmpkcafv4ho']
+[2024-04-04T07:21:30.419+0000] {standard_task_runner.py:88} INFO - Job 179: Subtask extract_real_estates
+[2024-04-04T07:21:30.844+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.extract_real_estates scheduled__2024-04-03T00:00:00+00:00 [running]> on host 05a350db99a0
+[2024-04-04T07:21:31.315+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='extract_real_estates' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='7' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-03T00:00:00+00:00'
+[2024-04-04T07:21:40.534+0000] {local_task_job_runner.py:302} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-04-04T07:21:40.841+0000] {process_utils.py:131} INFO - Sending 15 to group 2702. PIDs of all processes in the group: [2702]
+[2024-04-04T07:21:40.843+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 2702
+[2024-04-04T07:21:40.843+0000] {taskinstance.py:2483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-04-04T07:21:40.844+0000] {base_events.py:1707} ERROR - Fatal read error on socket transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x7f36cb38fdc0>
+transport: <_SelectorSocketTransport fd=127 read=polling write=<idle, bufsize=0>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/asyncio/selector_events.py", line 848, in _read_ready__data_received
+    data = self._sock.recv(self.max_size)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 2485, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-04-04T07:21:40.934+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/aiohttp/client_proto.py", line 83, in connection_lost
+    uncompleted = self._parser.feed_eof()
+  File "aiohttp/_http_parser.pyx", line 507, in aiohttp._http_parser.HttpParser.feed_eof
+aiohttp.http_exceptions.TransferEncodingError: 400, message:
+  Not enough data for satisfy transfer length header.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/__init__.py", line 17, in extract_real_estates
+    return asyncio.run(_extract_real_estates(urls))
+  File "/usr/local/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/local/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/real_estates.py", line 27, in _extract_real_estates
+    responses = await asyncio.gather(*tasks)
+  File "/opt/airflow/dags/real_estates/homes_jp/extractors/real_estates.py", line 54, in fetch
+    return (await response.text(), response.url_obj)
+  File "/home/airflow/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1143, in text
+    await self.read()
+  File "/home/airflow/.local/lib/python3.8/site-packages/aiohttp/client_reqrep.py", line 1101, in read
+    self._body = await self.content.read()
+  File "/home/airflow/.local/lib/python3.8/site-packages/aiohttp/streams.py", line 373, in read
+    block = await self.readany()
+  File "/home/airflow/.local/lib/python3.8/site-packages/aiohttp/streams.py", line 395, in readany
+    await self._wait("readany")
+  File "/home/airflow/.local/lib/python3.8/site-packages/aiohttp/streams.py", line 302, in _wait
+    await waiter
+aiohttp.client_exceptions.ClientPayloadError: Response payload is not completed
+[2024-04-04T07:21:40.954+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=real_estates, task_id=extract_real_estates, execution_date=20240403T000000, start_date=20240404T072130, end_date=20240404T072140
+[2024-04-04T07:21:40.979+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 179 for task extract_real_estates (Response payload is not completed; 2702)
+[2024-04-04T07:21:41.096+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=2702, status='terminated', exitcode=1, started='07:21:29') (2702) terminated with exit code 1

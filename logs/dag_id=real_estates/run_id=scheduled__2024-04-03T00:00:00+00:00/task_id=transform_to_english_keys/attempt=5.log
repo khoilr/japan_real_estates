@@ -1,0 +1,59 @@
+[2024-04-04T04:23:18.113+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.transform_to_english_keys scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T04:23:18.133+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.transform_to_english_keys scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T04:23:18.133+0000] {taskinstance.py:2193} INFO - Starting attempt 5 of 5
+[2024-04-04T04:23:18.160+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): transform_to_english_keys> on 2024-04-03 00:00:00+00:00
+[2024-04-04T04:23:18.174+0000] {standard_task_runner.py:60} INFO - Started process 205 to run task
+[2024-04-04T04:23:18.181+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'transform_to_english_keys', 'scheduled__2024-04-03T00:00:00+00:00', '--job-id', '158', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmp3ff1gq0l']
+[2024-04-04T04:23:18.187+0000] {standard_task_runner.py:88} INFO - Job 158: Subtask transform_to_english_keys
+[2024-04-04T04:23:18.293+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.transform_to_english_keys scheduled__2024-04-03T00:00:00+00:00 [running]> on host 05a350db99a0
+[2024-04-04T04:23:19.000+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='transform_to_english_keys' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-03T00:00:00+00:00'
+[2024-04-04T04:30:23.529+0000] {local_task_job_runner.py:302} WARNING - State of this instance has been externally set to restarting. Terminating instance.
+[2024-04-04T04:30:23.533+0000] {process_utils.py:131} INFO - Sending 15 to group 205. PIDs of all processes in the group: [205]
+[2024-04-04T04:30:23.534+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 205
+[2024-04-04T04:30:23.535+0000] {taskinstance.py:2483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-04-04T04:30:23.536+0000] {english_keys.py:74} WARNING - Error translating Remarks - 平日・夜間のご案内大歓迎！
+他にも周辺物件情報多数取り揃えてございます。
+買い取り保証あり♪
+頭金なし、勤続1年未満の方でもＯＫです。お気軽にお問合せ下さい。
+
+■■現地見学会開催中！■■
+建物完成しておりますので、ご見学可能です♪
+平日や夜間のご案内も大歓迎♪
+お客様のご都合に合わせてご案内いたします♪
+
+■■お出迎えサービス■■
+お車のない方も安心！
+担当スタッフがご指定のお待ち合わせ場所に
+無料でお迎えに上がります！
+
+■■■■ローン返済例■■■■
+物件価格：3199万円／借入額：3199万円（頭金0円・ボーナス払い0円）
+紹介金融機関：埼玉りそな銀行
+返済期間：３５年　金利：０．３９５％（変動金利）
+月々返済額：８１，５６５円
+※諸費用部分は借入額に含んでおりません
+事務手数料：３３，０００円
+団体生命保険・保証料：２０，６１４円
+（お借入期間３５年、お借入金額１００万円あたりの金額）
+
+■■住宅ローンのご相談だけでもＯＫ！■■
+住宅ローン・購入に関して分からない事があれば何でもご相談してください。
+頭金なし、勤続1年未満、現在借入のある方でもＯＫです！
+お客様の立場にたって出来る限りのご説明をさせて頂きます。
+
+■■買取保証■■
+ご自宅マンション・戸建の高価買い取りも致しております！
+無料でお見積り・査定致しますのでお問い合わせ下さい！
+
+■■火災・地震保険■■
+代理店クレス不動産だから
+【最大25％OFF！！】
+
+■■最新情報をお届け■■
+完成・新価格・クレス不動産だけの情報をすぐにお届け！
+『お気に入りに追加』をご利用下さい！
+[2024-04-04T04:30:23.537+0000] {english_keys.py:75} ERROR - Task received SIGTERM signal
+[2024-04-04T04:31:23.540+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=205, name='airflow task ru', status='sleeping', started='04:23:17') did not respond to SIGTERM. Trying SIGKILL
+[2024-04-04T04:31:23.543+0000] {process_utils.py:86} INFO - Sending the signal 9 to group 205
+[2024-04-04T04:31:23.609+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=205, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='04:23:17') (205) terminated with exit code -9
+[2024-04-04T04:31:23.610+0000] {standard_task_runner.py:175} ERROR - Job 158 was killed before it finished (likely due to running out of memory)

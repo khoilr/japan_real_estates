@@ -1,0 +1,17 @@
+[2024-04-04T04:47:54.039+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.transform_to_english_keys scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T04:47:54.059+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.transform_to_english_keys scheduled__2024-04-03T00:00:00+00:00 [queued]>
+[2024-04-04T04:47:54.061+0000] {taskinstance.py:2193} INFO - Starting attempt 9 of 9
+[2024-04-04T04:47:54.091+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): transform_to_english_keys> on 2024-04-03 00:00:00+00:00
+[2024-04-04T04:47:54.106+0000] {standard_task_runner.py:60} INFO - Started process 576 to run task
+[2024-04-04T04:47:54.113+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'transform_to_english_keys', 'scheduled__2024-04-03T00:00:00+00:00', '--job-id', '169', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmp1vwcdv_w']
+[2024-04-04T04:47:54.119+0000] {standard_task_runner.py:88} INFO - Job 169: Subtask transform_to_english_keys
+[2024-04-04T04:47:54.555+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.transform_to_english_keys scheduled__2024-04-03T00:00:00+00:00 [running]> on host 05a350db99a0
+[2024-04-04T04:47:54.951+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='transform_to_english_keys' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='9' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-04-03T00:00:00+00:00'
+[2024-04-04T04:50:21.226+0000] {local_task_job_runner.py:302} WARNING - State of this instance has been externally set to removed. Terminating instance.
+[2024-04-04T04:50:21.230+0000] {process_utils.py:131} INFO - Sending 15 to group 576. PIDs of all processes in the group: [576]
+[2024-04-04T04:50:21.231+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 576
+[2024-04-04T04:50:21.231+0000] {taskinstance.py:2483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-04-04T04:51:21.237+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=576, name='airflow task ru', status='sleeping', started='04:47:53') did not respond to SIGTERM. Trying SIGKILL
+[2024-04-04T04:51:21.239+0000] {process_utils.py:86} INFO - Sending the signal 9 to group 576
+[2024-04-04T04:51:21.292+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=576, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='04:47:53') (576) terminated with exit code -9
+[2024-04-04T04:51:21.294+0000] {standard_task_runner.py:175} ERROR - Job 169 was killed before it finished (likely due to running out of memory)

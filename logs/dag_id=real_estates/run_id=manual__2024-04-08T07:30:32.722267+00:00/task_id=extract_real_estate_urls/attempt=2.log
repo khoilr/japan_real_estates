@@ -1,0 +1,17 @@
+[2024-04-08T08:04:49.930+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.extract_real_estate_urls manual__2024-04-08T07:30:32.722267+00:00 [queued]>
+[2024-04-08T08:04:49.948+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.extract_real_estate_urls manual__2024-04-08T07:30:32.722267+00:00 [queued]>
+[2024-04-08T08:04:49.950+0000] {taskinstance.py:2193} INFO - Starting attempt 2 of 2
+[2024-04-08T08:04:49.980+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): extract_real_estate_urls> on 2024-04-08 07:30:32.722267+00:00
+[2024-04-08T08:04:49.995+0000] {standard_task_runner.py:60} INFO - Started process 139 to run task
+[2024-04-08T08:04:50.003+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'extract_real_estate_urls', 'manual__2024-04-08T07:30:32.722267+00:00', '--job-id', '337', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmpvebyv74x']
+[2024-04-08T08:04:50.008+0000] {standard_task_runner.py:88} INFO - Job 337: Subtask extract_real_estate_urls
+[2024-04-08T08:04:50.419+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.extract_real_estate_urls manual__2024-04-08T07:30:32.722267+00:00 [running]> on host 0a1174cdb8a2
+[2024-04-08T08:04:50.575+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='extract_real_estate_urls' AIRFLOW_CTX_EXECUTION_DATE='2024-04-08T07:30:32.722267+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-08T07:30:32.722267+00:00'
+[2024-04-08T08:04:52.323+0000] {urls.py:36} INFO - Found 89964 real estates
+[2024-04-08T08:04:52.330+0000] {urls.py:43} INFO - Found 30 pages
+[2024-04-08T08:04:56.082+0000] {urls.py:57} INFO - Batch 1/1 fetched 30 pages
+[2024-04-08T08:05:31.747+0000] {urls.py:66} INFO - Extracted 156 URLs
+[2024-04-08T08:05:31.760+0000] {python.py:204} INFO - Done. Returned value not shown
+[2024-04-08T08:05:31.827+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=real_estates, task_id=extract_real_estate_urls, execution_date=20240408T073032, start_date=20240408T080449, end_date=20240408T080531
+[2024-04-08T08:05:31.919+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-08T08:05:31.976+0000] {taskinstance.py:3312} INFO - 2 downstream tasks scheduled from follow-on schedule check

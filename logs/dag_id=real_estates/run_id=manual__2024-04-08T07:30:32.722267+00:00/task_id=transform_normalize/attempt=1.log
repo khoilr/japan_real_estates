@@ -1,0 +1,112 @@
+[2024-04-08T08:06:51.723+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.transform_normalize manual__2024-04-08T07:30:32.722267+00:00 [queued]>
+[2024-04-08T08:06:51.742+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.transform_normalize manual__2024-04-08T07:30:32.722267+00:00 [queued]>
+[2024-04-08T08:06:51.743+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-04-08T08:06:51.770+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): transform_normalize> on 2024-04-08 07:30:32.722267+00:00
+[2024-04-08T08:06:51.785+0000] {standard_task_runner.py:60} INFO - Started process 179 to run task
+[2024-04-08T08:06:51.793+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'transform_normalize', 'manual__2024-04-08T07:30:32.722267+00:00', '--job-id', '340', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmpx0set100']
+[2024-04-08T08:06:51.799+0000] {standard_task_runner.py:88} INFO - Job 340: Subtask transform_normalize
+[2024-04-08T08:06:51.895+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.transform_normalize manual__2024-04-08T07:30:32.722267+00:00 [running]> on host 0a1174cdb8a2
+[2024-04-08T08:06:52.469+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='transform_normalize' AIRFLOW_CTX_EXECUTION_DATE='2024-04-08T07:30:32.722267+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-08T07:30:32.722267+00:00'
+[2024-04-08T08:06:52.482+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+  + Exception Group Traceback (most recent call last):
+  |   File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+  |     result = _execute_callable(context=context, **execute_callable_kwargs)
+  |   File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+  |     return execute_callable(context=context, **execute_callable_kwargs)
+  |   File "/home/airflow/.local/lib/python3.8/site-packages/airflow/decorators/base.py", line 241, in execute
+  |     return_value = super().execute(context)
+  |   File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+  |     return_value = self.execute_callable()
+  |   File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 217, in execute_callable
+  |     return self.python_callable(*self.op_args, **self.op_kwargs)
+  |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/__init__.py", line 20, in transform_normalize
+  |     return trio.run(_normalize, data)
+  |   File "/home/airflow/.local/lib/python3.8/site-packages/trio/_core/_run.py", line 2288, in run
+  |     raise runner.main_task_outcome.error
+  |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 11, in _normalize
+  |     nursery.start_soon(normalize, item, normalized_data)
+  |   File "/home/airflow/.local/lib/python3.8/site-packages/trio/_core/_run.py", line 954, in __aexit__
+  |     raise combined_error_from_nursery
+  | exceptiongroup.ExceptionGroup: Exceptions from Trio nursery (93 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 21, in normalize
+    |     normalized_item["building_area"] = float(item["building_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '96.05ｍ2～101.02ｍ2'
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 21, in normalize
+    |     normalized_item["building_area"] = float(item["building_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '103.50（約31.30坪）'
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 21, in normalize
+    |     normalized_item["building_area"] = float(item["building_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '105.16平米'
+    +---------------- 4 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 21, in normalize
+    |     normalized_item["building_area"] = float(item["building_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '93.57～98.95'
+    +---------------- 5 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 21, in normalize
+    |     normalized_item["building_area"] = float(item["building_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '83.02ｍ2'
+    +---------------- 6 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 21, in normalize
+    |     normalized_item["building_area"] = float(item["building_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '93.15～101.43'
+    +---------------- 7 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 21, in normalize
+    |     normalized_item["building_area"] = float(item["building_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '105.15・107.06'
+    +---------------- 8 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 21, in normalize
+    |     normalized_item["building_area"] = float(item["building_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '78.24～84.25'
+    +---------------- 9 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 21, in normalize
+    |     normalized_item["building_area"] = float(item["building_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '100.55～110.54'
+    +---------------- 10 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 21, in normalize
+    |     normalized_item["building_area"] = float(item["building_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '100.73（約30.47坪）'
+    +---------------- 11 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 21, in normalize
+    |     normalized_item["building_area"] = float(item["building_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '87.13～87.91'
+    +---------------- 12 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 21, in normalize
+    |     normalized_item["building_area"] = float(item["building_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '93.15～94.81'
+    +---------------- 13 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 21, in normalize
+    |     normalized_item["building_area"] = float(item["building_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '80.73～89.91ｍ2'
+    +---------------- 14 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 21, in normalize
+    |     normalized_item["building_area"] = float(item["building_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '87.37～91.09'
+    +---------------- 15 ----------------
+    | Traceback (most recent call last):
+    |   File "/opt/airflow/dags/real_estates/homes_jp/transformers/normalize.py", line 22, in normalize
+    |     normalized_item["land_area"] = float(item["land_area"].replace(",", "").replace("m2", ""))
+    | ValueError: could not convert string to float: '110.93・111.23'
+    +---------------- ... ----------------
+    | and 78 more exceptions
+    +------------------------------------
+[2024-04-08T08:06:52.506+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=real_estates, task_id=transform_normalize, execution_date=20240408T073032, start_date=20240408T080651, end_date=20240408T080652
+[2024-04-08T08:06:52.528+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 340 for task transform_normalize (Exceptions from Trio nursery (93 sub-exceptions); 179)
+[2024-04-08T08:06:52.566+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-04-08T08:06:52.912+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

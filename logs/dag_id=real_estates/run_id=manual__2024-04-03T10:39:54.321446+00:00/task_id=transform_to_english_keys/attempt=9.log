@@ -1,0 +1,391 @@
+[2024-04-04T02:36:26.672+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: real_estates.transform_to_english_keys manual__2024-04-03T10:39:54.321446+00:00 [queued]>
+[2024-04-04T02:36:26.691+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: real_estates.transform_to_english_keys manual__2024-04-03T10:39:54.321446+00:00 [queued]>
+[2024-04-04T02:36:26.697+0000] {taskinstance.py:2193} INFO - Starting attempt 9 of 9
+[2024-04-04T02:36:26.726+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): transform_to_english_keys> on 2024-04-03 10:39:54.321446+00:00
+[2024-04-04T02:36:26.740+0000] {standard_task_runner.py:60} INFO - Started process 13262 to run task
+[2024-04-04T02:36:26.749+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'real_estates', 'transform_to_english_keys', 'manual__2024-04-03T10:39:54.321446+00:00', '--job-id', '149', '--raw', '--subdir', 'DAGS_FOLDER/real_estates/__init__.py', '--cfg-path', '/tmp/tmpsu6nnj1g']
+[2024-04-04T02:36:26.754+0000] {standard_task_runner.py:88} INFO - Job 149: Subtask transform_to_english_keys
+[2024-04-04T02:36:27.173+0000] {task_command.py:423} INFO - Running <TaskInstance: real_estates.transform_to_english_keys manual__2024-04-03T10:39:54.321446+00:00 [running]> on host 72a42bdc0b23
+[2024-04-04T02:36:27.827+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='real_estates' AIRFLOW_CTX_TASK_ID='transform_to_english_keys' AIRFLOW_CTX_EXECUTION_DATE='2024-04-03T10:39:54.321446+00:00' AIRFLOW_CTX_TRY_NUMBER='9' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-03T10:39:54.321446+00:00'
+[2024-04-04T02:36:28.700+0000] {english_keys.py:71} WARNING - Error translating name - クレイドルガーデン宮崎市高岡町飯田　第６
+[2024-04-04T02:36:28.701+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:29.277+0000] {english_keys.py:71} WARNING - Error translating name - 【町田市野津田町　新築戸建】
+[2024-04-04T02:36:29.278+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:29.815+0000] {english_keys.py:71} WARNING - Error translating name - 刈谷市小垣江町地内
+[2024-04-04T02:36:29.815+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:30.388+0000] {english_keys.py:71} WARNING - Error translating name - リーブルガーデン福重4丁目第4　新築戸建　1～2号棟
+[2024-04-04T02:36:30.389+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:30.891+0000] {english_keys.py:71} WARNING - Error translating name - ■見学予約キャンペーン実施中■柴田町槻木白幡第５■
+[2024-04-04T02:36:30.893+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:31.271+0000] {english_keys.py:71} WARNING - Error translating name - オープンプレイス柳瀬サンシャイン
+[2024-04-04T02:36:31.273+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:31.724+0000] {english_keys.py:71} WARNING - Error translating name - オープンライブス高槻市コンフォート
+[2024-04-04T02:36:31.726+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:32.307+0000] {english_keys.py:71} WARNING - Error translating name - 所沢市三ケ島５丁目　23ー1期　新築　全１棟
+[2024-04-04T02:36:32.308+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:32.916+0000] {english_keys.py:71} WARNING - Error translating name - 日野川辺堀之内　全３棟
+[2024-04-04T02:36:32.917+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:33.571+0000] {english_keys.py:71} WARNING - Error translating name - ドリームタウン吉祥院船戸町【２区画】
+[2024-04-04T02:36:33.571+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:34.084+0000] {english_keys.py:71} WARNING - Error translating name - ■見学予約キャンペーン実施中■塩竈市後楽町第５■
+[2024-04-04T02:36:34.085+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:34.702+0000] {english_keys.py:71} WARNING - Error translating name - ☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:36:34.703+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:35.366+0000] {english_keys.py:71} WARNING - Error translating name - 【ダイワハウス】セキュレア保免上II　(建築条件付宅地分譲)
+[2024-04-04T02:36:35.366+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:35.896+0000] {english_keys.py:71} WARNING - Error translating name - クレイドルガーデン宮崎市田野町乙　第3　１号棟
+[2024-04-04T02:36:35.896+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:36.536+0000] {english_keys.py:71} WARNING - Error translating name - オープンライブス学園南町コンフォート
+[2024-04-04T02:36:36.537+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:37.123+0000] {english_keys.py:71} WARNING - Error translating name - ～ME Select～　吹抜けのあるマイホーム　初富駅徒歩7分　鎌ケ谷市南初富４丁目　新築一戸建て　７期　全２棟
+[2024-04-04T02:36:37.124+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:37.733+0000] {english_keys.py:71} WARNING - Error translating name - LIGNAGE　国立市東２３-１期　全２棟
+[2024-04-04T02:36:37.733+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:38.121+0000] {english_keys.py:71} WARNING - Error translating name - 三木市緑が丘町本町　第１期
+[2024-04-04T02:36:38.122+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:38.749+0000] {english_keys.py:71} WARNING - Error translating name - 千葉市稲毛区長沼町　新築戸建　全１棟　1課
+[2024-04-04T02:36:38.749+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:39.168+0000] {english_keys.py:71} WARNING - Error translating name - 川口市安行原７期　WIC2か所など収納充実！☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:36:39.168+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:39.648+0000] {english_keys.py:71} WARNING - Error translating name - LIGNAGE　八王子市下恩方町２３-１期　　全７棟
+[2024-04-04T02:36:39.648+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:40.055+0000] {english_keys.py:71} WARNING - Error translating name - ブルーミングガーデン福岡市南区柏原5丁目
+[2024-04-04T02:36:40.055+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:40.588+0000] {english_keys.py:71} WARNING - Error translating name - オアシス八尾楠根町
+[2024-04-04T02:36:40.589+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:41.105+0000] {english_keys.py:71} WARNING - Error translating name - Heartful Town　日野神明　全９棟
+[2024-04-04T02:36:41.106+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:41.492+0000] {english_keys.py:71} WARNING - Error translating name - GRAFARE　立川市栄町　３期　　全２棟
+[2024-04-04T02:36:41.493+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:42.032+0000] {english_keys.py:71} WARNING - Error translating name - Cradle garden　青梅市 藤橋　第１６　　全６棟
+[2024-04-04T02:36:42.033+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:42.528+0000] {english_keys.py:71} WARNING - Error translating name - オープンライブス桜ケ丘北町アクセス
+[2024-04-04T02:36:42.529+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:43.152+0000] {english_keys.py:71} WARNING - Error translating name - 西宮市浜甲子園　第３期　新築一戸建て
+[2024-04-04T02:36:43.152+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:43.736+0000] {english_keys.py:71} WARNING - Error translating name - 土地ブルーミングガーデン 平塚市大島売地4区画
+[2024-04-04T02:36:43.737+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:44.375+0000] {english_keys.py:71} WARNING - Error translating name - 三郷市鷹野２丁目　７期　小中学校まで近くお子様も安心☆YouTube『情熱経営者』一日８回吠える男！佐々木康充　絶賛公開中
+[2024-04-04T02:36:44.375+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:44.799+0000] {english_keys.py:71} WARNING - Error translating name - <4/6（土）7（日）建物見学会開催します！>　現地住所や物件のデメリット等の詳細は、お気軽にお問い合わせください。
+[2024-04-04T02:36:44.799+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:45.409+0000] {english_keys.py:71} WARNING - Error translating name - HT円阿弥　~FCRMから諸費用コストダウンのご提案~
+[2024-04-04T02:36:45.409+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:46.077+0000] {english_keys.py:71} WARNING - Error translating name - ■見学予約キャンペーン実施中■中田１９期■
+[2024-04-04T02:36:46.078+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:46.580+0000] {english_keys.py:71} WARNING - Error translating name - 【旭区金が谷1丁目 新築戸建 全2棟】
+[2024-04-04T02:36:46.580+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:47.120+0000] {english_keys.py:71} WARNING - Error translating name - 【ベスト・ハウジング】幸1丁目25期（注文分譲予定地）
+[2024-04-04T02:36:47.121+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:47.697+0000] {english_keys.py:71} WARNING - Error translating name - クレイドルガーデン宮崎市田野町乙　第４　１号棟
+[2024-04-04T02:36:47.698+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:48.193+0000] {english_keys.py:71} WARNING - Error translating name - Livele Garden.S　東大和市南街　　全２棟
+[2024-04-04T02:36:48.194+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:48.610+0000] {english_keys.py:71} WARNING - Error translating name - クレイドルガーデン宮崎市大島町第２
+[2024-04-04T02:36:48.611+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:49.053+0000] {english_keys.py:71} WARNING - Error translating name - クレイドルガーデン都城市上長飯町　第２　１号棟
+[2024-04-04T02:36:49.054+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:49.734+0000] {english_keys.py:71} WARNING - Error translating name - 昭島緑町4期　新築一戸建て　全４棟
+[2024-04-04T02:36:49.735+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:50.228+0000] {english_keys.py:71} WARNING - Error translating name - 神戸市西区宮下　第２期　新築一戸建て
+[2024-04-04T02:36:50.229+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:50.785+0000] {english_keys.py:71} WARNING - Error translating name - 豊中市大島町　第１期　新築一戸建て
+[2024-04-04T02:36:50.786+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:51.414+0000] {english_keys.py:71} WARNING - Error translating name - 八潮市大瀬４期　小学校まで徒歩２分。WICあり☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:36:51.415+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:51.892+0000] {english_keys.py:71} WARNING - Error translating name - 柏市藤心３丁目　新築戸建　1課
+[2024-04-04T02:36:51.893+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:52.459+0000] {english_keys.py:71} WARNING - Error translating name - 土浦市右籾 第11
+[2024-04-04T02:36:52.461+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:53.050+0000] {english_keys.py:71} WARNING - Error translating name - グラファーレ　習志野市東習志野８丁目　新築一戸建て　１８期　全１棟　3課
+[2024-04-04T02:36:53.051+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:53.521+0000] {english_keys.py:71} WARNING - Error translating name - 松戸市大金平４丁目　新築戸建　全１棟　3課
+[2024-04-04T02:36:53.522+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:53.909+0000] {english_keys.py:71} WARNING - Error translating name - リーブルガーデン堺市南区赤坂台２期　全２邸
+[2024-04-04T02:36:53.910+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:54.335+0000] {english_keys.py:71} WARNING - Error translating name - LIGNAGE　八王子市大船町２３-１期　全３棟
+[2024-04-04T02:36:54.336+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:54.996+0000] {english_keys.py:71} WARNING - Error translating name - 南区白水町
+[2024-04-04T02:36:54.997+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:55.384+0000] {english_keys.py:71} WARNING - Error translating name - Heartful Town　立川栄町　全２棟
+[2024-04-04T02:36:55.385+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:55.913+0000] {english_keys.py:71} WARNING - Error translating name - クレイドルガーデン岸和田市別所町第３　全２邸
+[2024-04-04T02:36:55.914+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:56.344+0000] {english_keys.py:71} WARNING - Error translating name - GRAFARE　日野市新井２期　　全１６棟
+[2024-04-04T02:36:56.345+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:56.880+0000] {english_keys.py:71} WARNING - Error translating name - 幸手市幸手  第２　広々敷地面積301m2！住環境良好☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:36:56.881+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:57.343+0000] {english_keys.py:71} WARNING - Error translating name - クレイドルガーデン宮崎市希望ヶ丘 第３-１号棟
+[2024-04-04T02:36:57.345+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:57.850+0000] {english_keys.py:71} WARNING - Error translating name - Livele Garden.S　青梅今井第２　全３棟
+[2024-04-04T02:36:57.851+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:58.298+0000] {english_keys.py:71} WARNING - Error translating name - オープンライブス下井草アクセス
+[2024-04-04T02:36:58.299+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:58.824+0000] {english_keys.py:71} WARNING - Error translating name - 上尾市上野第1　新築　全1棟
+[2024-04-04T02:36:58.825+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:59.400+0000] {english_keys.py:71} WARNING - Error translating name - Livele Garden.S　筑紫野市紫2丁目
+[2024-04-04T02:36:59.401+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:36:59.945+0000] {english_keys.py:71} WARNING - Error translating name - 佐倉市井野　新築戸建　3課
+[2024-04-04T02:36:59.946+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:00.531+0000] {english_keys.py:71} WARNING - Error translating name - 久喜市三箇　4期　学校まで徒歩７分で安心の立地☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:00.532+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:01.100+0000] {english_keys.py:71} WARNING - Error translating name - 春日部市南４丁目　第2期　駅より徒歩8分・小学校徒歩８分で安心の立地☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:01.101+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:01.550+0000] {english_keys.py:71} WARNING - Error translating name - ＜4/6（土）7（日）建物内覧会開催！＞ ◆日吉駅徒歩圏！全居室フルハイトドア！×新築デザイナーズ住宅！
+[2024-04-04T02:37:01.552+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:02.118+0000] {english_keys.py:71} WARNING - Error translating name - 『建築条件付土地』<4/6（土）7（日）現地＆建物見学会、間取り無料相談会を開催します！>　～穏やかな風、光、緑が奏でる理想の暮らし～青空の麓に住まう×自由設計デザイナーズ住宅！
+[2024-04-04T02:37:02.120+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:02.529+0000] {english_keys.py:71} WARNING - Error translating name - クレイドルガーデン宮崎市恒久　第１０
+[2024-04-04T02:37:02.530+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:03.073+0000] {english_keys.py:71} WARNING - Error translating name - AVANTIA　流山市宮園1期
+[2024-04-04T02:37:03.074+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:03.601+0000] {english_keys.py:71} WARNING - Error translating name - Blooming Garden　八王子市清川町　全２棟
+[2024-04-04T02:37:03.602+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:04.194+0000] {english_keys.py:71} WARNING - Error translating name - Livele Garden.S 上尾市畔吉
+[2024-04-04T02:37:04.195+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:04.784+0000] {english_keys.py:71} WARNING - Error translating name - HeartfulTown　立川砂川町９期
+[2024-04-04T02:37:04.785+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:05.239+0000] {english_keys.py:71} WARNING - Error translating name - 【子育て支援対象物件】平第18
+[2024-04-04T02:37:05.240+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:05.706+0000] {english_keys.py:71} WARNING - Error translating name - 飯田グループ販売戸数全国7位の現地販売会社です【日高市原宿191-1付近】
+[2024-04-04T02:37:05.706+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:06.375+0000] {english_keys.py:71} WARNING - Error translating name - 春日部市粕壁東４丁目 第2　ワイドバルコニー・WIC等、充実の設備仕様☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:06.375+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:07.042+0000] {english_keys.py:71} WARNING - Error translating name - 鴻巣市北根　SIC付きでベビーカーやゴルフバッグなどスッキリ収納☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:07.043+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:07.464+0000] {english_keys.py:71} WARNING - Error translating name - さいたま市緑区大門　スカイバルコニー付きなので近隣からの視線が気になることもなくお子様の遊び場として、活用できます。☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:07.465+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:08.040+0000] {english_keys.py:71} WARNING - Error translating name - 【アイデムホーム春日井店】春日井市出川町1期　1号棟
+[2024-04-04T02:37:08.040+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:08.606+0000] {english_keys.py:71} WARNING - Error translating name - 所沢市花園２丁目　新築　全1棟
+[2024-04-04T02:37:08.607+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:09.270+0000] {english_keys.py:71} WARNING - Error translating name - 鴻巣榎戸2丁目　第2　新築　全1棟
+[2024-04-04T02:37:09.271+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:09.801+0000] {english_keys.py:71} WARNING - Error translating name - 鶴ヶ島市脚折　新築一戸建て　全１棟
+[2024-04-04T02:37:09.802+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:10.402+0000] {english_keys.py:71} WARNING - Error translating name - オープンライブス尻手アクセス
+[2024-04-04T02:37:10.403+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:10.953+0000] {english_keys.py:71} WARNING - Error translating name - 西宮市苦楽園二番町　新築一戸建て
+[2024-04-04T02:37:10.954+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:11.380+0000] {english_keys.py:71} WARNING - Error translating name - 土浦市藤沢 第8
+[2024-04-04T02:37:11.381+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:11.797+0000] {english_keys.py:71} WARNING - Error translating name - LIGNAGE　国立市谷保　２２-１期　　全９棟
+[2024-04-04T02:37:11.797+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:12.213+0000] {english_keys.py:71} WARNING - Error translating name - FIT旅石16期　新築戸建　1～2号棟
+[2024-04-04T02:37:12.214+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:12.617+0000] {english_keys.py:71} WARNING - Error translating name - Livele Garden.S 伊奈町小室3期
+[2024-04-04T02:37:12.618+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:13.223+0000] {english_keys.py:71} WARNING - Error translating name - ドッグランスペースあり【夢の庭付きマイホーム。車3台駐車可能】生駒市青山台（近鉄生駒線の南生駒駅）
+[2024-04-04T02:37:13.224+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:13.647+0000] {english_keys.py:71} WARNING - Error translating name - 佐伯区五日市町上河内南垣内
+[2024-04-04T02:37:13.647+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:14.053+0000] {english_keys.py:71} WARNING - Error translating name - 【青葉区美しが丘西2丁目　新築戸建　全3棟】
+[2024-04-04T02:37:14.054+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:14.615+0000] {english_keys.py:71} WARNING - Error translating name - 草加市新栄２丁目１期　周辺環境良好！広々26帖のLDK☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:14.616+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:15.196+0000] {english_keys.py:71} WARNING - Error translating name - さいたま市浦和区上木崎４丁目　11期　「与野」駅　徒歩6分！　全居室収納付きでスッキリ暮らせます☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:15.197+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:15.730+0000] {english_keys.py:71} WARNING - Error translating name - 【セキスイハイム】スマートハイムプレイス天王台【建築条件付土地】
+[2024-04-04T02:37:15.730+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:16.312+0000] {english_keys.py:71} WARNING - Error translating name - クレイドルガーデン宮崎市昭和町　第１　１号棟
+[2024-04-04T02:37:16.313+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:16.719+0000] {english_keys.py:71} WARNING - Error translating name - 【飯田グループ物件】東村山市青葉町2丁目　７期　全４棟　※南西道路につき陽当たり良好　グラファーレ
+[2024-04-04T02:37:16.719+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:17.279+0000] {english_keys.py:71} WARNING - Error translating name - ●練馬区大泉町１丁目　新築戸建　全１棟●
+[2024-04-04T02:37:17.280+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:17.933+0000] {english_keys.py:71} WARNING - Error translating name - ～ME Select～　○柏市南逆井4丁目II第2期　全4棟○　全居室収納付きのあるマイホーム　五香駅徒歩19分
+[2024-04-04T02:37:17.933+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:18.440+0000] {english_keys.py:71} WARNING - Error translating name - 足立区本木東町　新築一戸建て　８期　全９棟　教育施設が近く、子育てに安心！近くに買い物施設も充実のお家（6783192）
+[2024-04-04T02:37:18.441+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:19.073+0000] {english_keys.py:71} WARNING - Error translating name - 柏市篠籠田　新築　全１棟　1課
+[2024-04-04T02:37:19.074+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:19.577+0000] {english_keys.py:71} WARNING - Error translating name - 三郷市高州３丁目　カースペース2台 ！季節ものなどたっぷり収納出来るグルニエ付き☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:19.578+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:20.228+0000] {english_keys.py:71} WARNING - Error translating name - 三郷市高州１丁目３期　南道路で日当たり良好！カースペース3台☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:20.229+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:20.712+0000] {english_keys.py:71} WARNING - Error translating name - ■南光台１０期■見学予約キャンペーン実施中■
+[2024-04-04T02:37:20.712+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:21.380+0000] {english_keys.py:71} WARNING - Error translating name - ルルーディア長江3丁目
+[2024-04-04T02:37:21.380+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:21.763+0000] {english_keys.py:71} WARNING - Error translating name - ルルーディア西新涯町2丁目1号棟
+[2024-04-04T02:37:21.763+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:22.338+0000] {english_keys.py:71} WARNING - Error translating name - さいたま市南区大谷口　１２期　複数路線利用可能な「浦和」駅利用可能で通勤・通学に便利な立地。☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:22.339+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:22.888+0000] {english_keys.py:71} WARNING - Error translating name - 久喜市伊坂南３丁目　カースペース3台駐車可！WICなど収納豊富☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:22.888+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:23.489+0000] {english_keys.py:71} WARNING - Error translating name - 八潮市大瀬　全居室収納付き☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:23.490+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:24.142+0000] {english_keys.py:71} WARNING - Error translating name - 八潮市大曽根　第２０　スマートキー・浴室乾燥機・ガスコンセント等、充実の設備☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:24.142+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:24.755+0000] {english_keys.py:71} WARNING - Error translating name - グラファーレ　北本市緑１丁目　２期　新築　全22棟
+[2024-04-04T02:37:24.756+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:25.340+0000] {english_keys.py:71} WARNING - Error translating name - Heartful Town　春日市須玖北5丁目
+[2024-04-04T02:37:25.341+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:25.982+0000] {english_keys.py:71} WARNING - Error translating name - 尼崎市三反田町　第６期　新築一戸建て
+[2024-04-04T02:37:25.983+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:26.663+0000] {english_keys.py:71} WARNING - Error translating name - 川西市錦松台　第１期　新築一戸建て
+[2024-04-04T02:37:26.663+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:27.046+0000] {english_keys.py:71} WARNING - Error translating name - グラファーレ　市川市本北方２丁目　新築一戸建て　１２期　全４棟　小学校まで徒歩５分、子育て家族にうれしい住環境のお家(25545886)
+[2024-04-04T02:37:27.047+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:27.695+0000] {english_keys.py:71} WARNING - Error translating name - 【海老名市国分南2丁目　新築戸建　全2棟
+[2024-04-04T02:37:27.695+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:28.321+0000] {english_keys.py:71} WARNING - Error translating name - ルルーディア錦見７丁目(2)１号棟
+[2024-04-04T02:37:28.322+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:28.866+0000] {english_keys.py:71} WARNING - Error translating name - 幸手市東１丁目　食洗機、宅配ボックス等充実の設備！☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:28.866+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:29.373+0000] {english_keys.py:71} WARNING - Error translating name - 上尾市原市サンロワール6期　新築　全4棟
+[2024-04-04T02:37:29.374+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:29.766+0000] {english_keys.py:71} WARNING - Error translating name - ～ME Select～　浴室乾燥機付のマイホーム　増尾駅徒歩10分　柏市増尾３丁目　第2　新築　全２棟
+[2024-04-04T02:37:29.767+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:30.264+0000] {english_keys.py:71} WARNING - Error translating name - 宝塚市南ひばりガ丘　第１期　新築一戸建て
+[2024-04-04T02:37:30.265+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:30.881+0000] {english_keys.py:71} WARNING - Error translating name - 三郷市上彦名2期　開放感ある角地！22.1帖の吹抜けのあるリビング☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:30.882+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:31.444+0000] {english_keys.py:71} WARNING - Error translating name - さいたま市緑区馬場２丁目　3期　暮らしに便利な設備・収納が充実☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:31.445+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:32.082+0000] {english_keys.py:71} WARNING - Error translating name - さいたま市緑区大門5期　パントリー、リネンスペースなど収納豊富☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:32.083+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:32.636+0000] {english_keys.py:71} WARNING - Error translating name - 草加市瀬崎３丁目　新築一戸建て　全１棟　「谷塚」駅徒歩７分（10084240）
+[2024-04-04T02:37:32.637+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:33.271+0000] {english_keys.py:71} WARNING - Error translating name - ルルーディア新保
+[2024-04-04T02:37:33.272+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:33.791+0000] {english_keys.py:71} WARNING - Error translating name - 川口市新井町　広々19.2帖のLDK！全居室収納付き☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:33.792+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:34.398+0000] {english_keys.py:71} WARNING - Error translating name - 八潮市大瀬　第2　小学校まで徒歩8分。宅配ボックス・食洗機等、充実の設備☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:34.398+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:34.870+0000] {english_keys.py:71} WARNING - Error translating name - 大阪市住之江区安立1丁目3SLDK畳コーナー
+[2024-04-04T02:37:34.871+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:35.511+0000] {english_keys.py:71} WARNING - Error translating name - 坂戸市千代田２丁目(９４-４)　新築一戸建て　全２棟
+[2024-04-04T02:37:35.512+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:36.075+0000] {english_keys.py:71} WARNING - Error translating name - 上高田５３０(2)　新築一戸建て　全２棟
+[2024-04-04T02:37:36.076+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:36.575+0000] {english_keys.py:71} WARNING - Error translating name - ふじみ野市大原２丁目　第9期　新築　全１棟
+[2024-04-04T02:37:36.576+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:37.042+0000] {english_keys.py:71} WARNING - Error translating name - 明石市魚住町西岡　第３期　新築一戸建て
+[2024-04-04T02:37:37.043+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:37.427+0000] {english_keys.py:71} WARNING - Error translating name - 神戸市垂水区桃山台　新築一戸建て
+[2024-04-04T02:37:37.428+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:38.078+0000] {english_keys.py:71} WARNING - Error translating name - 川口市東本郷　開放感ある角地で日当たり良好！収納充実☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:38.078+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:38.603+0000] {english_keys.py:71} WARNING - Error translating name - 茅ヶ崎市赤羽根　暮らしが楽しくなる家。
+[2024-04-04T02:37:38.604+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:39.134+0000] {english_keys.py:71} WARNING - Error translating name - 【ダイワハウス】セキュレア元総社蒼海II　(分譲住宅)
+[2024-04-04T02:37:39.135+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:39.591+0000] {english_keys.py:71} WARNING - Error translating name - ドリームタウン山田南山田町
+[2024-04-04T02:37:39.592+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:40.060+0000] {english_keys.py:71} WARNING - Error translating name - 神戸市北区南五葉２丁目　新築一戸建て　９区画分譲
+[2024-04-04T02:37:40.061+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:40.485+0000] {english_keys.py:71} WARNING - Error translating name - 春日井市篠木町 V
+[2024-04-04T02:37:40.486+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:40.988+0000] {english_keys.py:71} WARNING - Error translating name - 春日部市備後東７丁目　9期　小学校まで徒歩２分で安心の立地。通勤・通学に便利な住環境☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:40.988+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:41.425+0000] {english_keys.py:71} WARNING - Error translating name - 【ダイワハウス】セキュレア中泉町　2期(分譲住宅)
+[2024-04-04T02:37:41.425+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:41.918+0000] {english_keys.py:71} WARNING - Error translating name - 西多摩郡瑞穂町大字駒形富士山　新築一戸建て　全６棟
+[2024-04-04T02:37:41.918+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:42.462+0000] {english_keys.py:71} WARNING - Error translating name - 富士見市関沢２丁目　第１　新築　全２棟
+[2024-04-04T02:37:42.463+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:43.132+0000] {english_keys.py:71} WARNING - Error translating name - 宝塚市光明町　第１期　新築一戸建て
+[2024-04-04T02:37:43.133+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:43.705+0000] {english_keys.py:71} WARNING - Error translating name - FiT　東区三苫2丁目3期
+[2024-04-04T02:37:43.706+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:44.250+0000] {english_keys.py:71} WARNING - Error translating name - 「フルコーディネイトハウス販売」カフェ風ヴィンテージスタイル家具・カーテン・エアコン付
+[2024-04-04T02:37:44.251+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:44.772+0000] {english_keys.py:71} WARNING - Error translating name - クレイドルガーデン宮崎市江平東 第１
+[2024-04-04T02:37:44.773+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:45.454+0000] {english_keys.py:71} WARNING - Error translating name - KEIAI FiT　城南区長尾1期
+[2024-04-04T02:37:45.455+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:45.935+0000] {english_keys.py:71} WARNING - Error translating name - 尼崎市西立花町　新築一戸建て
+[2024-04-04T02:37:45.935+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:46.567+0000] {english_keys.py:71} WARNING - Error translating name - Adoble+　粕屋町内橋西2丁目1期
+[2024-04-04T02:37:46.567+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:47.214+0000] {english_keys.py:71} WARNING - Error translating name - KEIAI Style　東区三苫1期
+[2024-04-04T02:37:47.214+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:47.730+0000] {english_keys.py:71} WARNING - Error translating name - 川口市本蓮１丁目４期　全居室南向きで日当たり良好！☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:47.731+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:48.380+0000] {english_keys.py:71} WARNING - Error translating name - ハートフルタウン博多区空港前5丁目　1号棟
+[2024-04-04T02:37:48.382+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:48.859+0000] {english_keys.py:71} WARNING - Error translating name - オープンプレイス中津町アクセス
+[2024-04-04T02:37:48.860+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:49.354+0000] {english_keys.py:71} WARNING - Error translating name - 【オープンハウスグループ】ミラスモシリーズ上尾市瓦葺
+[2024-04-04T02:37:49.355+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:49.933+0000] {english_keys.py:71} WARNING - Error translating name - KEIAI Style　太宰府市国分1期
+[2024-04-04T02:37:49.934+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:50.506+0000] {english_keys.py:71} WARNING - Error translating name - KEIAI Style　那珂川市中原1期
+[2024-04-04T02:37:50.507+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:50.966+0000] {english_keys.py:71} WARNING - Error translating name - KEIAI　FiT　太宰府市都府楼南2期
+[2024-04-04T02:37:50.967+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:51.373+0000] {english_keys.py:71} WARNING - Error translating name - 越谷市宮前１丁目３期　カースペース2台！WIC、食洗機設置☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:51.375+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:51.799+0000] {english_keys.py:71} WARNING - Error translating name - 所沢市上新井４丁目　２１期　「小手指」駅　徒歩10分で通勤・通学に便利な立地。☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:51.800+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:52.372+0000] {english_keys.py:71} WARNING - Error translating name - 所沢市上新井５丁目２９期　吹抜けから光が入る明るいＬＤＫ☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:37:52.373+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:53.030+0000] {english_keys.py:71} WARNING - Error translating name - 早良区原8丁目3期　新築戸建　1～2号棟
+[2024-04-04T02:37:53.031+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:53.710+0000] {english_keys.py:71} WARNING - Error translating name - 【オープンハウスグループ】ミラスモシリーズ船橋市習志野台
+[2024-04-04T02:37:53.710+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:54.363+0000] {english_keys.py:71} WARNING - Error translating name - Cradle garden　春日市春日原東町第1
+[2024-04-04T02:37:54.364+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:54.937+0000] {english_keys.py:71} WARNING - Error translating name - ～ME Select～　WICのあるマイホーム　北初富駅徒歩10分　□東中沢6期　全2棟□
+[2024-04-04T02:37:54.938+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:55.437+0000] {english_keys.py:71} WARNING - Error translating name - <グループ物件／メルディア堀船3丁目No.10>
+[2024-04-04T02:37:55.438+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:55.958+0000] {english_keys.py:71} WARNING - Error translating name - クレイドルガーデン福岡市博多区諸岡第9　1号棟
+[2024-04-04T02:37:55.959+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:56.398+0000] {english_keys.py:71} WARNING - Error translating name - ～GRAFARE～　八王子市日吉町　全３棟
+[2024-04-04T02:37:56.399+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:56.983+0000] {english_keys.py:71} WARNING - Error translating name - ■見学予約キャンペーン実施中■郡山７期■
+[2024-04-04T02:37:56.983+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:57.442+0000] {english_keys.py:71} WARNING - Error translating name - Livele Garden.S　東大和南街第二　全２棟
+[2024-04-04T02:37:57.443+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:58.094+0000] {english_keys.py:71} WARNING - Error translating name - 舞松原3丁目2期
+[2024-04-04T02:37:58.095+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:58.725+0000] {english_keys.py:71} WARNING - Error translating name - FIT　松崎1丁目3期
+[2024-04-04T02:37:58.725+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:59.309+0000] {english_keys.py:71} WARNING - Error translating name - 【オープンハウスグループ】ミラスモシリーズ調布市深大寺東町
+[2024-04-04T02:37:59.310+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:37:59.912+0000] {english_keys.py:71} WARNING - Error translating name - 桶川市鴨川１丁目　新築一戸建て　全2棟
+[2024-04-04T02:37:59.912+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:00.570+0000] {english_keys.py:71} WARNING - Error translating name - 神戸市北区鈴蘭台北町　新築一戸建て
+[2024-04-04T02:38:00.571+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:01.159+0000] {english_keys.py:71} WARNING - Error translating name - 【ダイワハウス】セキュレア国分VI　(分譲住宅)
+[2024-04-04T02:38:01.159+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:01.655+0000] {english_keys.py:71} WARNING - Error translating name - CLEIAS Town  八王子市越野　全３棟
+[2024-04-04T02:38:01.656+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:02.035+0000] {english_keys.py:71} WARNING - Error translating name - 松戸市新松戸4丁目3期　明るい南面道路！吹抜があるリビング☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:38:02.036+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:02.626+0000] {english_keys.py:71} WARNING - Error translating name - 蓮田市馬込２丁目７期　駅徒歩10分！WIC、SICなど収納豊富☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:38:02.627+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:03.142+0000] {english_keys.py:71} WARNING - Error translating name - オープンプレイス室見ソレイユ
+[2024-04-04T02:38:03.144+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:03.594+0000] {english_keys.py:71} WARNING - Error translating name - ～ME Select～　□松戸市金ヶ作1期 全1棟□　吹抜けのあるマイホーム　五香駅徒歩7分
+[2024-04-04T02:38:03.595+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:04.257+0000] {english_keys.py:71} WARNING - Error translating name - <4/6（土）7（日）建物見学会開催します！>　現地住所や物件のデメリット等の詳細は、お気軽にお問い合わせください。
+[2024-04-04T02:38:04.258+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:04.877+0000] {english_keys.py:71} WARNING - Error translating name - 神戸市長田区二葉町１０丁目　新築一戸建て　２区画分譲
+[2024-04-04T02:38:04.878+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:05.369+0000] {english_keys.py:71} WARNING - Error translating name - 所沢市向陽町　開放的な角地！WIC、SIC、食洗機など充実の仕様・設備☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:38:05.370+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:05.935+0000] {english_keys.py:71} WARNING - Error translating name - 越谷市登戸町９期　WIC2か所、床暖房、食洗機など充実の仕様・設備☆テレビで紹介された【やどかリッチ】使えます！
+[2024-04-04T02:38:05.936+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:06.616+0000] {english_keys.py:71} WARNING - Error translating name - ドッグランスペースあり【夢の庭付きマイホーム。車3台駐車可能】東大阪市日下町2（近鉄奈良線の石切駅）
+[2024-04-04T02:38:06.618+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:07.169+0000] {english_keys.py:71} WARNING - Error translating name - <グループ物件／メルディア中野>
+[2024-04-04T02:38:07.170+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:07.770+0000] {english_keys.py:71} WARNING - Error translating name - 川辺郡猪名川町白金　新築一戸建て
+[2024-04-04T02:38:07.772+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:08.205+0000] {english_keys.py:71} WARNING - Error translating name - ＼ZERO ENERGY HOUSE／太陽光＆蓄電池＆HEMSシステム搭載【袖ケ浦市長浦駅前】
+[2024-04-04T02:38:08.207+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:08.880+0000] {english_keys.py:71} WARNING - Error translating name - 千葉市稲毛区稲毛町５丁目　新築戸建　全２棟　1課
+[2024-04-04T02:38:08.882+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:09.362+0000] {english_keys.py:71} WARNING - Error translating name - 豊中市上野西　第２期　新築一戸建て
+[2024-04-04T02:38:09.363+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:09.983+0000] {english_keys.py:71} WARNING - Error translating name - 【ダイワハウス】まちなかジーヴォ前橋南町四丁目　2号地(分譲住宅)
+[2024-04-04T02:38:09.984+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:10.370+0000] {english_keys.py:71} WARNING - Error translating name - 【ダイワハウス】まちなかジーヴォ南江戸II　(分譲住宅)
+[2024-04-04T02:38:10.371+0000] {english_keys.py:72} ERROR - {'status': 'failed', 'error': JSONDecodeError('Expecting value: line 1 column 1 (char 0)')}
+[2024-04-04T02:38:10.375+0000] {python.py:204} INFO - Done. Returned value not shown
+[2024-04-04T02:38:10.418+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=real_estates, task_id=transform_to_english_keys, execution_date=20240403T103954, start_date=20240404T023626, end_date=20240404T023810
+[2024-04-04T02:38:10.476+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-04T02:38:10.515+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check
