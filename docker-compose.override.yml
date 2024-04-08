@@ -3,25 +3,20 @@ services:
         image: mongo
         ports:
             - 27017:27017
-        # networks:
-        #     - airflow
         environment:
             MONGO_INITDB_ROOT_USERNAME: mongo
             MONGO_INITDB_ROOT_PASSWORD: mongo
-
-    mgob:
-        image: maxisam/mgob
-        command: -LogLevel=info
-        ports:
-            - 8090:8090
-        volumes:
-            - ./mgob/config:/config
-            - ./mgob/storage:/storage
-            - ./mgob/tmp:/tmp
-            - ./mgob/data:/data
-        restart: always
-        # networks:
-        #     - airflow
+# mgob:
+#     image: maxisam/mgob
+#     command: -LogLevel=info
+#     ports:
+#         - 8090:8090
+#     volumes:
+#         - ./mgob/config:/config
+#         - ./mgob/storage:/storage
+#         - ./mgob/tmp:/tmp
+#         - ./mgob/data:/data
+#     restart: always
 # selenium:
 #     image: selenium/standalone-edge
 #     ports:
