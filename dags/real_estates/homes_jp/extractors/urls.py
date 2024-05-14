@@ -1,6 +1,5 @@
 import asyncio
 import logging
-from datetime import datetime
 from urllib.parse import urlparse
 
 import aiohttp
@@ -38,8 +37,8 @@ async def _extract_real_estate_urls():
         # Get the last page number
         last_page_li = soup.select_one("#searchResult li.lastPage")
         # Todo: Get actual number of pages
-        last_page = 30 if last_page_li else 1
-        # last_page = int(last_page_li.text) if last_page_li else 1
+        # last_page = 30 if last_page_li else 1
+        last_page = int(last_page_li.text) if last_page_li else 1
         logging.info(f"Found {last_page} pages")
 
         # Calculate the number of batches
@@ -59,9 +58,6 @@ async def _extract_real_estate_urls():
             # Extract URLs from each response and add them to the list
             for index, response_text in enumerate(responses):
                 urls.extend(await extract_urls_at_page(response_text, batch_index * BATCH_SIZE + index + 1))
-
-    # Filter out URLs that type of real estate is Chintai
-    urls = list(filter(lambda x: x["type"] != "chintai", urls))
 
     logging.info(f"Extracted {len(urls)} URLs")
 
@@ -116,6 +112,6 @@ async def extract_urls_at_page(response_text: str, index: int):
         if real_estate_a and "href" in real_estate_a.attrs:
             url = real_estate_a["href"]
             url_obj = urlparse(url)
-            urls.append({"url": url, "type": url_obj.path.split("/")[1], "created_at": datetime.now()})
+            urls.append({"url": url, "type": url_obj.path.split("/")[1]})
 
     return urls

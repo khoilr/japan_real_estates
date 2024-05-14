@@ -5,6 +5,7 @@ from airflow.decorators import task
 from real_estates.homes_jp.extractors.real_estates import _extract_real_estates
 from real_estates.homes_jp.extractors.regions_and_prefectures import regions_and_prefectures
 from real_estates.homes_jp.extractors.urls import _extract_real_estate_urls
+from real_estates.homes_jp.extractors.extract_v2 import _extract_v2
 
 
 @task(show_return_value_in_logs=False)
@@ -20,3 +21,8 @@ def extract_real_estates(urls: list):
 @task(show_return_value_in_logs=False)
 def extract_real_estate_urls():
     return asyncio.run(_extract_real_estate_urls())
+
+
+@task(show_return_value_in_logs=False)
+def extract_real_estates_v2(urls: list):
+    return asyncio.run(_extract_v2(urls))

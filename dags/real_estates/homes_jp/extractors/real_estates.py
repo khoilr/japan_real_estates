@@ -1,16 +1,20 @@
 import asyncio
 import logging
+import traceback
 
 import aiohttp
-from bs4 import BeautifulSoup, Tag
-
 import yarl
+from bs4 import BeautifulSoup
 
 BATCH_SIZE = 10000
 
 
 # This function is responsible for extracting real estate data from a list of URLs.
 async def _extract_real_estates(urls):
+    logging.info(f"Number of real estates: {len(urls)}")
+    urls = list(filter(lambda x: x["type"] not in ["chintai", "tochi"], urls))
+    logging.info(f"Number of real estates after filters: {len(urls)}")
+
     real_estates = []
 
     # Set the headers for the HTTP requests
@@ -27,7 +31,7 @@ async def _extract_real_estates(urls):
         for batch_index in range(batch_count):
             # Create a list of tasks for fetching the URLs in the current batch
             tasks = [
-                fetch(url["url"], headers, session)
+                fetch(url["url"], headers, session, url)
                 for url in urls[batch_index * BATCH_SIZE : (batch_index + 1) * BATCH_SIZE]
             ]
             # Use asyncio.gather to concurrently fetch the URLs in the current batch
@@ -37,10 +41,10 @@ async def _extract_real_estates(urls):
             logging.info(f"Batch {batch_index + 1}/{batch_count} fetched {len(responses)} pages")
 
             # Process each response and extract the real estate data
-            for response_text, url_obj in responses:
-                real_estate_data = await extract_real_estate_data(response_text, url_obj)
+            for response_text, url_obj, addition in responses:
                 # Append the real estate data to the list if it is not None
-                real_estates.append({**real_estate_data}) if real_estate_data else None
+                real_estate_data = await extract_real_estate_data(response_text, url_obj)
+                real_estates.append({**real_estate_data, **addition}) if real_estate_data else None
 
     # Log the number of real estate data extracted
     logging.info(f"Extracted {len(real_estates)} real estates")
@@ -49,7 +53,7 @@ async def _extract_real_estates(urls):
     return real_estates
 
 
-async def fetch(url: str, headers: dict, session: aiohttp.ClientSession):
+async def fetch(url: str, headers: dict, session: aiohttp.ClientSession, addition):
     """
     Fetches the content of a given URL using a POST request.
 
@@ -65,7 +69,7 @@ async def fetch(url: str, headers: dict, session: aiohttp.ClientSession):
         Any exceptions raised by the aiohttp library.
     """
     async with session.request("GET", url, headers=headers) as response:
-        return (await response.text(), response.url_obj)
+        return (await response.text(), response.url_obj, addition)
 
 
 async def extract_real_estate_data(response_text: str, url_obj: yarl.URL):
@@ -73,28 +77,32 @@ async def extract_real_estate_data(response_text: str, url_obj: yarl.URL):
     soup = BeautifulSoup(response_text, "html.parser")
 
     try:
-        # Not found
         if soup.select_one("#contents div.mod-bukkenNotFound"):
             logging.warning(f"Real estate not found: {url_human}")
             return None
 
-        name = soup.select_one("h1 span.bukkenName")
+        # Format type 1
+        name = soup.select_one(
+            "#contents > div.sec-detailContents.sbKodate.prg-detailContents > div.sec-contents > div.mod-summary > div > h1 > span.bukkenName"
+        )
         if name:
-            return {**format_1(soup), "url": url_human, "format": 1}
+            return {**format_1(soup), "format": 1}
 
-        # name = soup.select_one("div[data-component='ArticleHeader'] h1 > span:last-child")
-        # if name:
-        #     return {**format_2(soup), "url": url_human, "format": 2}
+        # Format type 2
+        name = soup.select_one("div[data-component='ArticleHeader'] h1 > span:last-child")
+        if name:
+            return {**format_2(soup), "format": 2}
 
+        # Format type 3
+        name = soup.select_one("#chk-bkh-name")
+        if name:
+            return {**format_3(soup), "format": 3}
+
+        # Skip
         logging.warning(f"{url_human} doesn't match any type of format. Skipping...")
 
-        # name = soup.select_one("h1 > span#chk-bkh-name")
-        # if name:
-        #     logging.warning(f"Temporarily skipping {url_human}")
-        #     return None
-
     except Exception as e:
-        logging.error(f"Error extracting data from {url_human}: {e}")
+        logging.error(f"Error extracting data from {url_human}: {e}\n{traceback.format_exc()}")
         return None
 
     # logging.warning(f"Could not extract data from {url_human}")
@@ -141,19 +149,7 @@ def format_1(soup: BeautifulSoup):
     return real_estate_data
 
 
-def format_2(soup):
-    def extract_from_table(table: Tag):
-        real_estate_data = {}
-
-        trs = table.select("tbody > tr")
-
-        for tr in trs:
-            key = tr.select_one("th").text.strip()
-            value = " ".join(value.text.strip() for value in tr.select("td > p"))
-            real_estate_data[key] = value
-
-        return real_estate_data
-
+def format_2(soup: BeautifulSoup):
     real_estate_data = {}
 
     # Get name
@@ -164,8 +160,66 @@ def format_2(soup):
     image_elements = soup.select('photo-slider photo-slider-photo img[data-targets="photo-slider.images"]')
     real_estate_data["images"] = [image_element["src"] for image_element in image_elements]
 
-    # Get overview
-    table = soup.select_one("#about table")
-    real_estate_data.update(extract_from_table(table))
+    # Get price
+    price = soup.select_one("p[data-component='price'] span:first-child").text.strip()
+    real_estate_data["price"] = price
+
+    # Get address
+    address = soup.select_one('div[data-component="Address"]').text.strip()
+    real_estate_data["address"] = address
+
+    # Get traffics
+    traffics = soup.select('p[data-component="Traffics"]')
+    real_estate_data["traffics"] = [traffic.text.strip() for traffic in traffics]
+
+    # Get land area
+    land_area = soup.select_one("#about table > tbody > tr:nth-child(4) > td").text.strip()
+    real_estate_data["land_area"] = land_area
+
+    # Get building area
+    building_area = soup.select_one("#about table > tbody > tr:nth-child(3) > td").text.strip()
+    real_estate_data["building_area"] = building_area
+
+    # Get floor plan
+    floor_plan = soup.select_one('span[data-component="floorplan"]').text.strip()
+    real_estate_data["floor_plan"] = floor_plan
+
+    return real_estate_data
+
+
+def format_3(soup: BeautifulSoup):
+    real_estate_data = {}
+
+    # Get name
+    name = soup.select_one("#chk-bkh-name").text.strip()
+    real_estate_data["name"] = name
+
+    # Get images
+    images = soup.select(".mod-photoView .prg-galleryItem img")
+    real_estate_data["images"] = [image["src"] for image in images]
+
+    # Get price
+    price = soup.select_one("#chk-bkc-moneyroom").text.strip()
+    real_estate_data["price"] = price
+
+    # Get address
+    address = soup.select_one("#chk-bkc-fulladdress").text.strip()
+    real_estate_data["address"] = address
+
+    # Get traffics
+    traffics = soup.select("p.traffic")
+    real_estate_data["traffics"] = [traffic.text.strip() for traffic in traffics]
+
+    # Get land area
+    land_area = soup.select_one("#chk-bkc-landarea").text.strip()
+    real_estate_data["land_area"] = land_area
+
+    # Get building area
+    building_area = soup.select_one("#chk-bkc-housearea").text.strip()
+    real_estate_data["building_area"] = building_area
+
+    # Get floor plan
+    floor_plan = soup.select("#chk-bkc-marodi").text.strip()
+    real_estate_data["floor_plan"] = floor_plan
 
     return real_estate_data

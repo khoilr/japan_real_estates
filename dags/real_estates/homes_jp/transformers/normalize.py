@@ -31,15 +31,21 @@ async def normalize(item: dict, normalized_data: list):
     else:
         normalized_item["building_area"] = float(building_area_bound[0])
 
-    land_area = re.sub(
-        r"\(.*?\)|\（.*?\）", "", item["land_area"].replace(",", "").replace("m2", "").replace("ｍ2", "")
-    )
-    land_area_bound = re.findall(r"\d+\.\d+|\d+", land_area)
-    if len(land_area_bound) == 2:
-        normalized_item["min_land_area"] = float(land_area_bound[0])
-        normalized_item["max_land_area"] = float(land_area_bound[1])
-    else:
-        normalized_item["land_area"] = float(land_area_bound[0])
+    try:
+        land_area = re.sub(
+            r"\(.*?\)|\（.*?\）", "", item["land_area"].replace(",", "").replace("m2", "").replace("ｍ2", "")
+        )
+        land_area_bound = re.findall(r"\d+\.\d+|\d+", land_area)
+        if not land_area_bound:
+            normalized_item["land_area"] = 0
+        if len(land_area_bound) == 2:
+            normalized_item["min_land_area"] = float(land_area_bound[0])
+            normalized_item["max_land_area"] = float(land_area_bound[1])
+        else:
+            logging.warning(item["land_area"])
+            normalized_item["land_area"] = float(land_area_bound[0])
+    except Exception as e:
+        logging.error("Error extracting land area ({}): {}".format(item["land_area"], e))
 
     price = re.sub(r"\(.*?\)|\（.*?\）", "", item["price"].replace("万円", "").replace(",", ""))
     price_bound = re.findall(r"\d+\.\d+|\d+", price)
