@@ -4,7 +4,7 @@ import aiohttp
 
 
 async def one_c(data: list):
-    async with aiohttp.ClientSession("http://103.157.218.115") as session:
+    async with aiohttp.ClientSession("http://") as session:
         for item in data:
             if item["price"] == 0:
                 continue
